@@ -1,0 +1,30 @@
+{
+  "name": "group_block_large-centered-cta",
+  "title": "Block Details: Large Centered CTA",
+  "fields": [
+    {
+      "label": "Heading",
+      "name": "heading",
+      "type": "text"
+    },
+    {
+      "label": "Content",
+      "name": "content",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Button",
+      "name": "button",
+      "type": "link"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/large-centered-cta"
+      }
+    ]
+  ]
+}

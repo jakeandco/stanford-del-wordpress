@@ -1,0 +1,12 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_large-centered-cta' } %}
+  {% block content %}
+
+
+    <p>{{fields.heading}}</p>
+
+    {{fields.content}}
+
+    <a href="{{fields.button.url}}" alt="{{fields.button.alt}}">{{fields.button.title}}</a>
+
+  {% endblock %}
+{% endembed %}
