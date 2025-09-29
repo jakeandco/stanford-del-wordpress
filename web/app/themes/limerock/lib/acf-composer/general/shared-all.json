@@ -2,6 +2,12 @@
   "name": "shared_all",
   "title": "Shared: All",
   "fields": [
+    {
+      "type": "repeater",
+      "name": "jump_links",
+      "label": "Jump Links",
+      "sub_fields": [{ "type": "link", "name": "link", "label": "Link" }]
+    }
   ],
   "location": [
     [

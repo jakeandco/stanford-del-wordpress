@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_work",
+  "title": "Post Type: Work Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "work"
+      }
+    ]
+  ]
+}

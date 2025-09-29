@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_person",
+  "title": "Post Type: Person Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "person"
+      }
+    ]
+  ]
+}

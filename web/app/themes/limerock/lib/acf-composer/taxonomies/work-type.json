@@ -1,0 +1,14 @@
+{
+  "key": "group_post-type_work-type",
+  "title": "Taxonomy: Work Type Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "work-type"
+      }
+    ]
+  ]
+}

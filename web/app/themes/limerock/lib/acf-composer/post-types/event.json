@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_event",
+  "title": "Post Type: Event Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "event"
+      }
+    ]
+  ]
+}

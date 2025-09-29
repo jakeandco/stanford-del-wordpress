@@ -1,0 +1,14 @@
+{
+  "key": "group_post-type_event-category",
+  "title": "Taxonomy: Event Category Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "event-category"
+      }
+    ]
+  ]
+}

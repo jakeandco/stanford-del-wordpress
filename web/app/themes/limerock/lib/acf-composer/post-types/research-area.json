@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_research-area",
+  "title": "Post Type: Research Area Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "research-area"
+      }
+    ]
+  ]
+}
