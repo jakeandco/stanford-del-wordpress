@@ -1,0 +1,23 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_homepage-header' } %}
+  {% block content %}
+
+
+    <div>
+      <h3>Field Group: headline</h3>
+
+
+      <p>{{fields.headline['primary']}}</p>
+
+      <p>{{fields.headline['secondary']}}</p>
+
+      {% for row in fields.headline['animating_text'] %}
+
+
+        <p>{{row['text']}}</p>
+
+      {% endfor %}
+
+    </div>
+
+  {% endblock %}
+{% endembed %}

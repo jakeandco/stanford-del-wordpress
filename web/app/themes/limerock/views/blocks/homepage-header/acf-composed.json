@@ -1,0 +1,44 @@
+{
+  "name": "group_block_homepage-header",
+  "title": "Block Details: Homepage Header",
+  "fields": [
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "group",
+      "sub_fields": [
+        {
+          "label": "Primary",
+          "name": "primary",
+          "type": "text"
+        },
+        {
+          "label": "Secondary",
+          "name": "secondary",
+          "type": "text"
+        },
+        {
+          "label": "Animating Text",
+          "name": "animating_text",
+          "type": "repeater",
+          "sub_fields": [
+            {
+              "label": "Text",
+              "name": "text",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/homepage-header"
+      }
+    ]
+  ]
+}
