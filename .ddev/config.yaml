@@ -1,4 +1,4 @@
-name: pantheon-wordpress-base
+name: stanford-del-wordpress
 type: wordpress
 docroot: web
 php_version: "8.3"
