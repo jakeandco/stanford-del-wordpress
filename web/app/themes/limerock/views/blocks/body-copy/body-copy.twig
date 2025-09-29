@@ -1,0 +1,13 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_body-copy' } %}
+  {% block content %}
+
+
+    <p>{{fields.heading}}</p>
+
+    {{fields.content}}
+
+
+    {% include '@partial/media-item.twig' with { image: fields.image } only %}
+
+  {% endblock %}
+{% endembed %}
