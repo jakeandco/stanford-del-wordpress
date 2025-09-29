@@ -1,0 +1,32 @@
+{
+  "name": "group_block_factoids",
+  "title": "Block Details: Factoids",
+  "fields": [
+    {
+      "label": "Factoids",
+      "name": "factoids",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "label": "Description",
+          "name": "description",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock\/factoids"
+      }
+    ]
+  ]
+}

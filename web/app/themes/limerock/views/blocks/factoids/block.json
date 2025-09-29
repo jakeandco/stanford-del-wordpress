@@ -1,0 +1,32 @@
+{
+  "name": "limerock/factoids",
+  "title": "Factoids",
+  "description": "A grid of bold numerical/statistical highlights with short labels, styled inside circular shapes.",
+  "category": "text",
+  "icon": "info-outline",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}
