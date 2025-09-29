@@ -18,7 +18,7 @@
       "conditional_logic": [
         [
           {
-            "fieldPath": "select",
+            "fieldPath": "selection_mode",
             "operator": "==",
             "value": "quote_post"
           }
@@ -32,7 +32,7 @@
       "conditional_logic": [
         [
           {
-            "fieldPath": "select",
+            "fieldPath": "selection_mode",
             "operator": "==",
             "value": "manual"
           }
@@ -46,7 +46,7 @@
       "conditional_logic": [
         [
           {
-            "fieldPath": "select",
+            "fieldPath": "selection_mode",
             "operator": "==",
             "value": "manual"
           }
@@ -60,7 +60,7 @@
       "conditional_logic": [
         [
           {
-            "fieldPath": "select",
+            "fieldPath": "selection_mode",
             "operator": "==",
             "value": "manual"
           }
