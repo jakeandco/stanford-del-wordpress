@@ -1,0 +1,22 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_page-header' } %}
+  {% block content %}
+
+
+    {% if fields.title_size == 'small' %}
+      <h4>Select type: Small</h4>
+      ,
+    {% elseif fields.title_size == 'medium' %}
+      <h4>Select type: Medium</h4>
+      ,
+    {% elseif fields.title_size == 'large' %}
+      <h4>Select type: Large</h4>
+      ,
+    {% elseif fields.title_size == 'extra_large' %}
+      <h4>Select type: Extra Large</h4>
+
+    {% endif %}
+
+    {{fields.intro_copy}}
+
+  {% endblock %}
+{% endembed %}

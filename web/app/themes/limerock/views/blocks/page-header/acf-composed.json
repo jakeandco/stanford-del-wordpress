@@ -1,0 +1,31 @@
+{
+  "name": "group_block_page-header",
+  "title": "Block Details: Page Header",
+  "fields": [
+    {
+      "label": "Title Size",
+      "name": "title_size",
+      "type": "select",
+      "choices": {
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "extra_large": "Extra Large"
+      }
+    },
+    {
+      "label": "Intro Copy",
+      "name": "intro_copy",
+      "type": "wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/page-header"
+      }
+    ]
+  ]
+}
