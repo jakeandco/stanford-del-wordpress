@@ -1,0 +1,12 @@
+{
+  "http-basic": {
+    "connect.advancedcustomfields.com": {
+      "username": "YOUR_ACF_LICENSE_KEY",
+      "password": "SAME_AS_WP_HOME"
+    },
+    "composer.gravity.io": {
+      "username": "API_KEY",
+      "password": "SAME_AS_WP_HOME"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% set width = attr.width|default('1116') %}
+{% set height = attr.height|default('636') %}
+
+<iframe
+  class="oembed oembed--{{embed_class}}"
+  src="{{embed_url}}"
+  width="{{width}}"
+  height="{{height}}"
+  controls="1"
+  hd="1"
+  frameborder="0"
+></iframe>

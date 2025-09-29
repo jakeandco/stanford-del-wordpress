@@ -1,0 +1,39 @@
+{
+  "limerock_base_type": "single-line-basic-wysiwyg",
+  "label": "Single Line WYSIWYG",
+  "name": "single_line_wysiwyg",
+  "type": "wysiwyg",
+  "acfe_wysiwyg_height": 50,
+  "acfe_wysiwyg_custom_toolbar": 1,
+  "acfe_wysiwyg_toolbar_buttons": {
+    "acfe_wysiwyg_toolbar_1": {
+      "0": {
+        "acfe_wysiwyg_toolbar_row": "bold"
+      },
+      "1": {
+        "acfe_wysiwyg_toolbar_row": "italic"
+      },
+      "2": {
+        "acfe_wysiwyg_toolbar_row": "underline"
+      },
+      "4": {
+        "acfe_wysiwyg_toolbar_row": "strikethrough"
+      },
+      "10": {
+        "acfe_wysiwyg_toolbar_row": "undo"
+      },
+      "11": {
+        "acfe_wysiwyg_toolbar_row": "redo"
+      },
+      "12": {
+        "acfe_wysiwyg_toolbar_row": "link"
+      }
+    },
+    "acfe_wysiwyg_toolbar_2": "",
+    "acfe_wysiwyg_toolbar_3": "",
+    "acfe_wysiwyg_toolbar_4": ""
+  },
+  "tabs": "all",
+  "toolbar": "basic",
+  "media_upload": 0
+}

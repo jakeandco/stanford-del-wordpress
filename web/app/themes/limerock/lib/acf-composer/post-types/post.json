@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_post",
+  "title": "Post Type: Post",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "post"
+      }
+    ]
+  ]
+}

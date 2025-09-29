@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "settings": {
+    "typography": {
+      "fontSizes": []
+    },
+    "blocks": {},
+    "layout": {
+      "contentSize": true,
+      "wideSize": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "gradients": [],
+      "palette": [
+        {
+          "color": "#AAA",
+          "name": "Primary (for current Page Color)",
+          "slug": "primary"
+        },
+        {
+          "color": "#BBB",
+          "name": "Secondary (for current Page Color)",
+          "slug": "secondary"
+        },
+        {
+          "color": "#CCC",
+          "name": "Tertiary (for current Page Color)",
+          "slug": "tertiary"
+        },
+        {
+          "color": "#D9ECF3",
+          "name": "Light",
+          "slug": "light"
+        },
+        {
+          "color": "#000",
+          "name": "Dark",
+          "slug": "dark"
+        }
+      ]
+    },
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": ["top", "bottom"],
+      "customSpacingSize": false,
+      "spacingSizes": [
+        { "name": "1/4", "slug": "1", "size": "0.25rem" },
+        { "name": "1/2", "slug": "2", "size": "0.5rem" },
+        { "name": "3/4", "slug": "3", "size": "0.75rem" },
+        { "name": "1", "slug": "4", "size": "1rem" },
+        { "name": "1 1/2", "slug": "5", "size": "1.5rem" },
+        { "name": "2", "slug": "6", "size": "2rem" },
+        { "name": "2 1/2", "slug": "7", "size": "2.5rem" },
+        { "name": "3", "slug": "8", "size": "3rem" },
+        { "name": "3 1/2", "slug": "9", "size": "3.5rem" },
+        { "name": "4", "slug": "10", "size": "4rem" },
+        { "name": "4 1/2", "slug": "11", "size": "4.5rem" },
+        { "name": "5", "slug": "12", "size": "5rem" }
+      ]
+    }
+  }
+}

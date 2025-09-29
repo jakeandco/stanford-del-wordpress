@@ -1,0 +1,19 @@
+{
+    "page_title": "Site Settings",
+    "menu_slug": "site-settings",
+    "active": true,
+    "menu_title": "Site Settings",
+    "capability": "edit_posts",
+    "parent_slug": "",
+    "position": "",
+    "icon_url": "",
+    "redirect": true,
+    "post_id": "site_options",
+    "autoload": false,
+    "update_button": "Update Site Settings",
+    "updated_message": "Site Settings Updated",
+    "acfe_autosync": [
+        "json"
+    ],
+    "modified": 1746729157
+}

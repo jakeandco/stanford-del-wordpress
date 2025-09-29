@@ -1,0 +1,23 @@
+// custom scroll
+// @include scroll-custom($width: 8px, $height: 8px, $scroll-bg: #e9e9e9, $scroll-slider-bg: #a1a5ad);
+@mixin scroll-custom($width: 5px, $height: 5px, $scroll-bg: #fff, $scroll-slider-bg: rgba(#B4B4B4, 1)){
+	&::-webkit-scrollbar {
+		width: $width;
+		height: $height;
+		background: $scroll-bg;
+		border-radius: calc(#{$width} / 2);
+		margin: 0 6px 0 0;
+	}
+  
+	&::-webkit-scrollbar-track {
+		border-radius: calc(#{$width} / 2);
+		// background: url(../images/track.jpg) top center repeat-y;
+	}
+  
+	&::-webkit-scrollbar-thumb {
+		width: $width;
+		height: 40px;
+		background: $scroll-slider-bg;
+		border-radius: calc(#{$width} / 2);
+	}
+  }

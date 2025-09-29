@@ -1,0 +1,30 @@
+{
+  "name": "limerock/quote",
+  "title": "Quote",
+  "description": "This block displays pull quotes, with optional Author & Attribution lines",
+  "category": "text",
+  "icon": "format-quote",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "anchor": true,
+    "color": {
+      "background": true,
+      "color": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

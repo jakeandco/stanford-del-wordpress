@@ -1,0 +1,20 @@
+{
+  "name": "group_block_contact-form",
+  "title": "Block Details: Contact Form",
+  "fields": [
+    {
+      "label": "Intro Copy",
+      "name": "intro_copy",
+      "type": "wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/contact-form"
+      }
+    ]
+  ]
+}

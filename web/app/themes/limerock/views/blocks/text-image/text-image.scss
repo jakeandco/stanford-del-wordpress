@@ -1,0 +1,198 @@
+.block_text-image {
+
+  & + .block_text-entry-point {
+    padding-top: 53px;
+    padding-bottom: 49px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-top: 129px;
+      padding-bottom: 108px;
+    }
+
+    
+  }
+
+  .container {
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      display: flex;
+      position: relative;
+    }
+  }
+
+  h5,
+  .h5 {
+    margin-bottom: 21px;
+    padding-top: 16px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-top: 0;
+      margin-bottom: 37px;
+    }
+  }
+
+  .img-col {
+    width: auto;
+    margin: 0 -20px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      width: 40%;
+      margin: 0;
+    }
+
+    .media-item {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 43vw;
+        height: 100%;
+      }
+    }
+
+    .media-item_caption {
+      display: none;
+      padding: 0;
+      position: absolute;
+      bottom: 20px;
+      left: 40%;
+      right: 20px;
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        display: block;
+        padding-left: 20px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+        padding-left: 40px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
+        bottom: 30px;
+        padding-left: 84px;
+      }
+    }
+
+    figure {
+      margin: 0;
+
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        height: 100%;
+      }
+    }
+  }
+
+  .media-item_holder {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      height: 100%;
+      right: 0;
+      left: auto;
+      transform: none;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .text-col {
+    padding-top: 36px;
+    padding-bottom: 48px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      width: 60%;
+      padding: 80px 20px;
+      padding-right: 0;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+      padding: 120px 40px;
+      padding-right: 0;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
+      padding: 162px 0px 159px 84px;
+      min-height: 848px;
+    }
+
+    p {
+      font-family: $font-family-serif;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        margin-bottom: 47px;
+      }
+    }
+
+    h4 {
+      @media screen and (max-width: map-get($grid-breakpoints, "md")) {
+        margin-bottom: 20px;
+      }
+      
+      &:only-child {
+        @media screen and (max-width: map-get($grid-breakpoints, "md")) {
+          line-height: 28px;
+        }
+      }
+    }
+  }
+
+  //   &--left {
+
+  //   }
+  &--right {
+    .container {
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .img-col {
+
+      .media-item {
+        @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+          left: 0;
+          right: auto;
+        }
+      }
+
+      .media-item_caption {
+        left: 20px;
+        right: 40%;
+        padding-left: 0;
+        @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+          padding-right: 40px;
+        }
+
+        @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
+          padding-right: 84px;
+        }
+      }
+    }
+
+    div.text-col {
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        padding-left: 0;
+      }
+
+      @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+        padding-right: 40px;
+      }
+
+      @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
+        padding-right: 84px;
+      }
+    }
+  }
+}

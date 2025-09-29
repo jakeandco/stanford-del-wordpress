@@ -1,0 +1,39 @@
+{
+  "name": "limerock/single-image",
+  "title": "Single Image",
+  "description": "This block shows one featured image or video. It can be displayed either full-bleed or centered full-width.",
+  "category": "media",
+  "icon": "format-image",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "alignWide": true,
+    "align": ["full", "wide"],
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

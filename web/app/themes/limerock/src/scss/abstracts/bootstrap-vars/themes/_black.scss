@@ -1,0 +1,24 @@
+// make sure this color-label variable doesn't be made global
+@if true {
+  $dynamic-color-label: 'black';
+  $dynamic-text-color: 'white';
+  $dynamic-primary-color-label: $dynamic-color-label;
+  $dynamic-secondary-color-label: $dynamic-color-label;
+  $dynamic-tertiary-color-label: $dynamic-color-label;
+  $dynamic-highlight-color-label: 'lime-green';
+  $dynamic-btn-hover-text-color: 'black';
+  $dynamic-btn-hover-bg: $dynamic-highlight-color-label;
+  $dynamic-hover-bg: 'green-pale';
+
+  @include dynamic-theme(
+    $dynamic-color-label,
+    $dynamic-text-color,
+    $dynamic-primary-color-label,
+    $dynamic-secondary-color-label,
+    $dynamic-tertiary-color-label,
+    $dynamic-highlight-color-label,
+    $dynamic-btn-hover-text-color,
+    $dynamic-btn-hover-bg,
+    $dynamic-hover-bg
+  );
+}

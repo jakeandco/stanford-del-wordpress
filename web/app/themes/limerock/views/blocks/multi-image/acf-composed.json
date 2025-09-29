@@ -1,0 +1,64 @@
+{
+  "name": "group_block_multi-image",
+  "title": "Block Details: Multi-Image",
+  "fields": [
+    {
+      "label": "Items",
+      "name": "items",
+      "type": "repeater",
+      "layout": "block",
+      "sub_fields": [
+        {
+          "label": "(Column 6/12)",
+          "name": "left_side",
+          "type": "acfe_column",
+          "columns": "6/12"
+        },
+        {
+          "acf_composer_extend": "LimeRockTheme/ACF/fields/image",
+          "label": "Image",
+          "name": "image",
+          "instructions": "Recommended dimensions:<br>• 1250x988px for 2-Up<br>• 810x810px for 3-Up<br>• 2880x1208px for Carousel Full<br>• 1692x1270px for Carousel Wide"
+        },
+        {
+          "label": "(Column 6/12)",
+          "name": "right_side",
+          "type": "acfe_column",
+          "columns": "6/12"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text",
+          "instructions": "Titles are not pulled into the Carousel variations."
+        },
+        {
+          "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+          "label": "Support Text",
+          "name": "support_text"
+        }
+      ]
+    },
+    {
+      "label": "Variant",
+      "name": "variant",
+      "type": "select",
+      "choices": {
+        "2-up": "2-Up Images",
+        "3-up": "3-Up Images",
+        "carousel": "Image Carousel - Full",
+        "carousel-wide": "Image Carousel - Wide"
+      },
+      "default_value": "2-up"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/multi-image"
+      }
+    ]
+  ]
+}

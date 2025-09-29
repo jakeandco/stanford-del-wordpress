@@ -1,0 +1,23 @@
+@use 'sass:string';
+@use 'sass:map';
+@use 'sass:color';
+
+@function url-friendly-colour($hex-bg-color) {
+  @return '%23' + string.slice('#{$hex-bg-color}', 2, -1);
+}
+
+@function to-rgba($color) {
+  @return rgba(
+    $red: color.channel($color, 'red'),
+    $green: color.channel($color, 'green'),
+    $blue: color.channel($color, 'blue'),
+    $alpha: color.channel($color, 'alpha')
+);
+}
+
+@mixin set_current_color_vars($color_map) {
+  // references theme map set in scss/abstracts/variables
+    @each $name, $color in $color_map {
+      --current-#{$name}-color: #{$color};
+    }
+}

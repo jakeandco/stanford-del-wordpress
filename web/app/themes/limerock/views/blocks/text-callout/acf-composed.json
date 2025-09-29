@@ -1,0 +1,34 @@
+{
+  "name": "group_block_text-callout",
+  "title": "Block Details: Text Callout",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Callout",
+      "name": "callout",
+      "type": "text"
+    },
+    {
+      "label": "Size",
+      "name": "size",
+      "type": "select",
+      "choices": {
+        "large": "Large",
+        "small": "Small"
+      }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock\/text-callout"
+      }
+    ]
+  ]
+}

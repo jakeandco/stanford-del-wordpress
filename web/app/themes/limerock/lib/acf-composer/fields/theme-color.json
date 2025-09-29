@@ -1,0 +1,17 @@
+{
+  "limerock_base_type": "theme-color",
+  "label": "Color Picker",
+  "name": "color_picker",
+  "type": "color_picker",
+  "required": 0,
+  "default_value": "",
+  "enable_opacity": 0,
+  "return_format": "color_label",
+  "display": "palette",
+  "color_picker": 0,
+  "allow_null": 0,
+  "theme_colors": 1,
+  "button_label": "Select Color",
+  "absolute": false,
+  "input": true
+}

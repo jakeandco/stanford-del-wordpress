@@ -1,0 +1,12 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &::-moz-placeholder {opacity: 1; @content}
+    &:-moz-placeholder {@content}
+    &:-ms-input-placeholder {@content}
+    &.placeholder {@content}
+}
+
+.bg-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-rgb), var(--bs-bg-opacity)) !important;
+}

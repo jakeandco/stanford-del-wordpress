@@ -1,0 +1,21 @@
+{
+  "name": "group_block_body-copy",
+  "title": "Block Details: Body Copy",
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
+      "label": "Copy",
+      "name": "copy",
+      "required": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/body-copy"
+      }
+    ]
+  ]
+}

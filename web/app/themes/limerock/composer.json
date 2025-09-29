@@ -1,0 +1,47 @@
+{
+  "name": "jakeandco/limerock",
+  "description": "Starter theme to build a Timber theme",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "email": "jared@upstatement.com",
+      "name": "jarednova"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "timber/timber": "2.x-dev",
+    "twig/intl-extra": "^3.x-dev",
+    "symfony/intl": "^6.4",
+    "twig/html-extra": "^3.21",
+    "giggsey/libphonenumber-for-php": "^9.0",
+    "symfony/mime": "^6.4"
+  },
+  "require-dev": {
+    "automattic/wordbless": "^0.4.2",
+    "yoast/wp-test-utils": "^1.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/automattic/wordbless/": [
+        "automattic/wordbless"
+      ]
+    },
+    "wordpress-install-dir": "wordpress"
+  },
+  "config": {
+    "allow-plugins": {
+      "roots/wordpress-core-installer": true,
+      "composer/installers": true
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}

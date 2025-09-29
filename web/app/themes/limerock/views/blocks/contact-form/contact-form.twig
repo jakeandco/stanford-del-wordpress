@@ -1,0 +1,24 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_contact-form' } %}
+  {% block content %}
+    <p>{{fields.intro_copy}}</p>
+    <form>
+      <div class="form-group">
+        <label for="contact-name">Your first and last name:</label>
+        <input type="text" class="form-control" id="contact-name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Your email address:</label>
+        <input type="email" class="form-control" id="contact-email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="contact-organization">Your Organization:</label>
+        <input type="text" class="form-control" id="contact-organization" placeholder="Enter your organization">
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Your Message:</label>
+        <textarea class="form-control" id="contact-message" rows="6" placeholder=""></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  {% endblock %}
+{% endembed %}

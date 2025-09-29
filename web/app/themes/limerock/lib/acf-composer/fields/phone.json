@@ -1,0 +1,15 @@
+{
+  "limerock_base_type": "phone",
+  "type": "acfe_phone_number",
+  "label": "Phone",
+  "name": "phone",
+  "countries": ["us"],
+  "default_country": "us",
+  "geolocation": 0,
+  "native": 0,
+  "national": 0,
+  "dropdown": 0,
+  "dial_code": 0,
+  "default_value": "(617) 468-6800",
+  "return_format": "array"
+}

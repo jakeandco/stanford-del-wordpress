@@ -1,0 +1,16 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_tiled-image-gallery full-block-width' } %}
+  {% block content %}
+    <div class="container">
+      <div class="masonry" data-masonry='{"percentPosition": true }'>
+        {% for image in fields.images %}
+          <div class="masonry-item position-relative">
+            <a href="{{image.url}}" data-fancybox="gallery" data-caption="{{image.caption|escape}}" class="text-decoration-none">
+              {% include '@partial/media-item.twig' with { image } only %}
+              <span class="gallery-opener border-raunded">+</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,32 @@
+{
+  "name": "limerock/tiled-image-gallery",
+  "title": "Tiled Image Gallery",
+  "description": "This block displays a set of tiled images. When clicked, the images will be displayed in a carousel modal.",
+  "category": "media",
+  "icon": "layout",
+  "keywords": [],
+  "acf": {
+      "mode": "preview",
+      "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+  "align": false,
+  "anchor": true,
+  "color": {
+    "gradient": true,
+    "background": true,
+    "text": false
+  },
+  "spacing": {
+    "padding": true,
+    "margin": true
+  }
+},
+  "example": {
+    "attributes": {
+      "data":  {
+        "is_example": true
+      }
+    }
+  }
+}

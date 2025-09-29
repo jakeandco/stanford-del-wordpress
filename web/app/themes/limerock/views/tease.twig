@@ -1,0 +1,21 @@
+{% set container_el = tease_options.container_el|default("article") %}
+{% set container_classes = html_classes(
+	'tease',
+	('tease-' ~ post.post_type),
+	{
+		('tease-' ~ post.post_type ~ '--' ~ tease_options.variant): tease_options.variant is not empty,
+	},
+	tease_options.extra_classes ?? '',
+) %}
+
+<{{container_el}} class="{{ container_classes }}" {{ tease_options.extra_attributes}} id="tease-{{post.post_id}}">
+  {% block content %}
+    <h2 class="h2">
+      <a href="{{post.link}}">{{post.post_title}}</a>
+    </h2>
+    <p>{{ post.excerpt }}</p>
+    {% if post.thumbnail %}
+      <img src="{{post.thumbnail.src}}"/>
+    {% endif %}
+  {% endblock %}
+</{{container_el}}>

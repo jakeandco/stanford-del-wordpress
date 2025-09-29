@@ -1,0 +1,37 @@
+{
+  "name": "group_block_simple-list",
+  "title": "Block Details: Simple List",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "List",
+      "name": "list",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "label": "Content",
+          "name": "content",
+          "type": "wysiwyg"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/simple-list"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "group_block_text-entry-point",
+  "title": "Block Details: Text Entry Point",
+  "fields": [
+    {
+      "label": "Copy",
+      "name": "copy",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Link",
+      "name": "link",
+      "type": "link"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/text-entry-point"
+      }
+    ]
+  ]
+}

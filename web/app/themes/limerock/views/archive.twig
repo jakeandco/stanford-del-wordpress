@@ -1,0 +1,13 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "@views/index.twig" %}
+
+{% block hero %}
+  {% include '@views/heros/hero.twig' with { post: null, template_options: { title } } only %}
+{% endblock %}
+
+{% block content %}
+  {% include "@partial/post-repeater.twig" with { posts } only %}
+  {% include '@partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

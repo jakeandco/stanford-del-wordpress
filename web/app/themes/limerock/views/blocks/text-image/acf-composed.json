@@ -1,0 +1,36 @@
+{
+  "name": "group_block_text-image",
+  "title": "Block Details: Text & Image",
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/image",
+      "label": "Image",
+      "name": "image", 
+      "instructions": "Recommended Dimensions: 1186x1696px"
+    },
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
+      "label": "Copy",
+      "name": "copy"
+    },
+    {
+      "label": "Link",
+      "name": "link",
+      "type": "link"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/text-image"
+      }
+    ]
+  ]
+}

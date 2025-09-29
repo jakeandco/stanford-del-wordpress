@@ -1,0 +1,20 @@
+{
+  "name": "group_block_tiled-image-gallery",
+  "title": "Block Details: Tiled Image Gallery",
+  "fields": [
+  {
+    "label": "Images",
+    "name": "images",
+    "type": "gallery"
+  }
+],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "limerock\/tiled-image-gallery"
+          }
+      ]
+  ]
+}

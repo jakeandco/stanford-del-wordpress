@@ -1,0 +1,20 @@
+{
+  "name": "limerock/BLOCKSLUG",
+  "title": "BLOCKNAME",
+  "description": "BLOCKDESCRIPTION",
+  "category": "BLOCKCATEGORY",
+  "icon": "BLOCKICON",
+  "keywords": [],
+  "acf": {
+      "mode": "preview",
+      "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": BLOCKSUPPORTS,
+  "example": {
+    "attributes": {
+      "data":  {
+        "is_example": true
+      }
+    }
+  }
+}

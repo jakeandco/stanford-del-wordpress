@@ -1,0 +1,9 @@
+// ACF Editor Overrides
+
+.acf-field-select select {
+  padding-right: 1.5em;
+}
+
+.acf-input textarea.wp-editor-area[aria-hidden="true"] {
+  display: none !important;
+}

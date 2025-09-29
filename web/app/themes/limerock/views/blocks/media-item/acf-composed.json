@@ -1,0 +1,20 @@
+{
+  "name": "group_block_media-item",
+  "title": "Block Details: Media Item",
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/image",
+      "label": "Media Item",
+      "name": "media_item"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/media-item"
+      }
+    ]
+  ]
+}

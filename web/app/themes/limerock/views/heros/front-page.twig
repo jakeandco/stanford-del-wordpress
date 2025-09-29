@@ -1,0 +1,10 @@
+<section class="bg-primary hero hero--front">
+  {% block content %}
+    <div class="container">
+      {% include "@partial/breadcrumb.twig" with { post } only %}
+      <h1>{{title|default(post.title)}}</h1>
+      {% include "@partial/media-item.twig" with { image: post.thumbnail } only %}
+    </div>
+  {% endblock %}
+</section>
+

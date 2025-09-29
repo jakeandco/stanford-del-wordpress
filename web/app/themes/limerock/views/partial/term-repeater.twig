@@ -1,0 +1,22 @@
+{% set repeater_rows = terms %}
+
+{% extends '@partial/repeater.twig'%}
+
+{% block row_container %}
+  {{ parent() }}
+{% endblock %}
+{% block row %}
+  {% set term = get_term(row_data) %}
+  {% include [
+    ('@views/teases/term-' ~ term.taxonomy ~ '-' ~ term.slug ~ '-' ~ tease_options.variant ~ '.twig'),
+    ('@views/teases/term-' ~ term.taxonomy ~ '-' ~ term.slug ~ '.twig'),
+    ('@views/teases/term-' ~ term.taxonomy ~ '-' ~ tease_options.variant ~ '.twig'),
+    ('@views/teases/term-' ~ term.taxonomy ~ '.twig'),
+    '@views/teases/term.twig'
+  ] with {
+    term,
+    tease_options,
+    current_page,
+    interview_locations,
+  } only %}
+{% endblock %}

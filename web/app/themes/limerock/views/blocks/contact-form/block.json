@@ -1,0 +1,38 @@
+{
+  "name": "limerock/contact-form",
+  "title": "Contact Form",
+  "description": "This block outputs a static contact form with an editable introductory text field.",
+  "category": "theme",
+  "icon": "email-alt",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "className": false,
+    "color": {
+      "gradient": false,
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "attributes": {
+    "color": {
+      "background": "transparent"
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="container block-header">
+  <div class="block-header--left">
+    {% if fields.label %}
+      <h2 class="type--header-all-caps block-header--label">{{fields.label}}</h2>
+    {% endif %}
+
+    {% if fields.title and fields.label %}
+      <p class="type--header-medium block-header--title">{{fields.title}}</p>
+    {% elseif fields.title %}
+      <h2 class="type--header-medium block-header--title">{{fields.title}}</h2>
+    {% endif %}
+  </div>
+  <div class="block-header--right">
+    {% if fields.header_link %}
+      <a href="{{fields.header_link.url}}" class="block-header--link btn btn--secondary">{{fields.header_link.title}} <small class="icon-arrow-right"></small></a>
+    {% endif %}
+  </div>
+</div>

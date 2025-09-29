@@ -1,0 +1,11 @@
+<button class="btn btn-clear">Clear all</button>
+<select name="{{filter_name}}"{% if redirect %} data-redirect="true"{% endif %}>
+  <option value="">Filter</option>
+  {% for term in terms %}
+    <option
+      data-tax="{{ term.taxonomy }}"
+      data-slug="{{term.slug}}"
+      value="{{ term.id }}"
+    >{{ term.name }}</option>
+  {% endfor %}
+</select>

@@ -1,0 +1,6 @@
+// Don't perform fade-in animation on editor preview.
+.block-wrapper .container {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}

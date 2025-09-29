@@ -1,0 +1,12 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_pull-quote' } %}
+  {% block content %}
+    <figure>
+      <blockquote class="blockquote h3">
+        {{fields.quote}}
+      </blockquote>
+      <figcaption class="blockquote-footer quote-author h6">
+        {{fields.attribution}}
+      </figcaption>
+    </figure>
+  {% endblock %}
+{% endembed %}

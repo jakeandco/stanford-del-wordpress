@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@sb/*": ["./.storybook/*"],
+      "@views/*": ["./views/*"],
+      "@src/*": ["./src/*"],
+      "@partial/*": ["./views/partial/*"],
+      "@blocks/*": ["./views/blocks/*"]
+    }
+  },
+  "exclude": ["dist", "node_modules", "vendor", "wordpress"]
+}

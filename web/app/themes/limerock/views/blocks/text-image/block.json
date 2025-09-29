@@ -1,0 +1,38 @@
+{
+  "name": "limerock/text-image",
+  "title": "Text & Image",
+  "description": "This block shows an image to the right or left of some featured text, with optional title & link",
+  "category": "media",
+  "icon": "align-left",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": ["left", "right"],
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

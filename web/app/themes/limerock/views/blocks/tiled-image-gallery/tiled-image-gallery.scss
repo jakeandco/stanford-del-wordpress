@@ -1,0 +1,218 @@
+@import "~@fancyapps/ui/dist/fancybox/fancybox.css";
+
+.block_tiled-image-gallery {
+  // Add your custom styles here
+  padding: 50px 0 1px;
+
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+    padding: 100px 0 52px;
+  }
+
+  .masonry {
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      column-count: 2;
+      column-gap: 36px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      column-count: 3;
+    }
+  }
+
+  .masonry-item {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 50px;
+    }
+
+    a {
+      outline: none;
+      background-image: none;
+
+      &:hover {
+        .gallery-opener {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .media-item_holder {
+    margin-bottom: 12px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      margin-bottom: 20px;
+    }
+
+    .media-item {
+      width: 100%;
+    }
+  }
+
+  .media-item_caption {
+    padding: 0;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  .gallery-opener {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 34px;
+    bottom: 31px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.fancybox__backdrop {
+  background: #202C1B;
+}
+
+.f-thumbs,
+.f-carousel__toolbar__column.is-left {
+  display: none;
+}
+
+.f-caption {
+  @extend .container;
+  padding-top: 20px;
+
+  @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
+    padding-top: 50px;
+  }
+}
+
+.f-carousel__toolbar__column.is-right {
+  .f-button:not([data-fancybox-close]) {
+    display: none;
+  }
+}
+
+.fancybox__carousel {
+  padding: 80px 0;
+  
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+    padding: 88px 0;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    padding: 110px 0 132px;
+  }
+
+  .f-button.is-arrow {
+    background: $white;
+    color: $black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 20px !important;
+    transform: none !important;
+    inset: auto auto 20px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      width: 60px;
+      height: 60px;
+      background-size: 30px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      width: 87px;
+      height: 87px;
+      background-size: 40px;
+      bottom: 40px !important;
+      // inset: auto auto 87px !important;
+    }
+
+    &.is-prev {
+      left: 20px !important;
+      background-image: url('../assets/images/prev-arrow.svg');
+
+      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        left: 78px !important;
+      }
+    }
+
+    &.is-next {
+      right: 20px !important;
+      background-image: url('../assets/images/next-arrow.svg');
+
+      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        right: 78px !important;
+      }
+    }
+
+    &:before {
+      display: none !important;
+    }
+
+    &:hover {
+      background-color: $pink;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .f-button[data-fancybox-close] {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    border: 1px solid $white;
+    padding: 8px 12px;
+    background: transparent;
+    width: auto;
+    height: auto;
+    top: 20px;
+    right: 20px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      top: 48px;
+      right: 77px;
+      padding: 14px 21px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &:before {
+      content: 'Close';
+    }
+
+    &:hover {
+    }
+
+    svg {
+      margin-left: 17px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  // .fancybox__slide {
+  //   max-height: calc(100% - 80px);
+  //   max-width: calc(100vw - 40px);
+    
+  //   @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+  //     max-height: calc(100% - 100px);
+  //   }
+
+  //   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+  //     max-height: calc(100% - 200px);
+  //   }
+  // }
+}

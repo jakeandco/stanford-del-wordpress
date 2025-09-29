@@ -1,0 +1,24 @@
+{% set align = block.align|default('full') %}
+{% embed '@partial/block_wrapper.twig' with {
+  extra_classes: html_classes(
+    'block_single-image',
+    ('block_single-image--' ~ align),
+    {
+      'full-block-width': align == 'wide'
+    },
+  )
+} %}
+  {% block content %}
+    {% if align == 'full' %}
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% include '@partial/media-item.twig' with { image: fields.image, autoplay: false } only %}
+          </div>
+        </div>
+      </div>
+    {% else %}
+      {% include '@partial/media-item.twig' with { image: fields.image, autoplay: false } only %}
+    {% endif %}
+  {% endblock %}
+{% endembed %}

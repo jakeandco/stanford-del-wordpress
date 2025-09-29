@@ -1,0 +1,7 @@
+{% extends "@views/base.twig" %}
+
+{% block content %}
+  {% include "@partial/post-repeater.twig" with { posts } only %}
+
+  {% include '@partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

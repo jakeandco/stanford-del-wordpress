@@ -1,0 +1,32 @@
+{
+  "name": "limerock/text-entry-point",
+  "title": "Text Entry Point",
+  "description": "A simple WYSIWYG with a link after it.",
+  "category": "text",
+  "icon": "admin-links",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

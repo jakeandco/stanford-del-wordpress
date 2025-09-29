@@ -1,0 +1,10 @@
+{% set unprefixed_name =  block.name|replace({ 'acf/': '', 'limerock/': '' })  %}
+{% set dist_preview = [theme.uri, "/dist/assets/images/block-examples/", unprefixed_name]|join('') %}
+{% set local_preview = [theme.uri, "/views/blocks/", unprefixed_name, "/preview"]|join('') %}
+
+<picture>
+  <source srcset="{{local_preview}}.png" type="image/png">
+  <source srcset="{{local_preview}}.jpg" type="image/jpeg">
+  <source srcset="{{dist_preview}}.png" type="image/png">
+  <img src="{{dist_preview}}.jpg" style="max-width: 100%; object-fit: contain;"/>
+</picture>

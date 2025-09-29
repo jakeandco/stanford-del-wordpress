@@ -1,0 +1,15 @@
+{
+  "name": "group_template_front-page",
+  "title": "Template: Front Page",
+  "fields": [
+  ],
+  "location": [
+    [
+      {
+        "param": "page_type",
+        "operator": "==",
+        "value": "front_page"
+      }
+    ]
+  ]
+}

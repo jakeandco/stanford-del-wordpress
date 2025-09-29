@@ -1,0 +1,31 @@
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_classes:'has-overlay-background',
+  },
+  post
+} only %}
+  {% block content %}
+    {% set full_post = get_post(post) %}
+    <a href="{{full_post.link}}">
+      <h6>{{ full_post.title }}</h6>
+    </a>
+
+    {% set post_children = get_posts({
+      'post_type': 'styleguide',
+      'post_parent': full_post.ID,
+      'posts_per_page': -1,
+      'orderby': 'menu_order',
+      'order': 'ASC'
+    }) %}
+
+    {% if post_children|length > 0 %}
+      <ul>
+        {% for child in post_children %}
+          <li>
+            {% include '@views/tease-styleguide.twig' with {post: child } only %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,29 @@
+.block_text-callout {
+  // Add your custom styles here
+  padding: 46px 0 50px;
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+    padding: 92px 0 100px;
+  }
+  &--small {
+    padding: 40px 0;
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding: 68px 0 76px;
+    }
+  }
+  .h5 {
+    margin-bottom: 22px;
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      margin-bottom: 26px;
+    }
+  }
+  .h3 {
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-right: 6%;
+    }
+  }
+  .h2 {
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-right: 2%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "limerock_base_type": "image",
+  "name": "image",
+  "label": "Image",
+  "type": "image",
+  "instructions": "Add image / video",
+  "mime_types": "jpg,jpeg,png,gif,mp4,m4v,mov,wmv,avi,mpg,ogv,3gp,3g2,svg"
+}

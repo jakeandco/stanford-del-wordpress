@@ -1,0 +1,48 @@
+<nav class="header navbar bg-primary navbar-expand-md" id="header">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand mb-0 h1">{{ theme.name }}</a>
+  </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      {% for menu_item in menus.header.items %}
+        {% set is_active = menu_item.current or menu_item.current_item_ancestor %}
+        {% set has_children = menu_item.children|length > 0 %}
+
+        {% if has_children %}
+          {% set link_classes = html_classes(
+            'nav-link',
+            'dropdown-toggle',
+            {
+              'active': is_active,
+            }
+          ) %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="{{menu_item.id}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{menu_item.name}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="{{menu_item.id}}">
+              {% for child in menu_item.children %}
+                <li>
+                  <a class="dropdown-item" href="{{child.path}}">{{child.name}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          {% set link_classes = html_classes(
+            'nav-link',
+            {
+              'active': is_active,
+            }
+          ) %}
+          <li class="nav-item">
+            <a class="{{link_classes}}" {% if is_active %} aria-current="page" {% endif %} href="{{menu_item.path}}">{{menu_item.name}}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

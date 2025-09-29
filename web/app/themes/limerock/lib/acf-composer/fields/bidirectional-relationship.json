@@ -1,0 +1,15 @@
+{
+  "limerock_base_type": "bidirectional-relationship",
+  "label": "relationship",
+  "name": "relationship",
+  "type": "relationship",
+  "post_status": ["publish"],
+  "taxonomy": "",
+  "filters": ["search"],
+  "return_format": "object",
+  "acfe_add_post": 1,
+  "acfe_edit_post": 1,
+  "bidirectional": 1,
+  "post_type": [],
+  "bidirectional_target": []
+}

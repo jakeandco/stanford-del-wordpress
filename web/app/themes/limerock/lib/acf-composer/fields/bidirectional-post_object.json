@@ -1,0 +1,20 @@
+{
+  "limerock_base_type": "bidirectional-post_object",
+  "label": "Bidirectional Post Object",
+  "name": "bidirectional_post_object",
+  "type": "post_object",
+  "post_type": [],
+  "post_status": ["publish"],
+  "taxonomy": "",
+  "return_format": "object",
+  "multiple": 0,
+  "save_custom": 0,
+  "save_post_status": "publish",
+  "acfe_add_post": 1,
+  "acfe_edit_post": 1,
+  "allow_null": 0,
+  "allow_in_bindings": 0,
+  "bidirectional": 1,
+  "bidirectional_target": [],
+  "ui": 1
+}

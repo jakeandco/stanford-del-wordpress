@@ -1,0 +1,27 @@
+// 1. Configuration and helpers
+@import 'abstracts/index';
+
+@mixin body-selector() {
+  :scope {
+    @content;
+  }
+}
+
+.editor-styles-wrapper .acf-block-body:not(.acf-block-preview) {
+  @import 'editor/acf-fixes';
+}
+
+
+:root {
+  @import 'editor/wp-root';
+}
+
+@scope (.editor-styles-wrapper .acf-block-preview ) {
+  @import 'editor/wp-reset';
+
+  @import 'general-styles';
+
+  // 6. block-specific overrides
+  @import 'editor/block-fixes/index';
+
+}

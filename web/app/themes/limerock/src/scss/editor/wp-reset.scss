@@ -1,0 +1,16 @@
+// WP Overrides
+
+.card {
+  max-width: unset;
+  min-width: unset;
+}
+
+.wp-block[class*="align"] {
+  float: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+}
+
+a:hover, a:focus {
+  color: unset;
+}

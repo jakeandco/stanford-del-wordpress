@@ -1,0 +1,10 @@
+{% set repeater_rows = posts %}
+
+{% extends '@partial/repeater.twig'%}
+
+{% block row_container %}
+  {{ parent() }}
+{% endblock %}
+{% block row %}
+  {% include '@partial/tease_switcher.twig' with { post: get_post(row_data), tease_options } only %}
+{% endblock %}

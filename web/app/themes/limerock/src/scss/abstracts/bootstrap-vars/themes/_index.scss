@@ -1,0 +1,242 @@
+@use 'sass:meta';
+@use 'sass:list';
+@import 'dark';
+
+// these are the custom background colors / themes we are allowing
+
+// make sure this color-label variable doesn't be made global
+@mixin dynamic-theme($dynamic-color-label,
+  $dynamic-text-color,
+  $dynamic-primary-color-label,
+  $dynamic-secondary-color-label,
+  $dynamic-tertiary-color-label,
+  $dynamic-highlight-color-label,
+  $dynamic-btn-hover-text-color,
+  $dynamic-btn-hover-bg,
+  $dynamic-hover-bg) {
+  [data-bs-theme='#{$dynamic-color-label}'] {
+    --#{$prefix}body-color: #{map-get($theme-colors, $dynamic-text-color)};
+    --#{$prefix}body-color-rgb: #{map-get(
+ $theme-colors-rgb,
+    $dynamic-text-color )
+  }
+
+  ;
+  --#{$prefix}body-bg: #{map-get($theme-colors, $dynamic-color-label)};
+  --#{$prefix}body-bg-rgb: #{map-get($theme-colors-rgb, $dynamic-color-label)};
+
+  --#{$prefix}emphasis-color: #{map-get($theme-colors, $dynamic-text-color)};
+  --#{$prefix}emphasis-color-rgb: #{map-get(
+ $theme-colors-rgb,
+  $dynamic-text-color )
+}
+
+;
+
+--#{$prefix}primary: #{map-get($theme-colors, $dynamic-primary-color-label)};
+--#{$prefix}primary-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-primary-color-label )
+}
+
+;
+--#{$prefix}primary-color: #{map-get(
+ $theme-colors,
+$dynamic-primary-color-label )
+}
+
+;
+--#{$prefix}primary-color-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-primary-color-label )
+}
+
+;
+--#{$prefix}primary-bg: #{map-get(
+ $theme-colors,
+$dynamic-primary-color-label )
+}
+
+;
+--#{$prefix}primary-bg-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-primary-color-label )
+}
+
+;
+
+--#{$prefix}secondary: #{map-get(
+ $theme-colors,
+$dynamic-secondary-color-label )
+}
+
+;
+--#{$prefix}secondary-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-secondary-color-label )
+}
+
+;
+--#{$prefix}secondary-color: #{map-get(
+ $theme-colors,
+$dynamic-secondary-color-label )
+}
+
+;
+--#{$prefix}secondary-color-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-secondary-color-label )
+}
+
+;
+--#{$prefix}secondary-bg: #{map-get(
+ $theme-colors,
+$dynamic-secondary-color-label )
+}
+
+;
+--#{$prefix}secondary-bg-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-secondary-color-label )
+}
+
+;
+
+--#{$prefix}tertiary: #{map-get(
+ $theme-colors,
+$dynamic-tertiary-color-label )
+}
+
+;
+--#{$prefix}tertiary-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-tertiary-color-label )
+}
+
+;
+--#{$prefix}tertiary-color: #{map-get(
+ $theme-colors,
+$dynamic-tertiary-color-label )
+}
+
+;
+--#{$prefix}tertiary-color-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-tertiary-color-label )
+}
+
+;
+--#{$prefix}tertiary-bg: #{map-get(
+ $theme-colors,
+$dynamic-tertiary-color-label )
+}
+
+;
+--#{$prefix}tertiary-bg-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-tertiary-color-label )
+}
+
+;
+
+--#{$prefix}heading-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}navbar-brand-color: #{map-get(
+ $theme-colors,
+$dynamic-text-color )
+}
+
+;
+
+--#{$prefix}link-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}link-color-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-text-color )
+}
+
+;
+--#{$prefix}link-hover-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}link-hover-color-rgb: #{map-get(
+ $theme-colors-rgb,
+$dynamic-text-color )
+}
+
+;
+
+--#{$prefix}code-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}highlight-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}highlight-bg: #{map-get(
+ $theme-colors,
+$dynamic-highlight-color-label )
+}
+
+;
+
+--#{$prefix}btn-hover-text-color: #{map-get($theme-colors, $dynamic-btn-hover-text-color)};
+--#{$prefix}btn-hover-text-color: #{map-get(
+ $theme-colors,
+$dynamic-btn-hover-text-color )
+}
+
+;
+
+--#{$prefix}btn-hover-bg: #{map-get($theme-colors, $dynamic-btn-hover-bg)};
+--#{$prefix}btn-hover-bg: #{map-get(
+ $theme-colors,
+$dynamic-btn-hover-bg )
+}
+
+;
+
+--#{$prefix}hover-bg-color: #{map-get($theme-colors, $dynamic-text-color)};
+--#{$prefix}hover-bg-color: #{map-get(
+ $theme-colors,
+$dynamic-hover-bg )
+}
+
+;
+
+// @each $color, $value in $theme-colors-text-dark {
+//   --#{$prefix}#{$color}-text-emphasis: #{$value};
+// }
+
+// @each $color, $value in $theme-colors-text-dark {
+//   --#{$prefix}-bg-subtle: #{$value};
+// }
+
+// @each $color, $value in $theme-colors-border-subtle-dark {
+//   --#{$prefix}#{$color}-border-subtle: #{$value};
+// }
+
+--#{$prefix}border-color: #{$dynamic-text-color};
+// --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
+
+// --#{$prefix}form-valid-color: #{$form-valid-color-dark};
+// --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
+// --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
+// --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
+}
+}
+
+@mixin when-themes($color-labels) {
+  @if (meta.type_of($color-labels)=='string') {
+    @scope ([data-bs-theme='#{$color_labels}']) {
+      & {
+        @content;
+      }
+    }
+  }
+
+  @if (list.index(('list', 'map', 'arglist'), meta.type_of($color-labels))) {
+    @each $color_label in $color_labels {
+      @scope ([data-bs-theme='#{$color_label}']) {
+        & {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+
+@import 'white';
+@import 'black';

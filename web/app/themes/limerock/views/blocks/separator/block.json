@@ -1,0 +1,31 @@
+{
+  "name": "limerock/separator",
+  "title": "Separator",
+  "description": "This block displays a simple line that separates blocks from each other.",
+  "category": "theme",
+  "icon": "minus",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "mode": false,
+    "anchor": true,
+    "color": {
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{% set page_background_color = page_background_color|default('dark') %}
+{% extends "@views/base.twig" %}
+{##
+  # Available blocks:
+  #  - hero: The header section of the taxonomy page.
+  #  - intro: The introductory section of the taxonomy page.
+  #  - post_loop: The section where posts related to the taxonomy are displayed.
+  #  - pagination: The pagination block for navigating through posts.
+  #  - outro: The closing section of the taxonomy page.
+  #
+  # Available template variables:
+  #  - term: The current taxonomy term object.
+  #  - fields: The Advanced Custom Fields (ACF) data associated with the current term.
+  #  - template: An object for customizing classes and attributes for various sections.
+  #
+  # The "template" object provides customization options:
+  #   template.classes: An object for adding CSS classes to container elements:
+  #     - template.classes.hero: Classes for the hero section.
+  #     - template.classes.intro: Classes for the intro section.
+  #     - template.classes.post_loop: Classes for the post loop section.
+  #     - template.classes.outro: Classes for the outro section.
+  #
+  #   template.attributes: An object for adding HTML attributes to container elements:
+  #     - template.attributes.hero: Attributes for the hero section.
+  #     - template.attributes.intro: Attributes for the intro section.
+  #     - template.attributes.post_loop: Attributes for the post loop section.
+  #     - template.attributes.outro: Attributes for the outro section.
+  #}
+
+{% block content %}
+  <header class="taxonomy_header hero position-relative taxonomy_header--{{ term.taxonomy }} {{template.classes.hero}}" {{template.attributes.hero}}>
+    {% block hero %}
+      <div class="container title-holder">
+        <h1>{{term.name}}</h1>
+      </div>
+    {% endblock %}
+  </header>
+
+  <div class="container">
+    <section class="taxonomy_intro taxonomy_intro--{{ term.taxonomy|default('default') }} {{template.classes.intro}}" {{template.attributes.intro}}>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9">
+          {% block intro %}{% endblock %}
+        </div>
+      </div>
+    </section>
+
+    <section class="taxonomy_loop taxonomy_loop--{{ term.taxonomy|default('default') }} {{template.classes.post_loop}}" {{template.attributes.post_loop}}>
+      {% block post_loop %}
+        {% include '@partial/post-repeater.twig' with { posts, tease_options: {variant: 'default' } } only %}
+      {% endblock %}
+      {% block pagination %}
+        {% include '@partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+      {% endblock %}
+    </section>
+
+    <section class="taxonomy_outro taxonomy_outro--{{ term.taxonomy }} {{template.classes.outro}}" {{template.attributes.outro}}>
+      {% block outro %}{% endblock %}
+    </section>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% include [
+  ('@views/teases/' ~ post.post_type ~ '-' ~ tease_options.variant ~ '.twig'),
+  ('@views/teases/' ~ post.post_type ~ '.twig'),
+  '@views/tease.twig'
+] with {
+  post,
+  tease_options,
+  current_page, 
+  addition_column_class
+} only %}

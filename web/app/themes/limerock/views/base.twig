@@ -1,0 +1,43 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!-->
+  <html
+    class="no-js no-svg" {{ site.language_attributes }}
+  > <!--<![endif]-->
+  <head>
+    {% include '@views/head-meta.twig' %}
+    {% block head %}{% endblock %}
+  </head>
+
+  <body class="{{body_class}}" data-template="base.twig" data-bs-theme="{{page_color|default(post.meta('page_color').slug)|default(default_page_color)|default('white')}}">
+    {{ function('wp_body_open') }}
+    <a class="skip-link visually-hidden screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+    {% block header %}
+      {% include '@views/parts/header/header.twig' %}
+    {% endblock %}
+    {% block hero %}{% endblock %}
+
+    <section id="content" role="main" class="content-wrapper">
+      <div class="wrapper">
+        {% block content %}
+          Sorry, no content
+        {% endblock %}
+        {% block footnotes %}
+          {% include '@views/parts/footnotes/footnotes.twig' %}
+        {% endblock %}
+      </div>
+      {% if sidebar %}
+        <aside class="layout-sidebar">
+          {{sidebar}}
+        </aside>
+      {% endif %}
+    </section>
+
+    {% block footer %}
+      {% include '@views/parts/footer/footer.twig' %}
+    {% endblock %}
+
+    {{ function('wp_footer') }}
+  </body>
+</html>

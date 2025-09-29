@@ -1,0 +1,28 @@
+{% set styles = [] %}
+{% for spacing_key, spacing_style in block.style.spacing %}
+  {% for spacing_subkey, spacing_substyle in spacing_style %}
+    {% if "var:preset" in spacing_substyle %}
+      {% set spacing_var = 'var(' ~ spacing_substyle|replace({"var:preset": '', '|': '--'}) ~ ')'%}
+    {% else %}
+      {% set spacing_var = spacing_substyle %}
+    {% endif %}
+
+    {% set row = (spacing_key ~'-' ~ spacing_subkey ~': ' ~ spacing_var ~ ';' ) %}
+    {% set styles = styles|merge([row]) %}
+  {% endfor %}
+{% endfor %}
+
+{% if is_example %}
+  {% include "@partial/block-preview.twig" with { block } %}
+{% else %}
+  {% set backgroundColor = block.backgroundColor|default('white') %}
+
+  {% if backgroundColor in ['primary', 'secondary', 'tertiary'] %}
+    {% set extra_classes = extra_classes|default('') ~ ' bg-' ~ backgroundColor %}
+  {% else %}
+    {% set extra_attributes = extra_attributes|default('') ~ ' data-bs-theme="'~backgroundColor~'"' %}
+  {% endif %}
+  <section class="block-wrapper {{ extra_classes }}" data-block="{{ block.id }}" id="{{ block.anchor|default(block.id) }}" style="{{styles|join(' ')}}" {{ extra_attributes }}>
+    {% block content %}{% endblock %}
+  </section>
+{% endif %}

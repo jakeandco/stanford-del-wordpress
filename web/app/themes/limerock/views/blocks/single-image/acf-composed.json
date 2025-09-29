@@ -1,0 +1,21 @@
+{
+  "name": "group_block_single-image",
+  "title": "Block Details: Single Image",
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/image",
+      "label": "Image",
+      "name": "image",
+      "instructions": "Recommended Dimensions: 2880x1608px"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/single-image"
+      }
+    ]
+  ]
+}

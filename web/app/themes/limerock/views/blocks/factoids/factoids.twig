@@ -1,0 +1,13 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_factoids block_factoids--count-' ~ fields.factoids|length } %}
+  {% block content %}
+    <ul class="card-group">
+      {% for row in fields.factoids %}
+        <li class="card">
+          <p class="card-title">{{row.title}}</p>
+          <p class="card-subtitle">{{row.description}}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <p>{{fields.caption}}</p>
+  {% endblock %}
+{% endembed %}

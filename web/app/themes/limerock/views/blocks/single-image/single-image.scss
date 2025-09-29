@@ -1,0 +1,68 @@
+.block_single-image {
+  display: flow-root;
+
+  padding-bottom: 37px;
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+    padding-bottom: 100px;
+  }
+
+  // Add your custom styles here
+  .media-item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .media-item_holder {
+    position: relative;
+    padding-bottom: 96.5%;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-bottom: 55.85%;
+    }
+  }
+
+  .media-item_caption {
+    padding-top: 15px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding-top: 17px;
+    }
+  }
+
+  figure {
+    margin-bottom: 0;
+  }
+
+  &--full {
+    &>.container {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+
+    .media-item_caption {
+      padding-top: 14px;
+      padding-left: 0;
+      padding-right: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &--wide {
+    padding-bottom: 0;
+
+    .media-item_caption {
+      margin-bottom: 37px;
+      
+      @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}

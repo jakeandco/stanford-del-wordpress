@@ -1,0 +1,86 @@
+@use 'sass:map';
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------
+// Bootstrap Variables
+// -----------------------------------
+@import 'bootstrap-vars';
+
+// -----------------------------------
+// Custom Variables
+// -----------------------------------
+// Try to accomplish as much within the Bootstrap convention
+// as possible before adding / overriding here
+
+$gray: #676767;
+
+$dark-blue: #0C2083;
+$light-blue: #BED0F9;
+$bage: #F0EADD;
+
+$default-light-colors: (
+  'background': $white,
+  'text': $black,
+);
+
+$default-dark-colors: (
+  'background': $black,
+  'text': $white,
+);
+
+$custom_colors: (
+  'black': 
+    map.merge(
+      $default-dark-colors,
+      (
+        'background': $black,
+        'text': $white,
+      )
+    ),
+  'white':
+    map.merge(
+      $default-light-colors,
+      (
+        'background': $white,
+        'text': $black,
+      )
+    ),
+
+  'blue':
+    map.merge(
+      $default-light-colors,
+      (
+        'background': rgba(161,186,241,0.4),
+        'text': $black,
+      )
+    ),
+  'light-blue':
+    map.merge(
+      $default-light-colors,
+      (
+        'background': $light-blue,
+        'text': $black,
+      )
+    ),
+  'blue-overlay':
+    map.merge(
+      $default-light-colors,
+      (
+        'background': linear-gradient(180deg, rgba(27, 95, 255, 0.5) 0%, rgba(14, 39, 160, 0.5) 100%),
+        'text': $white,
+      )
+    ),
+);
+
+// TODO: should be updated to match design
+$theme_spacing: (
+  xxs: 1px,
+  xs: 2px,
+  sm: 3px,
+  md: 4px,
+  lg: 5px,
+  xl: 6px,
+  xxl: 7px,
+);

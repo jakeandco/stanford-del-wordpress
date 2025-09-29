@@ -1,0 +1,13 @@
+{% set parent = post.parent %}
+{% if parent is empty and post.post_type != 'page' %}
+  {% set parent = get_post_type_archive(post.post_type) %}
+{% endif %}
+
+{% if parent is not empty %}
+  <div class="breadcrumb">
+    <a href="{{ parent.path }}">
+      <span class="icon"><-</span>
+      {{parent.title}}
+    </a>
+  </div>
+{% endif %}

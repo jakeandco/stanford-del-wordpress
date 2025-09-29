@@ -1,0 +1,28 @@
+{
+  "limerock_base_type": "address",
+  "label": "Address",
+  "name": "address",
+  "type": "group",
+  "sub_fields": [
+    {
+      "label": "Street Address",
+      "name": "street_address",
+      "type": "text"
+    },
+    {
+      "label": "City",
+      "name": "city",
+      "type": "text"
+    },
+    {
+      "label": "State",
+      "name": "state",
+      "type": "text"
+    },
+    {
+      "label": "Zipcode",
+      "name": "zipcode",
+      "type": "text"
+    }
+  ]
+}

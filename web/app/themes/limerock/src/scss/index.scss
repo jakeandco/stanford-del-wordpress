@@ -1,0 +1,9 @@
+@mixin body-selector() {
+  body {
+    @content;
+  }
+}
+
+@import "abstracts/index";
+
+@import 'general-styles';

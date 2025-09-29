@@ -1,0 +1,39 @@
+version: '3.8'
+
+secrets:
+  host_ssh_key:
+    file: ${SSH_KEY_PATH}
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: docker/wordpress/Dockerfile
+    volumes:
+      - .:/var/www/html:delegated
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+      - ~/.ssh/known_hosts:/root/.ssh/known_hosts:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=${DB_USER}
+      - WORDPRESS_DB_PASSWORD=${DB_PASSWORD}
+      - WORDPRESS_DB_NAME=${DB_NAME}
+      - WORDPRESS_DB_PREFIX=${DB_PREFIX}
+      - WORDPRESS_DEBUG=1
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  mysql_data: 

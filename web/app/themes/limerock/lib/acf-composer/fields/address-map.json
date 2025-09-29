@@ -1,0 +1,6 @@
+{
+  "limerock_base_type": "address-map",
+  "label": "Address",
+  "name": "address",
+  "type": "google_map"
+}

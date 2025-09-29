@@ -1,0 +1,32 @@
+{
+  "name": "limerock/body-copy",
+  "title": "Body Copy",
+  "description": "This block displays generic body copy for the site.",
+  "category": "text",
+  "icon": "text",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "anchor": true,
+    "className": false,
+    "color": {
+      "text": false,
+      "background": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "align": false
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

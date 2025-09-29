@@ -1,0 +1,9 @@
+/vendor/
+/node_modules/
+/dist/
+/wordpress/
+
+mix-manifest.json
+*storybook.log
+/storybook-static/*
+!/storybook-static/.gitkeep

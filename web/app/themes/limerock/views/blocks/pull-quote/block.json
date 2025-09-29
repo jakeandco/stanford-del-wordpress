@@ -1,0 +1,28 @@
+{
+  "name": "limerock/pull-quote",
+  "title": "Pull Quote",
+  "description": "This block displays pull quotes",
+  "category": "text",
+  "icon": "format-quote",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "anchor": true,
+    "className": false,
+    "color": { "background": false, "text": false },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_text-image full-block-width block_text-image--' ~ block.align } %}
+
+  {% block content %}
+    <div class="container">
+      <div class="img-col">
+        {% include '@partial/media-item.twig' with { image: fields.image } only %}
+      </div>
+      <div class="text-col">
+        {% if fields.title %}
+          <h2 class="h5">{{fields.title}}</h2>
+        {% endif %}
+
+        {{fields.copy}}
+        
+        {% if fields.link.title %}
+          <a class="btn btn-outline" href="{{fields.link.url}}" alt="{{fields.link.alt}}">{{fields.link.title}}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

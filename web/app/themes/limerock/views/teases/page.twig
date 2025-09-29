@@ -1,0 +1,16 @@
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_classes:'has-overlay-background',
+  },
+  post
+} only %}
+  {% block content %}
+    {% set full_post = get_post(post) %}
+    <h4><a href="{{full_post.link}}">{{ full_post.title }}</a></h4>
+    <span class="subtitle d-block">{{ full_post.meta('subtitle') }}</span>
+    {% for author in full_post.meta('authors') %}
+      <span class="name d-block">{{author.title}}</span>
+    {% endfor %}
+    <a href="{{full_post.link}}" class="btn btn-primary">{{ full_post.category().name }}</a>
+  {% endblock %}
+{% endembed %}

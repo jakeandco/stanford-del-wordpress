@@ -1,0 +1,9 @@
+{% extends "@views/page.twig" %}
+
+{% block hero %}
+  {% include "@views/heros/front-page.twig" with { post } %}
+{% endblock %}
+
+{% block content %}
+  {{post.content}}
+{% endblock %}

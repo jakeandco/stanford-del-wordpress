@@ -1,0 +1,33 @@
+{% set autoplay = autoplay is null ? true : autoplay %}
+{% set playsinline = playsinline is null ? true : playsinline %}
+
+{% set primary_media_item = video|default(image) %}
+
+{% if primary_media_item is not empty %}
+  <figure>
+    <div class="media-item_holder">
+      {% if primary_media_item.type == 'video' %}
+        <video class="media-item media-item--{{ primary_media_item.type }}" muted loop data-video {{ playsinline != false ? 'playsinline' : '' }} {{ autoplay != false ? 'autoplay' : '' }} {% if video is not empty and image is not empty %} poster="{{ image.url|default(image.src) }}" {% endif %}>
+          <source src="{{ primary_media_item.url|default(primary_media_item.src) }}" type="{{primary_media_item.mime_type}}">
+          Your browser does not support the video tag.
+        </video>
+
+        {% if not autoplay %}
+          <div class="video-toggle">
+            <button class="btn toggler" aria-pressed="false">
+              Play Video
+              <svg width="7" height="10" viewbox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.35645 5L0.356445 9.33013L0.356446 0.669872L6.35645 5Z" fill="black"/>
+              </svg>
+            </button>
+          </div>
+        {% endif %}
+      {% else %}
+        <img class="media-item media-item--{{ primary_media_item.type }}" src="{{ primary_media_item.url|default(primary_media_item.src) }}" alt='{{primary_media_item.alt}}'/>
+      {% endif %}
+    </div>
+    {% if not hide_caption and primary_media_item.caption is not empty %}
+      <figcaption class="container media-item_caption">{{primary_media_item.caption}}</figcaption>
+    {% endif %}
+  </figure>
+{% endif %}

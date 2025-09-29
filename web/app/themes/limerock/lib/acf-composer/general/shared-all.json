@@ -1,0 +1,15 @@
+{
+  "name": "shared_all",
+  "title": "Shared: All",
+  "fields": [
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ]
+}

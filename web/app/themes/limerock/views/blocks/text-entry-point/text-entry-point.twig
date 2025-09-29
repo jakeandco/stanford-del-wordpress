@@ -1,0 +1,14 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_text-entry-point full-block-width' } %}
+  {% block content %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-xl-8">
+          <div class="text-holder">
+            {{fields.copy}}
+          </div>
+          <a class="btn btn-outline" href="{{fields.link.url}}" alt="{{fields.link.alt}}">{{fields.link.title}}</a>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

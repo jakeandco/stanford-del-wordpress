@@ -1,0 +1,33 @@
+{
+  "name": "limerock/media-item",
+  "title": "Media Item",
+  "description": "This block displays a single Image or Video, with customizable alignment controls.",
+  "category": "media",
+  "icon": "format-image",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "anchor": true,
+    "className": false,
+    "color": {
+      "background": false,
+      "text": false
+    },
+    "alignWide": true,
+    "align": ["full", "left", "right", "wide"],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

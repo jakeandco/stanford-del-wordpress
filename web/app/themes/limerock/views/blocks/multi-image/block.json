@@ -1,0 +1,32 @@
+{
+  "name": "limerock/multi-image",
+  "title": "Multi-Image",
+  "description": "This block displays multiple images / videos in a variety of formats: 2-up, 3-up, and Carousel",
+  "category": "media",
+  "icon": "format-gallery",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

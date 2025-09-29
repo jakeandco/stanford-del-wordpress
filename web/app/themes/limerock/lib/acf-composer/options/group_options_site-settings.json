@@ -1,0 +1,70 @@
+{
+  "name": "group_options_site-settings",
+  "title": "Options Page: Site Settings",
+  "fields": [
+    {
+      "label": "Header",
+      "name": "tab-header",
+      "type": "tab"
+    },
+    {
+      "label": "Header",
+      "name": "header",
+      "type": "group",
+      "sub_fields": []
+    },
+    {
+      "label": "Footer",
+      "name": "tab-footer",
+      "type": "tab"
+    },
+    {
+      "label": "Footer",
+      "name": "footer",
+      "type": "group",
+      "sub_fields": []
+    },
+    {
+      "label": "General",
+      "name": "tab-general",
+      "type": "tab"
+    },
+    {
+      "label": "General",
+      "name": "general",
+      "type": "group",
+      "sub_fields": []
+    },
+    {
+      "label": "Blocks",
+      "name": "tab-blocks",
+      "type": "tab"
+    },
+    {
+      "label": "Block Fields",
+      "name": "blocks",
+      "type": "group",
+      "sub_fields": []
+    },
+    {
+      "label": "Post Types",
+      "name": "tab-post-types",
+      "type": "tab"
+    },
+    {
+      "label": "Post Types",
+      "name": "post_types",
+      "type": "group",
+      "sub_fields": []
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "site-settings"
+      }
+    ]
+  ]
+}

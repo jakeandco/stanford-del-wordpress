@@ -1,0 +1,9 @@
+{
+  "limerock_base_type": "date",
+  "label": "asdf",
+  "name": "asdf",
+  "type": "date_picker",
+  "display_format": "F j, Y",
+  "return_format": "F j, Y",
+  "first_day": 1
+}

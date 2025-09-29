@@ -1,0 +1,61 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_multi-image full-block-width block_multi-image--'~fields.variant  } %}
+  {% block content %}
+    <div class="{{ fields.variant == 'carousel-wide' ? 'container-fluid' : 'container' }}">
+      {% if fields.variant == '2-up' %}
+        <div class="images-row">
+          {% for row in fields.items %}
+            <div class="image-box img-cover-block">
+              {% include '@partial/media-item.twig' with { styles,  image: row.image } only %}
+              <div class="text-holder">
+                <h5>{{row.title}}</h5>
+                {{row.support_text}}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% elseif fields.variant == '3-up' %}
+        <div class="images-row">
+          {% for row in fields.items %}
+            <div class="image-box img-cover-block">
+              {% include '@partial/media-item.twig' with { styles,  image: row.image } only %}
+              <div class="text-holder">
+                <h5>{{row.title}}</h5>
+                {{row.support_text}}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% elseif fields.variant == 'carousel' or fields.variant == 'carousel-wide' %}
+        <div class="row">
+          <div class="image-carousel intro-gallery swiper">
+            <div class="swiper-wrapper">
+              {% for row in fields.items %}
+                <div class="image-box swiper-slide img-cover-block {% if loop.index == 1 %}active{% endif %}">
+                  {% include '@partial/media-item.twig' with { styles,  image: row.image } only %}
+                  
+                  {% if row.support_text %}
+                    <div class="text-holder">
+                      {{row.support_text}}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+
+            <div class="swiper-nav-link swiper-button-prev">
+              <svg style="transform: rotate(180deg);" width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8298 2.38365C12.6004 1.61359 13.313 0.900995 14.0143 0.200195C18.6072 4.80156 23.214 9.4173 27.8002 14.0115C23.2422 18.5795 18.6354 23.1963 14.0415 27.8007C13.3279 27.0845 12.6122 26.3658 11.9109 25.6619C15.2372 22.3241 18.5867 18.9627 21.9844 15.5531H0.200195V12.4709H21.8858C18.5343 9.10896 15.1823 5.74657 11.8303 2.38417L11.8298 2.38365Z" fill="currentColor"/>
+              </svg>
+            </div>
+
+            <div class="swiper-nav-link swiper-button-next">
+              <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8298 2.38365C12.6004 1.61359 13.313 0.900995 14.0143 0.200195C18.6072 4.80156 23.214 9.4173 27.8002 14.0115C23.2422 18.5795 18.6354 23.1963 14.0415 27.8007C13.3279 27.0845 12.6122 26.3658 11.9109 25.6619C15.2372 22.3241 18.5867 18.9627 21.9844 15.5531H0.200195V12.4709H21.8858C18.5343 9.10896 15.1823 5.74657 11.8303 2.38417L11.8298 2.38365Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endblock %}
+{% endembed %}

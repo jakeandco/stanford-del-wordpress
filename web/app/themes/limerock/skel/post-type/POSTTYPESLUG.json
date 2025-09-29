@@ -1,0 +1,14 @@
+{
+  "name": "group_post-type_POSTTYPESLUG",
+  "title": "Post Type: POSTTYPENAME Details",
+  "fields": [],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "POSTTYPESLUG"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{% extends "@views/base.twig" %}
+
+{% block content %}
+  <div class="search-section content-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <h1 class="h2">{{search_title}}</h1>
+
+          <form class="search-form position-relative" action="{{ search_url }}" method="get" role="search">
+            <label for="popup-search" class="popup-search-label">
+              <span class="screen-reader-text invisible">Search</span>
+              <svg width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8.5" cy="8.5" r="8" stroke="black"/>
+                <line x1="14.4277" y1="13.7207" x2="20.3536" y2="19.6466" stroke="black"/>
+              </svg>
+            </label>
+            <input type="search" id="popup-search" name="s" placeholder="Search" value=""/>
+            <button type="submit" class="popup-search-button">
+              <span class="screen-reader-text invisible">Submit search</span>
+            </button>
+          </form>
+
+          <div class="post-list">
+            {% embed '@partial/repeater.twig' with { repeater_rows: posts } %}
+              {% block row %}
+                {% include '@partial/tease_switcher.twig' with { post: get_post(row_data), tease_options } only %}
+              {% endblock %}
+              {% block empty %}
+                <p class="h4">No results found.</p>
+                <p class="h5">Please try a different keyword</p>
+              {% endblock %}
+            {% endembed %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

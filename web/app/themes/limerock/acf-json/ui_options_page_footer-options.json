@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_footer-options",
+    "title": "Footer Options",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Footer Options",
+    "menu_slug": "footer-options",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-generic"
+    },
+    "update_button": "Update",
+    "updated_message": "Footer Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "post_id",
+    "post_id": "footer_options",
+    "autoload": 0,
+    "modified": 1748638988
+}

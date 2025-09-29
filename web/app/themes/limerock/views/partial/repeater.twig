@@ -1,0 +1,9 @@
+{% block container %}
+  {% for row_data in repeater_rows %}
+    {% block row_container %}
+      {% block row %}{% endblock row %}
+    {% endblock row_container %}
+  {% else %}
+    {% block empty %}{% endblock empty %}
+  {% endfor %}
+{% endblock container %}

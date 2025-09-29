@@ -1,0 +1,24 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_simple-list' } %}
+  {% block content %}
+    <div class="container">
+      <h5>{{fields.title}}</h5>
+      <div class="table-responsive">
+        {% set table_rows = fields.list|filter(v => (v.title is not empty) or (v.content is not empty)) %}
+        {% if table_rows %}
+          <table class="table">
+            <tbody>
+              {% for row in table_rows %}
+                <tr>
+                  <td>
+                    <span class="title">{{row.title}}</span>
+                  </td>
+                  <td>{{row.content}}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

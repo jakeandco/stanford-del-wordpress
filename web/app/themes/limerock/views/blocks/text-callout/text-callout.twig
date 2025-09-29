@@ -1,0 +1,14 @@
+{% if fields.size == 'small' %}
+  {% set text_class = 'h3' %}
+{% else %}
+  {% set text_class = 'h2' %}
+{% endif %}
+
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_text-callout full-block-width block_text-callout--' ~ fields.size } %}
+  {% block content %}
+    <div class="container">
+      <h3 class="h5">{{fields.title}}</h3>
+      <p class="{{text_class}} mb-0">{{fields.callout}}</p>
+    </div>
+  {% endblock %}
+{% endembed %}

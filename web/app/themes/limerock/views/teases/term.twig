@@ -1,0 +1,9 @@
+{% set term = get_term(term) %}
+<article class="tease-term tease-term-{{term.taxonomy}} tease-term-{{term.taxonomy}}-{{term.slug}} {{extra_classes}}" id="tease-term--{{term.taxonomy}}--{{term.slug}}">
+  {% block content %}
+    <h3 class="title">{{ term.title }}</h3>
+    <p class="subtitle">{{ term.description }}</p>
+
+    <a href="{{term.path}}" class="btn btn-link">Listen Now</a>
+  {% endblock %}
+</article>

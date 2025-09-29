@@ -1,0 +1,34 @@
+{% set footnotes = post.meta('page_footnotes')|default([]) %}
+{% if footnotes is not empty %}
+
+  {% set accordion_content %}
+  <ol class="footnotes-list list-unstyled">
+    {% for row in footnotes %}
+      <li>
+        <a class="footnote-back footnote-anchor" href="#footnote-link--{{loop.index}}">{{loop.index}}</a>
+        <a href="{{row.footnote.url}}" target="{{row.footnote.target}}" id="footnote--{{loop.index}}">{{row.footnote.title}}</a>
+      </li>
+    {% endfor %}
+  </ol>
+  {% endset %}
+
+  {% include "@views/blocks/accordion/accordion.twig" with {
+    block: {
+      anchor: "footnotes",
+      backgroundColor: "white",
+    },
+    fields: {
+      rows: [
+        {
+          title: "Footnotes & Citations on this page (" ~ footnotes|length ~ ")",
+          content: [
+            {
+              acf_fc_layout: "text",
+              text:  accordion_content,
+            }
+          ]
+        }
+      ]
+    }
+  } %}
+{% endif %}

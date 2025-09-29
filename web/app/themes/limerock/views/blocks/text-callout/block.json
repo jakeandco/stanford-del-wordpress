@@ -1,0 +1,32 @@
+{
+  "name": "limerock/text-callout",
+  "title": "Text Callout",
+  "description": "This block displays a large text field with an optional title. The size of text is configurable.",
+  "category": "text",
+  "icon": "megaphone",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

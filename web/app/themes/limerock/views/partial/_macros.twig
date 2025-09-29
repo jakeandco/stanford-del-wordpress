@@ -1,0 +1,19 @@
+{% macro html_attributes(arr) %}
+  {% apply trim %}
+  {% if arr is not empty %}
+    {% set renderable_items = arr|filter(i => (i is not empty) and (i[2] is null or i[2] is true)) %}
+    {% set rendered_items = []%}
+
+    {% for arr_item in renderable_items %}
+      {% set key = arr_item[0]%}
+      {% set value = arr_item[1] %}
+      {% set rendered_item %}
+      {{key}}="{{'data-limerock' in key ? (value|json_encode|escape) : value}}"
+      {% endset %}
+      {% set rendered_items = rendered_items|merge([rendered_item|trim]) %}
+    {% endfor %}
+
+    {{ rendered_items|join(' ') }}
+  {% endif %}
+  {% endapply %}
+{% endmacro %}

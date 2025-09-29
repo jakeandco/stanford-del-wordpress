@@ -1,0 +1,35 @@
+{
+  "name": "group_block_quote",
+  "title": "Block Details: Quote",
+  "fields": [
+    {
+      "label": "Size",
+      "name": "size",
+      "type": "select",
+      "choices": {
+        "large": "Large",
+        "small": "Small"
+      },
+      "default_value": "large"
+    },
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
+      "label": "Quote",
+      "name": "quote"
+    },
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
+      "label": "Attribution",
+      "name": "attribution"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/quote"
+      }
+    ]
+  ]
+}

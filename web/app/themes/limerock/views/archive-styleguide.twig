@@ -1,0 +1,12 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "@views/archive.twig" %}
+
+{% block content %}
+  {% for post in posts %}
+    {% if post.parent is empty %}
+      {% include ['@views/tease-'~post.post_type~'.twig', '@views/tease.twig'] %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}
