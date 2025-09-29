@@ -1,0 +1,14 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_2-column-text-block' } %}
+  {% block content %}
+
+
+    <p>{{fields.heading}}</p>
+
+    <p>{{fields.column_1}}</p>
+
+    <p>{{fields.column_2}}</p>
+
+    {{fields.sidebar_content}}
+
+  {% endblock %}
+{% endembed %}
