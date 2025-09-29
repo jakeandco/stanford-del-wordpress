@@ -1,7 +1,7 @@
 {
   "name": "limerock/body-copy",
   "title": "Body Copy",
-  "description": "This block displays generic body copy for the site.",
+  "description": "Flexible rich-text content block for long-form paragraphs, headings, lists, etc.",
   "category": "text",
   "icon": "text",
   "keywords": [],
