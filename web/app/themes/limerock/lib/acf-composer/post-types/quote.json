@@ -1,0 +1,27 @@
+{
+  "name": "group_post-type_quote",
+  "title": "Post Type: Quote Details",
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/bidirectional-post_object",
+      "label": "Person",
+      "name": "person",
+      "bidirectional": 0,
+      "post_type": ["person"]
+    },
+    {
+      "label": "Quote",
+      "name": "quote",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "quote"
+      }
+    ]
+  ]
+}

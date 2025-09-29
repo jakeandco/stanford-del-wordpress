@@ -1,9 +1,9 @@
 {
-  "name": "limerock/quote",
-  "title": "Quote",
-  "description": "A block that displays a quote either selected from the quote post type or directly entered into the block.",
+  "name": "limerock/two-column-text-block",
+  "title": "2-Column Text Block",
+  "description": "Two equal-width text columns with optional CTA buttons; stacks on mobile.",
   "category": "text",
-  "icon": "quote",
+  "icon": "admin-comments",
   "keywords": [],
   "acf": {
     "mode": "preview",
@@ -14,7 +14,7 @@
     "align": false,
     "anchor": true,
     "color": {
-      "gradient": true,
+      "gradient": false,
       "background": true,
       "text": false
     },

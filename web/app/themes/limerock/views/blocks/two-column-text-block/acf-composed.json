@@ -1,0 +1,35 @@
+{
+  "name": "group_block_two-column-text-block",
+  "title": "Block Details: 2-Column Text Block",
+  "fields": [
+    {
+      "label": "Heading",
+      "name": "heading",
+      "type": "text"
+    },
+    {
+      "label": "Column 1",
+      "name": "column_1",
+      "type": "text"
+    },
+    {
+      "label": "Column 2",
+      "name": "column_2",
+      "type": "text"
+    },
+    {
+      "label": "Sidebar Content",
+      "name": "sidebar_content",
+      "type": "wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/two-column-text-block"
+      }
+    ]
+  ]
+}

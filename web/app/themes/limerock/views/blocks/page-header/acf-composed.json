@@ -14,9 +14,9 @@
       }
     },
     {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
       "label": "Intro Copy",
-      "name": "intro_copy",
-      "type": "wysiwyg"
+      "name": "intro_copy"
     }
   ],
   "location": [

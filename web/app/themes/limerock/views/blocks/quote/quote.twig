@@ -1,23 +1,24 @@
-{% set block = block|merge({
-  backgroundColor: block.backgroundColor|default('light-green')
-}) %}
-
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_quote full-block-width' } %}
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_quote' } %}
   {% block content %}
-    <div class="container">
-      <figure class="m-0">
-        <blockquote class="blockquote blockquote--{{fields.size|default('large')}}">
-          {{fields.quote}}
-        </blockquote>
 
-        {% if fields.attribution %}
-          <figcaption class="blockquote-footer">
-            <cite class="fst-normal d-block">
-              {{fields.attribution}}
-            </cite>
-          </figcaption>
-        {% endif %}
-      </figure>
-    </div>
+
+    {% if fields.selection_mode == 'quote_post' %}
+      <h4>Select type: Quote Post</h4>
+      ,
+    {% elseif fields.selection_mode == 'manual' %}
+      <h4>Select type: Manual</h4>
+
+    {% endif %}
+
+
+    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.quote_source) } only %}
+
+    {{fields.manual_quote}}
+
+
+    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.citation) } only %}
+
+    <a href="{{fields.cta.url}}" alt="{{fields.cta.alt}}">{{fields.cta.title}}</a>
+
   {% endblock %}
 {% endembed %}

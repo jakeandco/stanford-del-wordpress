@@ -3,24 +3,69 @@
   "title": "Block Details: Quote",
   "fields": [
     {
-      "label": "Size",
-      "name": "size",
+      "label": "Selection Mode",
+      "name": "selection_mode",
       "type": "select",
       "choices": {
-        "large": "Large",
-        "small": "Small"
-      },
-      "default_value": "large"
+        "quote_post": "Quote Post",
+        "manual": "Manual"
+      }
     },
     {
-      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
-      "label": "Quote",
-      "name": "quote"
+      "label": "Quote Source",
+      "name": "quote_source",
+      "type": "post_object",
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "select",
+            "operator": "==",
+            "value": "quote_post"
+          }
+        ]
+      ]
     },
     {
-      "acf_composer_extend": "LimeRockTheme/ACF/fields/body-copy",
-      "label": "Attribution",
-      "name": "attribution"
+      "label": "Manual Quote",
+      "name": "manual_quote",
+      "type": "wysiwyg",
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "select",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Citation",
+      "name": "citation",
+      "type": "post_object",
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "select",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "CTA",
+      "name": "cta",
+      "type": "link",
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "select",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
     }
   ],
   "location": [
