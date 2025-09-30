@@ -1,0 +1,78 @@
+name: Deploy to Pantheon
+
+on:
+  pull_request: { types: [opened, synchronize, reopened] } # PRs → Multidev
+  push:
+    branches: [main] # main → Dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+      contents: read
+      pull-requests: read
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1 # ensure shallow (default is 1, but we make it explicit)
+
+      # PHP for Composer
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
+
+      # Cache Composer (theme dir)
+      - name: Cache Composer deps
+        uses: actions/cache@v4
+        with:
+          path: web/app/themes/limerock/vendor
+          key: composer-${{ runner.os }}-${{ hashFiles('web/app/themes/limerock/composer.lock') }}
+
+      # Install theme Composer dependencies
+      - name: Composer install (theme)
+        working-directory: web/app/themes/limerock
+        run: composer install --no-dev --prefer-dist --no-interaction --no-progress
+
+      # Node for theme build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: web/app/themes/limerock/package-lock.json
+
+      # Build theme assets
+      - name: Install & build (theme)
+        working-directory: web/app/themes/limerock
+        run: |
+          npm ci
+          npm run build
+
+      # Push to Pantheon multidev for new PRs.
+      - name: Push to Pantheon (PRs → Multidev)
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: pantheon-systems/push-to-pantheon@0.x
+        with:
+          ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
+          machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+          site: ${{ vars.PANTHEON_SITE }}
+          clone_content: false
+          source_env: live
+        env:
+          GIT_TERMINUS_SITE_ROOT_NO_INIT: true
+
+      # Push to Pantheon dev for new main branch commits.
+      - name: Push to Pantheon (main → dev)
+        if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+        uses: pantheon-systems/push-to-pantheon@0.x
+        with:
+          ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
+          machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+          site: ${{ vars.PANTHEON_SITE }}
+          delete_old_environments: true
+        env:
+          GIT_TERMINUS_SITE_ROOT_NO_INIT: true
