@@ -152,7 +152,10 @@
     ]
   },
   "scripts": {
-    "post-install-cmd": "@maybe-create-symlinks",
+    "post-install-cmd": [
+      "@maybe-create-symlinks",
+      "bash ./scripts/post-install.sh"
+    ],
     "pre-update-cmd": [
       "WordPressComposerManaged\\ComposerScripts::preUpdate"
     ],
