@@ -22,7 +22,55 @@
       "label": "Footer",
       "name": "footer",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "Address",
+          "name": "address",
+          "type": "textarea"
+        },
+        {
+          "label": "Email",
+          "name": "contact_email",
+          "type": "text"
+        },
+        {
+          "label": "Social Media Links",
+          "name": "social_media_links",
+          "type": "repeater",
+          "sub_fields": [
+            {
+              "label": "Type",
+              "name": "type",
+              "type": "select",
+              "choices": {
+                "linkedin": "Linkedin",
+                "twitter_x": "X( Twitter)",
+                "youtube": "YouTube"
+              }
+            },
+            {
+              "label": "URL",
+              "name": "url",
+              "type": "url"
+            }
+          ]
+        },
+        {
+          "label": "Subscribe Text",
+          "name": "subscribe_text",
+          "type": "text"
+        },
+        {
+          "label": "Bottom Logo",
+          "name": "bottom_logo",
+          "type": "image"
+        },
+        {
+          "label": "Copyright",
+          "name": "copyright",
+          "type": "text"
+        }
+      ]
     },
     {
       "label": "General",
