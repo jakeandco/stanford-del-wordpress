@@ -55,7 +55,6 @@ class TimberCustomizer
 		];
 
 		$context['options']  = [
-			'footer' => get_fields('footer_options'),
 			'site' => get_fields('site-settings'),
 		];
 
