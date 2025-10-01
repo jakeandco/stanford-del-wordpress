@@ -60,7 +60,7 @@ jobs:
           ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           site: ${{ vars.PANTHEON_SITE }}
-          clone_content: false
+          clone_content: true
           source_env: live
         env:
           GIT_TERMINUS_SITE_ROOT_NO_INIT: true
