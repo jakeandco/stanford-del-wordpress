@@ -61,7 +61,7 @@ jobs:
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           site: ${{ vars.PANTHEON_SITE }}
           clone_content: true
-          source_env: live
+          source_env: dev
         env:
           GIT_TERMINUS_SITE_ROOT_NO_INIT: true
 
