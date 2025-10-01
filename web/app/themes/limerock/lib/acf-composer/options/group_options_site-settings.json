@@ -85,7 +85,137 @@
       "label": "Footer",
       "name": "footer",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "Top",
+          "name": "top",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Logo",
+              "name": "logo",
+              "type": "image"
+            },
+            {
+              "label": "Address",
+              "name": "address",
+              "type": "wysiwyg"
+            },
+            {
+              "label": "Email Label",
+              "name": "email_label",
+              "type": "text"
+            },
+            {
+              "label": "Email Address",
+              "name": "email_address",
+              "type": "email"
+            },
+            {
+              "label": "Menu Label",
+              "name": "menu_label",
+              "type": "text"
+            },
+            {
+              "label": "Menu Items",
+              "name": "menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Middle",
+          "name": "middle",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Subscribe Label",
+              "name": "subscribe_label",
+              "type": "text"
+            },
+            {
+              "label": "Subscribe Form",
+              "name": "subscribe_form",
+              "type": "oembed"
+            },
+            {
+              "label": "Subscribe Disclaimer",
+              "name": "subscribe_disclaimer",
+              "type": "wysiwyg"
+            },
+            {
+              "label": "Social Menu Label",
+              "name": "social_menu_label",
+              "type": "text"
+            },
+            {
+              "label": "Social Menu Items",
+              "name": "social_menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Bottom",
+          "name": "bottom",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Heading Text",
+              "name": "heading_text",
+              "type": "text"
+            },
+            {
+              "label": "University Logo",
+              "name": "university_logo",
+              "type": "image"
+            },
+            {
+              "label": "Primary Links",
+              "name": "primary_links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            },
+            {
+              "label": "Secondary Links",
+              "name": "secondary_links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            },
+            {
+              "label": "Copyright Text ",
+              "name": "copyright_text",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "General",
