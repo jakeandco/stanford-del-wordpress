@@ -1,3 +1,35 @@
+{% set header_fields = options.site.header %}
+
+{# Example of fields for banner nav #}
+<ul>
+  {% for row in header_fields.banner_navigation.links %}
+    <li>
+      <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{# End example of fields for banner nav #}
+{# Example of fields for main nav #}
+<div>
+  {% include "@partial/media-item.twig" with { image: header_fields.main_navigation.logo } only %}
+  <ul>
+    {% for row in header_fields.main_navigation.menu_items %}
+      {% for subrow in row.sub_menu_items %}
+        {% set page_post = get_post(subrow.page) %}
+        <li>
+          <a href="{{ page_post.path }}">{{ page_post.title }}</a>
+        </li>
+      {% endfor %}
+      {% for subrow in row.utility_links %}
+        <li>
+          <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>
+{# End example of fields for main nav #}
+
 <nav class="header navbar bg-primary navbar-expand-md" id="header">
   <div class="container-fluid">
     <a href="/" class="navbar-brand mb-0 h1">{{ theme.name }}</a>

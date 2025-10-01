@@ -11,7 +11,70 @@
       "label": "Header",
       "name": "header",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "Banner Navigation",
+          "name": "banner_navigation",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Links",
+              "name": "links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Main Navigation",
+          "name": "main_navigation",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Logo",
+              "name": "logo",
+              "type": "image"
+            },
+            {
+              "label": "Menu Items",
+              "name": "menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Sub Menu Items",
+                  "name": "sub_menu_items",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "label": "Page",
+                      "name": "page",
+                      "type": "post_object"
+                    }
+                  ]
+                },
+                {
+                  "label": "Utility Links",
+                  "name": "utility_links",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "label": "Link",
+                      "name": "link",
+                      "type": "link"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "Footer",
