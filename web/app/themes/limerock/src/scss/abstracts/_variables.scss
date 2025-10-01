@@ -18,7 +18,19 @@ $gray: #676767;
 
 $dark-blue: #0C2083;
 $light-blue: #BED0F9;
-$bage: #F0EADD;
+$bage: #F5F5F5;
+
+$stanford-red: #8C1515;
+$dark-red: #401415;
+$bright-red: #E54A2B;
+$dark: #0D0F0F;
+$warm-light: #F3EFEC;
+$warm-dark: #BCAC9B;
+$green: #EAF1ED;
+$green-dark: #ADBDB4;
+$purple: #DED3E3;
+$violet: #201440;
+
 
 $default-light-colors: (
   'background': $white,
@@ -31,7 +43,7 @@ $default-dark-colors: (
 );
 
 $custom_colors: (
-  'black': 
+  'black':
     map.merge(
       $default-dark-colors,
       (
