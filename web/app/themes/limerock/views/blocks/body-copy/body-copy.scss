@@ -1,3 +1,22 @@
 .block_body-copy {
   // Add your custom styles here
+  padding: 31px 0 40px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 90px 0 71px;
+  }
+
+  h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 44px;
+      line-height: 50px;
+      margin-bottom: 51px;
+    }
+  }
+
+  .text-holder {
+    margin-bottom: 40px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 0;
+    }
+  }
 }

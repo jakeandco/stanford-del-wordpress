@@ -1,4 +1,22 @@
 body {
   color: $black;
   background: $white;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.media-item_holder {
+  img {
+    width: 100%;
+  }
+}
+
+img {
+  vertical-align: top;
 }
