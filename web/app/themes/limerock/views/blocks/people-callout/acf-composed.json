@@ -1,0 +1,35 @@
+{
+  "name": "group_block_people-callout",
+  "title": "Block Details: People Callout",
+  "fields": [
+  {
+    "label": "Heading",
+    "name": "Heading",
+    "type": "text"
+  },
+  {
+    "label": "People",
+    "name": "people",
+    "acf_composer_extend": "LimeRockTheme/ACF/fields/relationship",
+    "post_type": ["person"]
+  },
+  {
+    "label": "Variation",
+    "name": "variation",
+    "type": "select",
+    "choices": {
+      "accordion": "Accordion",
+      "listing": "Listing"
+    }
+  }
+],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "limerock\/people-callout"
+          }
+      ]
+  ]
+}
