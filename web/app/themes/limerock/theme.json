@@ -38,6 +38,11 @@
           "slug": "white"
         },
         {
+          "color": "#F0E7DE",
+          "name": "Light",
+          "slug": "light"
+        },
+        {
           "color": "#000",
           "name": "Black",
           "slug": "black"
