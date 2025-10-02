@@ -1,5 +1,5 @@
 {% embed '@views/blocks/accordion/layout.twig' %}
   {% block layout_content %}
-    {% include '@partial/media-item.twig' with { image: layout.image } only %}
+    {% include '@views/blocks/body-copy/body-copy.twig' with {fields: layout} only %}
   {% endblock %}
 {% endembed %}

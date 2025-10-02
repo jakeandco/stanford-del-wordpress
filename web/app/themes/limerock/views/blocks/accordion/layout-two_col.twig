@@ -1,0 +1,8 @@
+{% embed '@views/blocks/accordion/layout.twig' %}
+  {% block layout_content %}
+    {% include "@views/blocks/two-column-text-block/two-column-text-block.twig" with {
+      block: {},
+      fields: layout
+    } only %}
+  {% endblock %}
+{% endembed %}

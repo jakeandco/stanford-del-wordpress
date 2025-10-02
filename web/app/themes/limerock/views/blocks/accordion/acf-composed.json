@@ -1,0 +1,92 @@
+{
+  "name": "group_block_accordion",
+  "title": "Block Details: Accordion",
+  "fields": [
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Rows",
+      "name": "rows",
+      "type": "repeater",
+      "layout": "block",
+      "acfe_repeater_stylised_button": 1,
+      "sub_fields": [
+        {
+          "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+          "limerock_option_autop": false,
+          "label": "Title",
+          "name": "title"
+        },
+        {
+          "label": "Title Size",
+          "name": "title_size",
+          "type": "select",
+          "choices": {
+            "regular": "Regular",
+            "large": "Large"
+          },
+          "default_value": "regular"
+        },
+        {
+          "label": "Content",
+          "name": "content",
+          "type": "flexible_content",
+          "layouts": {
+            "body_copy": {
+              "name": "body_copy",
+              "label": "Body Copy",
+              "sub_fields": [
+                {
+                  "label": "Body Copy",
+                  "name": "body_copy",
+                  "type": "wysiwyg"
+                },
+                {
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image"
+                }
+              ]
+            },
+            "two-col": {
+              "label": "Two Column Text",
+              "name": "two_col",
+              "sub_fields": [
+                {
+                  "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+                  "limerock_option_autop": false,
+                  "label": "Column 1",
+                  "name": "column_1"
+                },
+                {
+                  "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+                  "limerock_option_autop": false,
+                  "label": "Column 2",
+                  "name": "column_2"
+                },
+                {
+                  "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+                  "limerock_option_autop": false,
+                  "label": "Sidebar Content",
+                  "name": "sidebar_content"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/accordion"
+      }
+    ]
+  ]
+}
