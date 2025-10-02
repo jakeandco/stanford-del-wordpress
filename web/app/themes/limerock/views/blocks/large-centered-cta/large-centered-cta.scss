@@ -1,3 +1,23 @@
 .block_large-centered-cta {
   // Add your custom styles here
+  padding: 50px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 77px 0;
+  }
+
+  h5 {
+    margin-bottom: 17px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 44px;
+      line-height: 50px;
+      margin-bottom: 18px;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 28px;
+    }
+  }
 }
