@@ -14,17 +14,31 @@
   {% include "@partial/media-item.twig" with { image: header_fields.main_navigation.logo } only %}
   <ul>
     {% for row in header_fields.main_navigation.menu_items %}
-      {% for subrow in row.sub_menu_items %}
-        {% set page_post = get_post(subrow.page) %}
         <li>
-          <a href="{{ page_post.path }}">{{ page_post.title }}</a>
+          {# Always visible at the top of the page #}
+          <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+
+          {# Only visible once you click the link above #}
+          <div>
+            <ul>
+              {% for subrow in row.sub_menu_items %}
+                {% set page_post = get_post(subrow.page) %}
+                <li>
+                  {# > The links with the animating svgs here < #}
+                  <a href="{{ page_post.path }}">{{ page_post.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+            <ul>
+              {% for subrow in row.utility_links %}
+                <li>
+                  {# > The small links at the bottom of the opened menu < #}
+                  <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </li>
-      {% endfor %}
-      {% for subrow in row.utility_links %}
-        <li>
-          <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
-        </li>
-      {% endfor %}
     {% endfor %}
   </ul>
 </div>
