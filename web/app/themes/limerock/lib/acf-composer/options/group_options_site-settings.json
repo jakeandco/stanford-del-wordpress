@@ -47,6 +47,11 @@
               "type": "repeater",
               "sub_fields": [
                 {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                },
+                {
                   "label": "Sub Menu Items",
                   "name": "sub_menu_items",
                   "type": "repeater",
