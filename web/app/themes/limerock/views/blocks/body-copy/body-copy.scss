@@ -9,7 +9,6 @@
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       font-size: 44px;
       line-height: 50px;
-      margin-bottom: 51px;
     }
   }
 
@@ -17,6 +16,12 @@
     margin-bottom: 40px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       margin-bottom: 0;
+    }
+  }
+
+  .media-item_holder {
+    img {
+      width: 100%;
     }
   }
 }
