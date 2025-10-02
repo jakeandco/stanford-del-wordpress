@@ -10,12 +10,12 @@
     {
       "label": "Column 1",
       "name": "column_1",
-      "type": "text"
+      "type": "wysiwyg"
     },
     {
       "label": "Column 2",
       "name": "column_2",
-      "type": "text"
+      "type": "wysiwyg"
     },
     {
       "label": "Sidebar Content",
