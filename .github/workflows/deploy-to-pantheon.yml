@@ -6,7 +6,7 @@ on:
     branches: [main] # main → Dev
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
     permissions:
       deployments: write
@@ -51,6 +51,26 @@ jobs:
         run: |
           npm ci
           npm run build
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+      contents: read
+      pull-requests: read
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1 # ensure shallow (default is 1, but we make it explicit)
+
+      # PHP for Composer
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
 
       # Push to Pantheon multidev for new PRs.
       - name: Push to Pantheon (PRs → Multidev)
@@ -60,8 +80,8 @@ jobs:
           ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           site: ${{ vars.PANTHEON_SITE }}
-          clone_content: false
-          source_env: live
+          clone_content: true
+          source_env: dev
         env:
           GIT_TERMINUS_SITE_ROOT_NO_INIT: true
 

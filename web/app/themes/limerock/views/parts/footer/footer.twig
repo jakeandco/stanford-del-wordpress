@@ -1,26 +1,71 @@
+{% set footer_fields = options.site.footer %}
+{% set top_fields = footer_fields.top %}
+{% set middle_fields = footer_fields.middle %}
+{% set bottom_fields = footer_fields.bottom %}
+
 <footer class="footer" id="footer">
   <div class="container">
     <div class="row footer-info-top">
       <div class="col-12 col-md-6">
+
+        {% include "@partial/media-item.twig" with { image: top_fields.logo } only %}
+
         <address class="footer-address">
-          <p>{{ options.footer.address }}</p>
-          <h4>Get in touch</h4>
-          <p><a href="mailto:{{ options.footer.contact_email }}">{{ options.footer.contact_email }}</a></p>
+          <p>{{ top_fields.address }}</p>
+          <h4>{{top_fields.email_label}}</h4>
+          <p><a href="mailto:{{ top_fields.email_address }}">{{ top_fields.email_address }}</a></p>
         </address>
       </div>
       <div class="col-12 col-md-6">
+        <p>{{ top_fields.menu_label }}</p>
+        <ul>
+          {% for row in top_fields.menu_items %}
+            <li>
+              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
 
     <div class="row footer-info-medium">
       <div class="col-12 col-md-6">
+        <p>{{ middle_fields.subscribe_label }}</p>
+        {{ middle_fields.subscribe_form }}
+        {{ middle_fields.subscribe_disclaimer}}
       </div>
       <div class="col-12 col-md-6">
+        <p>{{ middle_fields.social_menu_label}}</p>
+        <ul>
+          {% for row in middle_fields.social_menu_items %}
+            <li>
+              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
 
     <div class="row footer-info-bottom">
       <div class="col-12">
+        <p>{{ bottom_fields.heading_text }}</p>
+        {% include "@partial/media-item.twig" with { image: top_fields.university_logo } only %}
+        <p>{{ bottom_fields.social_menu_label}}</p>
+        <ul>
+          {% for row in bottom_fields.primary_links %}
+            <li>
+              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          {% for row in bottom_fields.secondary_links %}
+            <li>
+              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p>{{ bottom_fields.copyright_text }}</p>
       </div>
     </div>
   </div>

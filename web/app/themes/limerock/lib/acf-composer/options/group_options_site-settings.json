@@ -11,7 +11,70 @@
       "label": "Header",
       "name": "header",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "Banner Navigation",
+          "name": "banner_navigation",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Links",
+              "name": "links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Main Navigation",
+          "name": "main_navigation",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Logo",
+              "name": "logo",
+              "type": "image"
+            },
+            {
+              "label": "Menu Items",
+              "name": "menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Sub Menu Items",
+                  "name": "sub_menu_items",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "label": "Page",
+                      "name": "page",
+                      "type": "post_object"
+                    }
+                  ]
+                },
+                {
+                  "label": "Utility Links",
+                  "name": "utility_links",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "label": "Link",
+                      "name": "link",
+                      "type": "link"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "Footer",
@@ -24,51 +87,133 @@
       "type": "group",
       "sub_fields": [
         {
-          "label": "Address",
-          "name": "address",
-          "type": "textarea"
-        },
-        {
-          "label": "Email",
-          "name": "contact_email",
-          "type": "text"
-        },
-        {
-          "label": "Social Media Links",
-          "name": "social_media_links",
-          "type": "repeater",
+          "label": "Top",
+          "name": "top",
+          "type": "group",
           "sub_fields": [
             {
-              "label": "Type",
-              "name": "type",
-              "type": "select",
-              "choices": {
-                "linkedin": "Linkedin",
-                "twitter_x": "X( Twitter)",
-                "youtube": "YouTube"
-              }
+              "label": "Logo",
+              "name": "logo",
+              "type": "image"
             },
             {
-              "label": "URL",
-              "name": "url",
-              "type": "url"
+              "label": "Address",
+              "name": "address",
+              "type": "wysiwyg"
+            },
+            {
+              "label": "Email Label",
+              "name": "email_label",
+              "type": "text"
+            },
+            {
+              "label": "Email Address",
+              "name": "email_address",
+              "type": "email"
+            },
+            {
+              "label": "Menu Label",
+              "name": "menu_label",
+              "type": "text"
+            },
+            {
+              "label": "Menu Items",
+              "name": "menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
             }
           ]
         },
         {
-          "label": "Subscribe Text",
-          "name": "subscribe_text",
-          "type": "text"
+          "label": "Middle",
+          "name": "middle",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Subscribe Label",
+              "name": "subscribe_label",
+              "type": "text"
+            },
+            {
+              "label": "Subscribe Form",
+              "name": "subscribe_form",
+              "type": "oembed"
+            },
+            {
+              "label": "Subscribe Disclaimer",
+              "name": "subscribe_disclaimer",
+              "type": "wysiwyg"
+            },
+            {
+              "label": "Social Menu Label",
+              "name": "social_menu_label",
+              "type": "text"
+            },
+            {
+              "label": "Social Menu Items",
+              "name": "social_menu_items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            }
+          ]
         },
         {
-          "label": "Bottom Logo",
-          "name": "bottom_logo",
-          "type": "image"
-        },
-        {
-          "label": "Copyright",
-          "name": "copyright",
-          "type": "text"
+          "label": "Bottom",
+          "name": "bottom",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Heading Text",
+              "name": "heading_text",
+              "type": "text"
+            },
+            {
+              "label": "University Logo",
+              "name": "university_logo",
+              "type": "image"
+            },
+            {
+              "label": "Primary Links",
+              "name": "primary_links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            },
+            {
+              "label": "Secondary Links",
+              "name": "secondary_links",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "label": "Link",
+                  "name": "link",
+                  "type": "link"
+                }
+              ]
+            },
+            {
+              "label": "Copyright Text ",
+              "name": "copyright_text",
+              "type": "text"
+            }
+          ]
         }
       ]
     },
