@@ -3,29 +3,106 @@
 }
 
 h1 {
-  font-size: 140px;
-  font-weight: 300;
-  line-height: 110px;
   letter-spacing: -0.4px;
-
-//   Name
-// Sans 140 (Title)
-
-// Font
-// FT System
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 140px;
+    line-height: 110px;
+  }
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 95px;
-  line-height: 95px;
   letter-spacing: -1px;
-//   Name
-// Sans 95 (Sm Title)
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 95px;
+    line-height: 95px;
+  }
+}
 
-// Font
-// FT System
+h3 {
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 75px;
+    line-height: 81px;
+  }
+}
 
-// Letter spacing
-// -3%
+h4 {
+  letter-spacing: -0.5px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 65px;
+    line-height: 72px;
+  }
+}
+
+h5 {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 14px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 51px;
+  }
+}
+
+h6, .subheader {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.subheader-small {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.subheader-sans {
+  font-family: 'FT System Grotesk';
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.caption {
+  font-family: 'FT System Mono';
+  letter-spacing: 0;
+  font-weight: 400;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+p {
+  margin-bottom: 14px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 26px;
+  }
+}
+
+.media-item_caption {
+  font-family: 'FT System Mono';
+  padding-top: 15px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 14px;
+    padding-top: 19px;
+  }
 }
