@@ -1,13 +1,18 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_factoids block_factoids--count-' ~ fields.factoids|length, extra_attributes: 'data-bs-theme="lights"' } %}
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_factoids block_factoids--count-' ~ fields.factoids|length } %}
   {% block content %}
-    <ul class="card-group">
-      {% for row in fields.factoids %}
-        <li class="card">
-          <p class="card-title">{{row.title}}</p>
-          <p class="card-subtitle">{{row.description}}</p>
-        </li>
-      {% endfor %}
-    </ul>
-    <p>{{fields.caption}}</p>
+    <div class="container">
+      <div class="factoid-row row justify-content-center text-center">
+        {% for row in fields.factoids %}
+          <div class="col-12 col-md-4 factoid-col">
+            <div class="factoid-card">
+              <div class="factoid-card-content">
+                <span class="card-title">{{row.title}}</span>
+                <p class="card-subtitle caption">{{row.description}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   {% endblock %}
 {% endembed %}

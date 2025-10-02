@@ -2,4 +2,61 @@
     &--count-1 {}
     &--count-2 {}
     &--count-3 {}
+
+  padding: 44px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 90px 0 40px;
+  }
+
+  .card-title {
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 10px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 120px;
+      margin-bottom: 43px;
+    }
+  }
+}
+
+.factoid-col {
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 0 15px;
+  }
+
+  &:last-child {
+    .factoid-card {
+      margin-bottom: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.factoid-row {
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin: 0 -15px;
+  }
+}
+
+.factoid-card {
+  max-width: 325px;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  display: flex;
+  margin: 0 auto 40px;
+  position: relative;
+  background-color:  var(--bs-secondary-bg);
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    max-width: 406px;
+  }
+
+  .factoid-card-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
