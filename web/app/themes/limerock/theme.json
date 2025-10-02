@@ -33,14 +33,64 @@
           "slug": "tertiary"
         },
         {
-          "color": "#D9ECF3",
-          "name": "Light",
-          "slug": "light"
+          "color": "#fff",
+          "name": "White",
+          "slug": "white"
         },
         {
           "color": "#000",
+          "name": "Black",
+          "slug": "black"
+        },
+        {
+          "color": "#8C1515",
+          "name": "Stanford Red",
+          "slug": "stanford-red"
+        },
+        {
+          "color": "#401415",
+          "name": "Dark Red",
+          "slug": "dark-red"
+        },
+        {
+          "color": "#E54A2B",
+          "name": "Bright Red",
+          "slug": "bright-red"
+        },
+        {
+          "color": "#F3EFEC",
+          "name": "Warm Light",
+          "slug": "warm-light"
+        },
+        {
+          "color": "#BCAC9B",
+          "name": "Warm Dark",
+          "slug": "warm-dark"
+        },
+        {
+          "color": "#EAF1ED",
+          "name": "Green",
+          "slug": "green"
+        },
+        {
+          "color": "#ADBDB4",
+          "name": "Green Dark",
+          "slug": "green-dark"
+        },
+        {
+          "color": "#0D0F0F",
           "name": "Dark",
           "slug": "dark"
+        },
+        {
+          "color": "#DED3E3",
+          "name": "Purple",
+          "slug": "purple"
+        },
+        {
+          "color": "#201440",
+          "name": "Violet",
+          "slug": "violet"
         }
       ]
     },

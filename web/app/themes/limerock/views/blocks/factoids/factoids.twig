@@ -1,4 +1,4 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_factoids block_factoids--count-' ~ fields.factoids|length } %}
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_factoids block_factoids--count-' ~ fields.factoids|length, extra_attributes: 'data-bs-theme="lights"' } %}
   {% block content %}
     <ul class="card-group">
       {% for row in fields.factoids %}
