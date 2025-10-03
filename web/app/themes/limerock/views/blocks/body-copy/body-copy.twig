@@ -1,15 +1,17 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_body-copy' } %}
   {% block content %}
     <div class="container">
-      <div class="row justify-content-space-between">
+      <div class="row justify-content-between">
         <div class="col-12 col-md-8 text-holder">
           <h5>{{fields.heading}}</h5>
           {{fields.content}}
         </div>
 
-        <div class="col-12 col-md-3 image-holder">
-          {% include '@partial/media-item.twig' with { image: fields.image } only %}
-        </div>
+        {% if fields.image %}
+          <div class="col-12 col-md-3 image-holder">
+            {% include '@partial/media-item.twig' with { image: fields.image } only %}
+          </div>
+        {% endif %}
       </div>
     </div>
   {% endblock %}

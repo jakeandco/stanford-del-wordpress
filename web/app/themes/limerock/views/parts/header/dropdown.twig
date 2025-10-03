@@ -1,0 +1,30 @@
+{% set is_active = row.link.current or row.link.current_item_ancestor %}
+
+{% set link_classes = html_classes(
+  'nav-link',
+  {
+    'active': is_active,
+  }
+) %}
+
+<li class="nav-item dropdown">
+  <a href="{{ row.link.url }}" class="{{link_classes}} dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" {% if is_active %} aria-current="page" {% endif %} >{{ row.link.title }}</a>
+
+  <div class="dropdown-menu">
+    <ul class="menu main-nav list-unstyled">
+      {% for subrow in row.sub_menu_items %}
+        {% set page_post = get_post(subrow.page) %}
+        <li class="dropdown-item">
+          <a href="{{ page_post.path }}">{{ page_post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="utility-links list-unstyled">
+      {% for subrow in row.utility_links %}
+        <li>
+          <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</li>

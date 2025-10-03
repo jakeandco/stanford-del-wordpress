@@ -11,10 +11,19 @@
   .card-title {
     font-size: 90px;
     line-height: 1;
-    margin-bottom: 10px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 4px;
+    display: block;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 100px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
       font-size: 120px;
-      margin-bottom: 43px;
+    }
+  }
+
+  .caption {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 14px;
     }
   }
 }
@@ -41,7 +50,6 @@
 }
 
 .factoid-card {
-  max-width: 325px;
   padding-bottom: 100%;
   border-radius: 100%;
   display: flex;
