@@ -5,7 +5,7 @@ body {
   line-height: 22px;
   font-weight: 400;
   letter-spacing: 0;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 22px;
     line-height: 30px;
   }

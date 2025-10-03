@@ -1,9 +1,14 @@
 .btn {
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 1.39;
     font-weight: 600;
-    padding: 14px 29px;
+    padding: 10px 28px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 14px 32px;
   }
 
   &:hover {

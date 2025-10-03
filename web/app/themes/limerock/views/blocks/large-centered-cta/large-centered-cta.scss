@@ -1,23 +1,34 @@
 .block_large-centered-cta {
   // Add your custom styles here
-  padding: 50px 0;
+  padding: 15px 0;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 77px 0;
+    padding: 30px 0;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 24px;
+    line-height: 32px;
   }
 
   h5 {
     margin-bottom: 17px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 44px;
       line-height: 50px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
   }
 
   p {
     margin-bottom: 25px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
+  }
+}
+
+.cta-block {
+  padding: 50px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 77px 0;
   }
 }

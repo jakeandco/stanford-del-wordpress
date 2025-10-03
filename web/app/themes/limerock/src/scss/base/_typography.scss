@@ -4,8 +4,12 @@
 
 h1 {
   font-size: 90px;
+  line-height: 1;
   letter-spacing: -0.4px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 110px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 140px;
     line-height: 110px;
   }
@@ -41,8 +45,13 @@ h5 {
   letter-spacing: 0;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 38px;
+    line-height: 1.167;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 48px;
     line-height: 52px;
     margin-bottom: 51px;
@@ -83,27 +92,31 @@ h6, .subheader {
   font-family: 'FT System Mono';
   letter-spacing: 0;
   font-weight: 400;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+  font-size: 12px;
+  line-height: 18px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 14px;
     line-height: 20px;
+    letter-spacing: 1.2px;
   }
 }
 
 p {
   margin-bottom: 14px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    margin-bottom: 26px;
+    margin-bottom: 17px;
   }
 }
 
 .media-item_caption {
   font-family: 'FT System Mono';
-  padding-top: 15px;
+  padding-top: 17px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 14px;
     padding-top: 19px;
+    letter-spacing: 0.1px;
   }
 }

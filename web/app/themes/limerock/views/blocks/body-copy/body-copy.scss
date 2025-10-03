@@ -6,15 +6,21 @@
   }
 
   h5 {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 44px;
       line-height: 50px;
     }
   }
 
-  .text-holder {
-    margin-bottom: 40px;
+  .image-holder {
+    padding-top: 25px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-top: 0;
+      padding-left: 12px;
+      margin-top: -11px;
+    }
+
+    .figure {
       margin-bottom: 0;
     }
   }
