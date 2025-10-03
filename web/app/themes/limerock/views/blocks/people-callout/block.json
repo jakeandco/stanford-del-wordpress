@@ -1,0 +1,39 @@
+{
+  "name": "limerock/people-callout",
+  "title": "People Callout",
+  "description": "This WordPress block displays a list of people, either as an accordion (expand/collapse for each person) or as a standard listing. Each entry shows the person's name, role, contact information, image, and bio.",
+  "category": "post-type",
+  "icon": "team",
+  "keywords": [],
+  "acf": {
+      "mode": "preview",
+      "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+  "className": false,
+  "align": false,
+  "anchor": true,
+  "color": {
+    "gradient": true,
+    "background": true,
+    "text": false
+  },
+  "spacing": {
+    "padding": [
+      "top",
+      "bottom"
+    ],
+    "margin": [
+      "top",
+      "bottom"
+    ]
+  }
+},
+  "example": {
+    "attributes": {
+      "data":  {
+        "is_example": true
+      }
+    }
+  }
+}
