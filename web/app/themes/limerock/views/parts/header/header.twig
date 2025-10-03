@@ -1,50 +1,87 @@
 {% set header_fields = options.site.header %}
 
 {# Example of fields for banner nav #}
-<ul>
-  {% for row in header_fields.banner_navigation.links %}
-    <li>
-      <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-{# End example of fields for banner nav #}
-{# Example of fields for main nav #}
-<div>
-  {% include "@partial/media-item.twig" with { image: header_fields.main_navigation.logo } only %}
-  <ul>
-    {% for row in header_fields.main_navigation.menu_items %}
+<div class="top-navigation" data-bs-theme="black">
+  <div class="container">
+    <ul class="top-navigation__links list-unstyled d-flex">
+      {% for row in header_fields.banner_navigation.links %}
         <li>
-          {# Always visible at the top of the page #}
           <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-
-          {# Only visible once you click the link above #}
-          <div>
-            <ul>
-              {% for subrow in row.sub_menu_items %}
-                {% set page_post = get_post(subrow.page) %}
-                <li>
-                  {# > The links with the animating svgs here < #}
-                  <a href="{{ page_post.path }}">{{ page_post.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-            <ul>
-              {% for subrow in row.utility_links %}
-                <li>
-                  {# > The small links at the bottom of the opened menu < #}
-                  <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
         </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
+{# End example of fields for banner nav #}
+
+{# Example of fields for main nav #}
+<header class="header" id="header" role="banner">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <a class="navbar-brand" href="#">
+        {% include "@partial/media-item.twig" with { image: header_fields.main_navigation.logo } only %}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% for row in header_fields.main_navigation.menu_items %}
+            {% set has_children = row.children|length > 0 %}
+
+            {% if row.sub_menu_items %}
+              {% include "@views/parts/header/dropdown.twig" with { row} %}
+            {% else %}
+              {% set is_active = row.link.current or row.link.current_item_ancestor %}
+              {% set link_classes = html_classes(
+                'nav-link',
+                { 'active': is_active, }
+              ) %}
+
+              <li class="nav-item">
+                <a href="{{ row.link.url }}" class="{{link_classes}}" {% if is_active %} aria-current="page" {% endif %} >{{ row.link.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="search-form-holder">
+        <button type="button" class="btn d-none d-lg-inline-block search-opener" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="6" stroke="black" stroke-width="2"/>
+            <line x1="10.7071" y1="11.2929" x2="17.7782" y2="18.364" stroke="black" stroke-width="2"/>
+          </svg>
+        </button>
+        <div class="modal search-modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header d-none d-lg-block">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="search-form" action="{{ site.url }}" method="get">
+                  <input type="text" name="s" placeholder="Search..." required value="{{ search_text }}">
+                  <button type="submit">
+                    <svg id="Group_836" data-name="Group 836" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <g id="Symbol_62_2" data-name="Symbol 62 – 2" transform="translate(0 0)">
+                        <rect id="Rectangle_176" data-name="Rectangle 176" width="20" height="20" transform="translate(0 0)" fill="none"/>
+                        <path id="Path_99" data-name="Path 99" d="M19.7,17.964,15.61,13.875a8.482,8.482,0,0,0,1.734-5.2A8.619,8.619,0,0,0,8.672,0,8.619,8.619,0,0,0,0,8.672a8.619,8.619,0,0,0,8.672,8.672,8.482,8.482,0,0,0,5.2-1.734L17.964,19.7ZM2.478,8.672A6.134,6.134,0,0,1,8.672,2.478a6.134,6.134,0,0,1,6.194,6.194,6.134,6.134,0,0,1-6.194,6.194A6.134,6.134,0,0,1,2.478,8.672Z" transform="translate(0.302 0.151)" fill="#0072ce"/>
+                      </g>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
 {# End example of fields for main nav #}
 
-<nav class="header navbar bg-primary navbar-expand-md" id="header">
+{# <nav class="navbar bg-primary navbar-expand-md">
   <div class="container-fluid">
     <a href="/" class="navbar-brand mb-0 h1">{{ theme.name }}</a>
   </div>
@@ -91,4 +128,4 @@
       {% endfor %}
     </ul>
   </div>
-</nav>
+</nav> #}

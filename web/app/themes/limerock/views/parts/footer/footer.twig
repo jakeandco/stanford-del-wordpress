@@ -4,68 +4,93 @@
 {% set bottom_fields = footer_fields.bottom %}
 
 <footer class="footer" id="footer">
-  <div class="container">
-    <div class="row footer-info-top">
-      <div class="col-12 col-md-6">
+  <div class="footer-info-top" data-bs-theme="dark-red">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-6">
+          <div class="footer-logo">
+            {% include "@partial/media-item.twig" with { image: top_fields.logo } only %}
+          </div>
 
-        {% include "@partial/media-item.twig" with { image: top_fields.logo } only %}
+          <address class="footer-address">
+            <p>{{ top_fields.address }}</p>
+          </address>
 
-        <address class="footer-address">
-          <p>{{ top_fields.address }}</p>
-          <h4>{{top_fields.email_label}}</h4>
+          <h6 class="footer-title">{{top_fields.email_label}}</h6>
+
           <p><a href="mailto:{{ top_fields.email_address }}">{{ top_fields.email_address }}</a></p>
-        </address>
-      </div>
-      <div class="col-12 col-md-6">
-        <p>{{ top_fields.menu_label }}</p>
-        <ul>
-          {% for row in top_fields.menu_items %}
-            <li>
-              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+        </div>
+
+        <div class="col-12 col-md-4 top-footer-menu-holder">
+          <h6 class="footer-title">{{ top_fields.menu_label }}</h6>
+
+          <ul class="top-footer-menu list-unstyled">
+            {% for row in top_fields.menu_items %}
+              <li>
+                <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="row footer-info-medium">
-      <div class="col-12 col-md-6">
-        <p>{{ middle_fields.subscribe_label }}</p>
-        {{ middle_fields.subscribe_form }}
-        {{ middle_fields.subscribe_disclaimer}}
-      </div>
-      <div class="col-12 col-md-6">
-        <p>{{ middle_fields.social_menu_label}}</p>
-        <ul>
-          {% for row in middle_fields.social_menu_items %}
-            <li>
-              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+  <div class="footer-info-medium" data-bs-theme="dark">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-6 subscribe-form-holder">
+          <h6 class="subscribe-label">{{ middle_fields.subscribe_label }}</h6>
+          {{ middle_fields.subscribe_form }}
+          {{ middle_fields.subscribe_disclaimer}}
+        </div>
+
+        <div class="col-12 col-md-4 d-none d-md-block">
+          <h6 class="footer-title">{{ middle_fields.social_menu_label}}</h6>
+
+          <ul class="social-menu list-unstyled">
+            {% for row in middle_fields.social_menu_items %}
+              <li>
+                <a href="{{ row.link.url }}">{{ row.link.title }} →</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="row footer-info-bottom">
-      <div class="col-12">
-        <p>{{ bottom_fields.heading_text }}</p>
-        {% include "@partial/media-item.twig" with { image: top_fields.university_logo } only %}
-        <p>{{ bottom_fields.social_menu_label}}</p>
-        <ul>
-          {% for row in bottom_fields.primary_links %}
-            <li>
-              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <ul>
-          {% for row in bottom_fields.secondary_links %}
-            <li>
-              <a href="{{ row.link.url }}">{{ row.link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <p>{{ bottom_fields.copyright_text }}</p>
+  <div class="footer-info-bottom" data-bs-theme="dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="d-none d-md-block footer-info-bottom--label">{{ bottom_fields.heading_text }}</p>
+
+          <div class="row text-center text-md-start">
+            <div class="col-12 col-md-4">
+              {% include "@partial/media-item.twig" with { image: bottom_fields.university_logo } only %}
+            </div>
+            <div class="col-12 col-md-8">
+              <ul class="bottom-menu list-unstyled d-flex flex-wrap justify-content-center justify-content-md-start">
+                {% for row in bottom_fields.primary_links %}
+                  <li>
+                    <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              <ul class="secondary-menu list-unstyled d-flex flex-wrap justify-content-center justify-content-md-start">
+                {% for row in bottom_fields.secondary_links %}
+                  <li>
+                    <a href="{{ row.link.url }}">{{ row.link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              <p class="copyright">{{ bottom_fields.copyright_text }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

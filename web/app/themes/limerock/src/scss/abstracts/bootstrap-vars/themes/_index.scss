@@ -10,10 +10,7 @@
   $dynamic-primary-color-label,
   $dynamic-secondary-color-label,
   $dynamic-tertiary-color-label,
-  $dynamic-highlight-color-label,
-  $dynamic-btn-hover-text-color,
-  $dynamic-btn-hover-bg,
-  $dynamic-hover-bg) {
+  $dynamic-btn-hover-text-color) {
   [data-bs-theme='#{$dynamic-color-label}'] {
     --#{$prefix}body-color: #{map-get($theme-colors, $dynamic-text-color)};
     --#{$prefix}body-color-rgb: #{map-get(
@@ -162,14 +159,14 @@ $dynamic-text-color )
 
 ;
 
---#{$prefix}code-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}highlight-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}highlight-bg: #{map-get(
- $theme-colors,
-$dynamic-highlight-color-label )
-}
+// --#{$prefix}code-color: #{map-get($theme-colors, $dynamic-text-color)};
+// --#{$prefix}highlight-color: #{map-get($theme-colors, $dynamic-text-color)};
+// --#{$prefix}highlight-bg: #{map-get(
+//  $theme-colors,
+// $dynamic-highlight-color-label )
+// }
 
-;
+// ;
 
 --#{$prefix}btn-hover-text-color: #{map-get($theme-colors, $dynamic-btn-hover-text-color)};
 --#{$prefix}btn-hover-text-color: #{map-get(
@@ -179,21 +176,21 @@ $dynamic-btn-hover-text-color )
 
 ;
 
---#{$prefix}btn-hover-bg: #{map-get($theme-colors, $dynamic-btn-hover-bg)};
---#{$prefix}btn-hover-bg: #{map-get(
- $theme-colors,
-$dynamic-btn-hover-bg )
-}
+// --#{$prefix}btn-hover-bg: #{map-get($theme-colors, $dynamic-btn-hover-bg)};
+// --#{$prefix}btn-hover-bg: #{map-get(
+//  $theme-colors,
+// $dynamic-btn-hover-bg )
+// }
 
-;
+// ;
 
---#{$prefix}hover-bg-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}hover-bg-color: #{map-get(
- $theme-colors,
-$dynamic-hover-bg )
-}
+// --#{$prefix}hover-bg-color: #{map-get($theme-colors, $dynamic-text-color)};
+// --#{$prefix}hover-bg-color: #{map-get(
+//  $theme-colors,
+// $dynamic-hover-bg )
+// }
 
-;
+// ;
 
 // @each $color, $value in $theme-colors-text-dark {
 //   --#{$prefix}#{$color}-text-emphasis: #{$value};
@@ -240,3 +237,14 @@ $dynamic-hover-bg )
 
 @import 'white';
 @import 'black';
+@import 'dark-color';
+@import 'stanford-red';
+@import 'dark-red';
+@import 'bright-red';
+@import 'dark';
+@import 'warm-light';
+@import 'warm-dark';
+@import 'green';
+@import 'green-dark';
+@import 'purple';
+@import 'violet';

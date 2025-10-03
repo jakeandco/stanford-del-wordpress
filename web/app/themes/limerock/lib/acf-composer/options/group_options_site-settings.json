@@ -148,7 +148,7 @@
             {
               "label": "Subscribe Form",
               "name": "subscribe_form",
-              "type": "oembed"
+              "type": "wysiwyg"
             },
             {
               "label": "Subscribe Disclaimer",

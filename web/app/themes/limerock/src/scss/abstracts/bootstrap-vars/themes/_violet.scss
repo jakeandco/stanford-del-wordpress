@@ -1,7 +1,7 @@
 // make sure this color-label variable doesn't be made global
 @if true {
-  $dynamic-color-label: 'white';
-  $dynamic-text-color: 'black';
+  $dynamic-color-label: 'violet';
+  $dynamic-text-color: 'white';
   $dynamic-primary-color-label: $dynamic-color-label;
   $dynamic-secondary-color-label: $dynamic-color-label;
   $dynamic-tertiary-color-label: $dynamic-color-label;

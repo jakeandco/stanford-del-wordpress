@@ -2,30 +2,130 @@
   font-family: $font-family-sans-serif;
 }
 
+h6, .h6,
+h5, .h5,
+h4, .h4,
+h3, .h3,
+h2, .h2,
+h1, .h1 {
+  color: inherit;
+}
+
 h1 {
-  font-size: 140px;
-  font-weight: 300;
-  line-height: 110px;
+  font-size: 90px;
+  line-height: 1;
   letter-spacing: -0.4px;
-
-//   Name
-// Sans 140 (Title)
-
-// Font
-// FT System
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 110px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 140px;
+    line-height: 110px;
+  }
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 95px;
-  line-height: 95px;
   letter-spacing: -1px;
-//   Name
-// Sans 95 (Sm Title)
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 95px;
+    line-height: 95px;
+  }
+}
 
-// Font
-// FT System
+h3 {
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 75px;
+    line-height: 81px;
+  }
+}
 
-// Letter spacing
-// -3%
+h4 {
+  letter-spacing: -0.5px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 65px;
+    line-height: 72px;
+  }
+}
+
+h5 {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 38px;
+    line-height: 1.167;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 51px;
+  }
+}
+
+h6, .subheader {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.subheader-small {
+  font-family: 'Season';
+  font-weight: 470;
+  letter-spacing: 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.subheader-sans {
+  font-family: 'FT System Grotesk';
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.caption {
+  font-family: 'FT System Mono';
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.2px;
+  }
+}
+
+p {
+  margin-bottom: 14px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 17px;
+  }
+}
+
+.media-item_caption {
+  font-family: 'FT System Mono';
+  padding-top: 17px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 14px;
+    padding-top: 19px;
+    letter-spacing: 0.1px;
+  }
 }
