@@ -1,2 +1,98 @@
 .block_accordion {
+  padding: 46px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 90px 0;
+  }
+}
+
+.accordion {
+  .accordion-heading {
+    font-family: 'Season';
+    font-weight: 470;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 0;
+    padding: 17px 0 23px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 44px;
+      line-height: 50px;
+      padding: 46px 31px;
+    }
+
+    &.accordion-heading-large {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 60px;
+        line-height: 70px;
+        padding: 28px 31px;
+      }
+    }
+  }
+
+  .accordion-item {
+    border-bottom-color: $black;
+    position: relative;
+  }
+
+  .accordion-button {
+    padding: 0;
+    position: static;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      display: block;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+      width: 32px;
+      height: 32px;
+      background-color: $light;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+      width: 32px;
+      height: 32px;
+      background-image: url(../assets/images/arrow-down.svg);
+      background-position: center;
+      transition: all 0.3s ease-in-out;
+      z-index: 2;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &:hover {
+      &:before {
+        background-color: $bright-red;
+      }
+      &:after {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &:before {
+        background-color: $black;
+        bottom: 25px;
+        transform: none;
+      }
+      &:after {
+        filter: brightness(0) invert(1);
+        bottom: 25px;
+        transform: rotate(-180deg);
+      }
+    }
+  }
 }
