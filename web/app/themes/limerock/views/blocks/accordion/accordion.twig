@@ -1,24 +1,26 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_accordion' } %}
   {% block content %}
-    {% set accordion_id = block.anchor|default(block.id) %}
-    <h3>{{fields.headline}}</h3>
+    <div class="container">
+      {% set accordion_id = block.anchor|default(block.id) %}
+      <h3>{{fields.headline}}</h3>
 
-    {% embed "@views/partial/accordion.twig" with {
-      rows: fields.rows,
-      accordion_id,
-    } %}
-      {% block accordion_header %}
-      <p>
-        <sup>Size: {{ row.title_size }}</sup>
-        {{row.title}}
-      </p>
+      {% embed "@views/partial/accordion.twig" with {
+        rows: fields.rows,
+        accordion_id,
+      } %}
+        {% block accordion_header %}
+        <p>
+          <sup>Size: {{ row.title_size }}</sup>
+          {{row.title}}
+        </p>
 
-      {% endblock %}
-      {% block accordion_body %}
-        {% for layout in row.content %}
-          {% include "@views/blocks/accordion/layout-" ~layout.acf_fc_layout ~".twig" with {layout} %}
-        {% endfor %}
-      {% endblock %}
-    {% endembed %}
+        {% endblock %}
+        {% block accordion_body %}
+          {% for layout in row.content %}
+            {% include "@views/blocks/accordion/layout-" ~layout.acf_fc_layout ~".twig" with {layout} %}
+          {% endfor %}
+        {% endblock %}
+      {% endembed %}
+    </div>
   {% endblock %}
 {% endembed %}
