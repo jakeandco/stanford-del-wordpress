@@ -1,3 +1,7 @@
+{% set block = block|merge({
+  backgroundColor: block.backgroundColor|default('warm-light'),
+}) %}
+
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_homepage-header' } %}
   {% block content %}
     <div class="container">
@@ -7,9 +11,11 @@
         <span class="d-block">{{fields.headline['secondary']}}</span>
 
         <div class="animating-text-holder">
-          {% for row in fields.headline['animating_text'] %}
-            <span class="d-block animating-text mark">{{row['text']}}</span>
-          {% endfor %}
+          <div class="animating-text-wrapper">
+            {% for row in fields.headline['animating_text'] %}
+              <span class="d-block animating-text mark">{{row['text']}}</span>
+            {% endfor %}
+          </div>
         </div>
       </h1>
     </div>
