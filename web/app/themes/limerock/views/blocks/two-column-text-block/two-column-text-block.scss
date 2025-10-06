@@ -1,3 +1,54 @@
 .block_two-column-text-block {
   // Add your custom styles here
+  padding: 26px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 57px 0;
+  }
+
+  .block-title {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid;
+    margin-bottom: 19px;
+    letter-spacing: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 9px;
+      margin-bottom: 52px;
+    }
+  }
+
+  .two-column-sidebar {
+    margin-bottom: 18px;
+    word-wrap: break-word;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 6px;
+    }
+
+    .sidebar-title {
+      margin-bottom: 0px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 7px;
+      }
+    }
+
+    ul {
+      padding-top: 18px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-top: 20px;
+      }
+
+      li {
+        margin-bottom: 3px;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
 }
