@@ -1,24 +1,25 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_quote' } %}
   {% block content %}
+    <div class="container">
+      {% if fields.selection_mode == 'quote_post' %}
+        <h4>Select type: Quote Post</h4>
+        ,
+      {% elseif fields.selection_mode == 'manual' %}
+        <h4>Select type: Manual</h4>
+      {% endif %}
 
 
-    {% if fields.selection_mode == 'quote_post' %}
-      <h4>Select type: Quote Post</h4>
-      ,
-    {% elseif fields.selection_mode == 'manual' %}
-      <h4>Select type: Manual</h4>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          {% include '@partial/tease_switcher.twig' with { post: get_post(fields.quote_source) } only %}
+          {% include '@partial/tease_switcher.twig' with { post: get_post(fields.citation) } only %}
+        </div>
+        <div class="col-12 col-md-8">
+          {{fields.manual_quote}}
+        </div>
+      </div>
 
-    {% endif %}
-
-
-    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.quote_source) } only %}
-
-    {{fields.manual_quote}}
-
-
-    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.citation) } only %}
-
-    <a href="{{fields.cta.url}}" alt="{{fields.cta.alt}}">{{fields.cta.title}}</a>
-
+      <a href="{{fields.cta.url}}" alt="{{fields.cta.alt}}" class="btn btn-primary">{{fields.cta.title}}</a>
+    </div>
   {% endblock %}
 {% endembed %}

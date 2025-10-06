@@ -9,24 +9,66 @@
     font-size: 16px;
     line-height: 22px;
     opacity: 0.65;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       font-size: 18px;
       line-height: 20px;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
 
   a {
     text-decoration: none;
+    &[href^="mailto:"] {
+      text-decoration: underline;
+    }
+
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  .mc4wp-form {
+    position: relative;
+
+    input[type="email"] {
+      font-family: 'Season';
+      border: 1px solid transparent;
+      border-bottom: 1px solid $white;
+      color: $white;
+      background: transparent;
+      font-weight: 470;
+      font-size: 40px;
+      line-height: 1;
+      padding: 10px 0 27px;
+      margin-bottom: 27px;
+      width: 100%;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 15px 0 20px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 46px;
+        line-height: 58px;
+        margin-bottom: 42px;
+      }
+
+      @mixin placeholder {
+        color: $white;
+        opacity: 0.65;
+      }
+    }
+
+    input[type="submit"] {
+      position: absolute;
+      left: -9999px;
+      visibility: hidden;
+      opacity: 0;
     }
   }
 }
 
 .footer-info-top {
-  padding: 49px 0;
+  padding: 49px 0 24px;
   font-size: 16px;
   line-height: 22px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
@@ -36,13 +78,32 @@
 }
 
 .top-footer-menu-holder {
-  border-top: 1px solid rgba($white, 0.20);
-  padding-top: 39px;
+  padding-top: 41px;
   margin-top: 20px;
+  position: relative;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    border: 0;
-    padding-top: 0;
+    padding-top: 30px;
     margin: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    height: 1px;
+    display: block;
+    border-top: 1px solid rgba($white, 0.20);
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      display: none;
+    }
+  }
+
+  .footer-title {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 18px;
+    }
   }
 }
 
@@ -50,15 +111,28 @@
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     line-height: 30px;
   }
+
+  li {
+    margin-bottom: 5px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 6px;
+    }
+  }
 }
 
 .footer-address {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 31px;
+  }
 }
 
 .footer-logo {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
   max-width: 179px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 35px;
+  }
 
   figure {
     margin-bottom: 0;
@@ -70,9 +144,15 @@
 }
 
 .footer-info-medium {
-  padding: 36px 0;
+  padding: 36px 0 30px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 50px 0 39px;
+    padding: 52px 0 16px;
+  }
+
+  .footer-title {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 17px;
+    }
   }
 }
 
@@ -81,6 +161,13 @@
     opacity: 0.65;
     font-size: 14px;
     line-height: 22px;
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   .subscribe-label {
@@ -88,77 +175,135 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       font-size: 18px;
       line-height: 24px;
       font-weight: 500;
-      margin-bottom: 22px;
+      margin-bottom: 5px;
     }
   }
 }
 
 .footer-info-bottom {
   border-top: 1px solid $white;
-  padding: 20px 0;
+  padding: 21px 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 300;
   letter-spacing: .5px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 26px 0;
+    padding: 26px 0 18px;
     font-size: 16px;
     line-height: 24px;
   }
 }
 
 .footer-info-bottom--label {
-  font-size: 12px;
-  margin-bottom: 30px;
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 36px;
+  letter-spacing: 0.1px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 12px;
+    margin-bottom: 39px;
+  }
 }
 
-.copyright {
-  display: block;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    display: flex;
-    flex-wrap: wrap;
+.footer-info-bottom--logo {
+
+  figure {
+    margin-bottom: 15px;
   }
 
-  span {
-    display: block;
+  .media-item_holder {
+    max-width: 102px;
+    margin: 0 auto;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin: 0 15px;
+      max-width: 158px;
+      margin: 0;
     }
   }
 }
 
-.secondary-menu {
-  li {
-    margin: 0 10px;
+.copyright {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 6px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin: 0 15px;
+      margin: 0 10px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      margin: 0 17px;
+    }
+  }
+}
+
+.footer-info-bottom--menus {
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding-left: 0px;
+  }
+}
+
+.secondary-menu {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0 -15px 9px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin: 0 0 16px;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  li {
+    margin: 0 5px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin: 0 10px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      margin: 0 17px;
     }
   }
 }
 
 .bottom-menu {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 23px;
+  margin: 0 -15px 9px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     font-size: 18px;
     line-height: 27px;
+    margin: 0 0 15px;
+    letter-spacing: 0.4px;
   }
 
   li {
-    margin: 0 10px;
+    margin: 0 6px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin: 0 15px;
+      margin: 0 10px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      margin: 0 16px;
     }
   }
 }
 
 .social-menu {
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    line-height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+
+  li {
+    margin-bottom: 7px;
   }
 }

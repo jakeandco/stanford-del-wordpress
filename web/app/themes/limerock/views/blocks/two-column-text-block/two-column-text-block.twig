@@ -1,14 +1,19 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_two-column-text-block' } %}
   {% block content %}
+    <div class="container">
+      <h2 class="h5">{{fields.heading}}</h2>
 
-
-    <p>{{fields.heading}}</p>
-
-    <p>{{fields.column_1}}</p>
-
-    <p>{{fields.column_2}}</p>
-
-    {{fields.sidebar_content}}
-
+      <div class="row">
+        <div class="col-12 col-md-2">
+          {{fields.sidebar_content}}
+        </div>
+        <div class="col-12 col-md-5">
+          {{fields.column_1}}
+        </div>
+        <div class="col-12 col-md-5">
+          {{fields.column_2}}
+        </div>
+      </div>
+    </div>
   {% endblock %}
 {% endembed %}
