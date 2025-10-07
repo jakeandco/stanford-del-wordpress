@@ -1,0 +1,9 @@
+<a
+  role="button"
+  class="btn btn-{{shortcode_attrs.type}}"
+  href="{{shortcode_attrs.href}}"
+  target="{{shortcode_attrs.target}}"
+  label="{{shortcode_attrs.label}}"
+  aria-label="{{shortcode_attrs['aria-label']|default(shortcode_attrs.label)}}"
+  rel="{{ shortcode_attrs.target == '_blank' ? 'noopener' : 'nofollow' }}"
+>{{shortcode_attrs.title}}</a>

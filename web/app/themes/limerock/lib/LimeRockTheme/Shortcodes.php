@@ -14,6 +14,7 @@ class Shortcodes
   public static function init()
   {
 
+    add_shortcode('button', "LimeRockTheme\Shortcodes::shortcode_button");
     add_shortcode('year', "LimeRockTheme\Shortcodes::shortcode_current_year");
     add_shortcode('footnote', "LimeRockTheme\Shortcodes::shortcode_footnote");
   }
@@ -26,6 +27,22 @@ class Shortcodes
   public static function shortcode_current_year()
   {
     return date('Y');
+  }
+
+  public static function shortcode_button($attributes)
+  {
+    return Timber\Timber::compile('views/shortcodes/button.twig', Timber\Timber::context(
+      [
+        'shortcode_attrs' => [
+          'href' => esc_url(Util::array_value($attributes, 'href')) ?: '#',
+          'type' => esc_attr(Util::array_value($attributes, 'type')) ?: 'primary',
+          'target' => esc_attr(Util::array_value($attributes, 'target')) ?: 'self',
+          'label' => esc_attr(Util::array_value($attributes, 'label')) ?: '',
+          'aria-label' => esc_attr(Util::array_value($attributes, 'aria-label')) ?: '',
+          'title' => wp_kses_post(Util::array_value($attributes, 'title')) ?: '',
+        ]
+      ]
+    ));
   }
 
   /*
