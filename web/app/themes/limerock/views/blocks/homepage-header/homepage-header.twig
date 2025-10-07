@@ -6,14 +6,14 @@
   {% block content %}
     <div class="container">
       <h1>
-        <span class="d-block">{{fields.headline['primary']}}</span>
+        <span class="d-xl-block">{{fields.headline['primary']}}</span>
 
-        <span class="d-block">{{fields.headline['secondary']}}</span>
+        <span class="d-xl-block">{{fields.headline['secondary']}}</span>
 
-        <div class="animating-text-holder">
-          <div class="animating-text-wrapper">
+        <div class="animating-text-holder swiper-container">
+          <div class="animating-text-wrapper swiper-wrapper">
             {% for row in fields.headline['animating_text'] %}
-              <span class="d-block animating-text mark">{{row['text']}}</span>
+              <div class="swiper-slide animating-text mark">{{row['text']}}</div>
             {% endfor %}
           </div>
         </div>

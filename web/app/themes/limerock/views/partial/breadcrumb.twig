@@ -4,10 +4,11 @@
 {% endif %}
 
 {% if parent is not empty %}
-  <div class="breadcrumb">
-    <a href="{{ parent.path }}">
-      <span class="icon"><-</span>
-      {{parent.title}}
-    </a>
-  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">
+        <a href="{{ parent.path }}">{{parent.title}}</a>
+      </li>
+    </ol>
+  </nav>
 {% endif %}

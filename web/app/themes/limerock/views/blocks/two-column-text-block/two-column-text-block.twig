@@ -1,17 +1,27 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_two-column-text-block' } %}
   {% block content %}
     <div class="container">
-      <h2 class="block-title">{{fields.heading}}</h2>
+      {% if fields.heading %}
+        <h2 class="block-title">{{fields.heading}}</h2>
+      {% endif %}
 
       <div class="row">
-        <div class="col-12 col-md-4 col-lg-2 two-column-sidebar">
+        <div class="col-12 col-md-2 two-column-sidebar">
           {{fields.sidebar_content}}
         </div>
-        <div class="col-12 col-md-4 col-lg-5">
+        <div class="col-12 col-md-5">
           {{fields.column_1}}
+
+          {% if fields.button_column_1.url %}
+            <a href="{{fields.button_column_1.url}}" alt="{{fields.button_column_1.alt}}" class="btn btn-primary">{{fields.button_column_1.title}} →</a>
+          {% endif %}
         </div>
-        <div class="col-12 col-md-4 col-lg-5">
+        <div class="col-12 col-md-5">
           {{fields.column_2}}
+
+          {% if fields.button_column_2.url %}
+            <a href="{{fields.button_column_2.url}}" alt="{{fields.button_column_2.alt}}" class="btn btn-primary">{{fields.button_column_2.title}} →</a>
+          {% endif %}
         </div>
       </div>
     </div>

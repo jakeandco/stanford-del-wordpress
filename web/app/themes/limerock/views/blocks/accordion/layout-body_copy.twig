@@ -1,5 +1,9 @@
 {% embed '@views/blocks/accordion/layout.twig' %}
   {% block layout_content %}
-    {% include '@views/blocks/body-copy/body-copy.twig' with {fields: layout} only %}
+    {% include '@views/blocks/body-copy/body-copy.twig' with {fields: {
+        heading: layout.heading|default(''),
+        content: layout.body_copy,
+        image: layout.image
+    }} only %}
   {% endblock %}
 {% endembed %}

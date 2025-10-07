@@ -2,4 +2,97 @@
 // This file contains all styles related to the header of the site
 // -----------------------------------------------------------------------------
 
-.header {}
+.navbar-nav {
+  .nav-link {
+    color: $black;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 4px 16px;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $white;
+      background: #303030;
+      border-color: #303030;
+    }
+
+    &.active {
+      border-color: #303030;
+    }
+  }
+
+  .nav-item {
+    padding-left: 6px;
+
+    &:hover {
+
+      .nav-link {
+        color: $white;
+        background: #303030;
+        border-color: #303030;
+      }
+
+      .dropdown-toggle {
+        color: $white;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    padding: 0;
+    display: inline;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dropdown {
+
+    .nav-link {
+      padding-right: 40px;
+    }
+  }
+}
+
+.top-navigation {
+  font-family: 'FT System Mono';
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 13px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    position: relative;
+
+    &:after {
+      content: '・';
+      display: inline-block;
+      vertical-align: top;
+      padding: 13px 0;
+      margin: 0 16px 0 10px;
+    }
+
+    &:last-child {
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

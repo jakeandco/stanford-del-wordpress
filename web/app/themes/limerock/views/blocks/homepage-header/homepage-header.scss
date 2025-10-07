@@ -1,8 +1,11 @@
 .block_homepage-header {
   // Add your custom styles here
-  padding: 80px 0 40px;
+  padding: 85px 0 40px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 250px 0 61px;
+    padding: 150px 0 61px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    padding-top: 250px;
   }
 
   h1 {
@@ -10,10 +13,14 @@
     font-size: 50px;
     line-height: 1;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      font-size: 110px;
-      letter-spacing: -0.8px;
+      font-size: 100px;
+      letter-spacing: -1.5px;
     }
-    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      font-size: 120px;
+      letter-spacing: -2px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
       font-size: 146px;
       line-height: 142px;
       letter-spacing: -3px;
@@ -27,57 +34,14 @@
   }
 
   .animating-text-holder {
-    position: relative;
     overflow: hidden;
-    height: 50px;
+    width: 100%;
+    height: 52px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      height: 110px;
+      height: 112px;
     }
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-      height: 142px;
-    }
-  }
-
-  .animating-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    animation: slide-vertical 8s ease-in-out infinite;
-  }
-
-  @keyframes slide-vertical {
-    0% {
-      transform: translateY(0);
-    }
-
-    // @for $i from 1 through 8 {
-    //   #{100 / 8 * $i}% {
-    //     transform: translateY(-#{$i * 50px});
-    //     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    //       transform: translateY(-#{$i * 110px});
-    //     }
-    //     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-    //       transform: translateY(-#{$i * 142px});
-    //     }
-    //   }
-    // }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .animating-text {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 50px;
-    line-height: 1;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      font-size: 110px;
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-      font-size: 146px;
-      line-height: 142px;
+      height: 148px;
     }
   }
 }

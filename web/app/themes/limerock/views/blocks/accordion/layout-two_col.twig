@@ -2,7 +2,12 @@
   {% block layout_content %}
     {% include "@views/blocks/two-column-text-block/two-column-text-block.twig" with {
       block: {},
-      fields: layout
+      fields: {
+        heading: layout.heading|default(''),
+        sidebar_content: layout.sidebar_content|default(''),
+        column_1: layout.column_1|default(''),
+        column_2: layout.column_2|default('')
+      }
     } only %}
   {% endblock %}
 {% endembed %}
