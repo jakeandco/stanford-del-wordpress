@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-12 col-md-8 text-holder">
-          <h5>{{fields.heading}}</h5>
+          {% if fields.heading %}
+            <h5>{{fields.heading}}</h5>
+          {% endif %}
           {{fields.content}}
         </div>
 

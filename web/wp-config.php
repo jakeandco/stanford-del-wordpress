@@ -18,4 +18,10 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 require_once dirname(__DIR__) . '/config/application.php';
 
+
+if ( file_exists( __DIR__ . '/wp-config-ddev.php' ) ) {
+    require_once __DIR__ . '/wp-config-ddev.php';
+}
+
 require_once ABSPATH . 'wp-settings.php';
+

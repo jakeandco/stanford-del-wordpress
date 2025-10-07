@@ -12,30 +12,71 @@
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 0;
-    padding: 17px 0 23px;
+    min-height: 92px;
+    width: 100%;
+    display: flex;
+    align-items: center;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       font-size: 44px;
       line-height: 50px;
-      padding: 46px 31px;
+      min-height: auto;
     }
 
     &.accordion-heading-large {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         font-size: 60px;
         line-height: 70px;
-        padding: 28px 31px;
       }
+    }
+
+    &.accordion-heading-regular {
+      &:only-child {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding: 18px 0;
+        }
+      }
+    }
+  }
+
+  .subheading {
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 8px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .accordion-body {
+    padding: 20px 40px 20px 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 0px 40px 20px 31px;
+    }
+
+    .container {
+      padding: 0;
     }
   }
 
   .accordion-item {
     border-bottom-color: $black;
     position: relative;
+    &:first-child {
+      border-top: 1px solid $black;
+    }
   }
 
   .accordion-button {
-    padding: 0;
     position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 17px 40px 23px 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 28px 31px;
+    }
 
     &:before {
       content: '';
@@ -64,12 +105,14 @@
       width: 32px;
       height: 32px;
       background-image: url(../assets/images/arrow-down.svg);
+      background-size: 12px;
       background-position: center;
       transition: all 0.3s ease-in-out;
       z-index: 2;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         width: 65px;
         height: 65px;
+        background-size: 26px;
       }
     }
 
@@ -94,5 +137,10 @@
         transform: rotate(-180deg);
       }
     }
+  }
+
+  .block_body-copy,
+  .block_two-column-text-block {
+    padding: 0;
   }
 }

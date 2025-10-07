@@ -9,11 +9,12 @@
         accordion_id,
       } %}
         {% block accordion_header %}
+          <span class="subheading">Optional subheading</span>
           <h3 class="accordion-heading accordion-heading-{{ row.title_size }}">{{row.title}}</h3>
           {% endblock %}
         {% block accordion_body %}
           {% for layout in row.content %}
-            {% include "@views/blocks/accordion/layout-" ~layout.acf_fc_layout ~".twig" with {layout} %}
+            {% include "@views/blocks/accordion/layout-" ~layout.acf_fc_layout ~".twig" with {layout: layout} %}
           {% endfor %}
         {% endblock %}
       {% endembed %}
