@@ -1,0 +1,12 @@
+{% set jump_links = post.meta('jump_links') %}
+{{jump_links|console_log('jump links')}}
+
+{% if jump_links %}
+  <ul>
+    {% for row in jump_links %}
+      <li>
+        <a href="{{ row.link.url }}" class="{{link_classes}}" {% if is_active %} aria-current="page" {% endif %}>{{ row.link.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
