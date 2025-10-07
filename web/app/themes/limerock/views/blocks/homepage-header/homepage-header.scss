@@ -16,13 +16,14 @@
       font-size: 100px;
       letter-spacing: -1.5px;
     }
-    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      font-size: 120px;
+      letter-spacing: -2px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
       font-size: 146px;
       line-height: 142px;
       letter-spacing: -3px;
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
-
     }
   }
 
