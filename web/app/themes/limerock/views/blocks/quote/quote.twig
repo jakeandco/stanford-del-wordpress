@@ -1,25 +1,42 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_quote' } %}
+  {% set person_info = {
+    name: '',
+    title: '',
+    image_src: '',
+  } %}
+  {% set quote_content = '' %}
+
+  {% if fields.selection_mode == 'quote_post' %}
+    {% set quote_post = get_post(fields.quote_source) %}
+    {% set quote_person = get_post(quote_post.person) %}
+
+    {% set quote_content = quote_post.meta('quote') %}
+  {% elseif fields.selection_mode == 'manual' %}
+    {% set quote_content = fields.manual_quote %}
+    {% set quote_person = get_post(fields.citation) %}
+  {% endif %}
+
   {% block content %}
+
     <div class="container">
-      {% if fields.selection_mode == 'quote_post' %}
-        <h4>Select type: Quote Post</h4>
-        ,
-      {% elseif fields.selection_mode == 'manual' %}
-        <h4>Select type: Manual</h4>
-      {% endif %}
-
-
       <div class="row">
         <div class="col-12 col-md-4">
-          {% include '@partial/tease_switcher.twig' with { post: get_post(fields.quote_source) } only %}
-          {% include '@partial/tease_switcher.twig' with { post: get_post(fields.citation) } only %}
+          <div class="col">
+            {% include '@partial/media-item.twig' with { image: quote_person.thumbnail } only %}
+          </div>
+          <div class="col">
+            <p>{{ ([quote_person.meta('first_name'), quote_person.meta('last_name')])|filter(v => v)|join(' ') }}</p>
+            <p>{{ ((quote_person.meta('titles')|default([]))|map(v => v.title)|filter(v => v))|join(', ') }}</p>
+          </div>
         </div>
         <div class="col-12 col-md-8">
-          {{fields.manual_quote}}
+          {{quote_content}}
         </div>
       </div>
 
-      <a href="{{fields.cta.url}}" alt="{{fields.cta.alt}}" class="btn btn-primary">{{fields.cta.title}}</a>
+      {% if fields.cta %}
+        <a href="{{fields.cta.url}}" alt="{{fields.cta.alt}}" class="btn btn-primary">{{fields.cta.title}}</a>
+      {% endif %}
     </div>
   {% endblock %}
 {% endembed %}

@@ -1,7 +1,74 @@
 {
   "name": "group_post-type_person",
   "title": "Post Type: Person Details",
-  "fields": [],
+  "fields": [
+    {
+      "label": "First Name",
+      "name": "first_name",
+      "type": "text"
+    },
+    {
+      "label": "Last Name",
+      "name": "last_name",
+      "type": "text"
+    },
+    {
+      "label": "Title(s)",
+      "name": "titles",
+      "type": "repeater",
+      "instructions": "List one or more titles/positions for the person.",
+      "layout": "row",
+      "button_label": "Add Title",
+      "sub_fields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "label": "Email",
+      "name": "email",
+      "type": "email",
+      "instructions": "Contact email for the person."
+    },
+    {
+      "label": "Social Channels",
+      "name": "social_channels",
+      "type": "repeater",
+      "instructions": "Add social channels or external links for the person.",
+      "layout": "row",
+      "button_label": "Add Social Channel",
+      "sub_fields": [
+        {
+          "label": "Social Link",
+          "name": "social_link",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "label": "Bio",
+      "name": "bio",
+      "type": "wysiwyg",
+      "instructions": "Short biography or profile content."
+    },
+    {
+      "label": "Quote",
+      "name": "quote",
+      "type": "wysiwyg",
+      "instructions": "Optional short quote."
+    },
+    {
+      "label": "Publish to Site",
+      "name": "publish_to_site",
+      "type": "true_false",
+      "instructions": "Used to determine if appears in People archive.",
+      "message": "Publish",
+      "default_value": 1
+    }
+  ],
   "location": [
     [
       {

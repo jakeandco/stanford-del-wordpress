@@ -12,9 +12,10 @@
       }
     },
     {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/post_object",
       "label": "Quote Source",
       "name": "quote_source",
-      "type": "post_object",
+      "post_type": ["quote"],
       "conditional_logic": [
         [
           {
@@ -40,9 +41,10 @@
       ]
     },
     {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/post_object",
       "label": "Citation",
       "name": "citation",
-      "type": "post_object",
+      "post_type": ["person"],
       "conditional_logic": [
         [
           {
@@ -56,16 +58,7 @@
     {
       "label": "CTA",
       "name": "cta",
-      "type": "link",
-      "conditional_logic": [
-        [
-          {
-            "fieldPath": "selection_mode",
-            "operator": "==",
-            "value": "manual"
-          }
-        ]
-      ]
+      "type": "link"
     }
   ],
   "location": [

@@ -3,7 +3,7 @@
   "title": "Post Type: Quote Details",
   "fields": [
     {
-      "acf_composer_extend": "LimeRockTheme/ACF/fields/bidirectional-post_object",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/post_object",
       "label": "Person",
       "name": "person",
       "bidirectional": 0,
