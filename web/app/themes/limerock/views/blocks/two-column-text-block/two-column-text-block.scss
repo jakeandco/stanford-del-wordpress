@@ -28,6 +28,10 @@
       font-size: 16px;
       line-height: 20px;
       padding-top: 6px;
+      padding-right: 0;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding-right: 25px;
     }
 
     .sidebar-title {
@@ -49,6 +53,14 @@
           margin-bottom: 9px;
         }
       }
+    }
+  }
+
+  .btn {
+    margin-top: 23px;
+    margin-bottom: 14px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 17px;
     }
   }
 }
