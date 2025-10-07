@@ -8,14 +8,26 @@
 ) %}
 
 <li class="nav-item dropdown">
-  <a href="{{ row.link.url }}" class="{{link_classes}} dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" {% if is_active %} aria-current="page" {% endif %} >{{ row.link.title }}</a>
+  <a href="{{ row.link.url }}" href="{{row.link.path}}" id="{{row.link.id}}" class="{{link_classes}}">
+    {{ row.link.title }}
+  </a>
 
-  <div class="dropdown-menu">
+  <button class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="{{row.id}}">
     <ul class="menu main-nav list-unstyled">
       {% for subrow in row.sub_menu_items %}
         {% set page_post = get_post(subrow.page) %}
         <li class="dropdown-item">
-          <a href="{{ page_post.path }}">{{ page_post.title }}</a>
+          <a href="{{ page_post.path }}">
+
+            {% include '@partial/media-item.twig' with { image: subrow.image } only %}
+
+            <h4>{{ page_post.title }}</h4>
+
+            {{ subrow.subtitle }}
+          </a>
         </li>
       {% endfor %}
     </ul>

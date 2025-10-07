@@ -10,13 +10,16 @@
     font-family: 'Season';
     font-weight: 470;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.167;
     margin-bottom: 0;
     min-height: 92px;
     width: 100%;
     display: flex;
     align-items: center;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 34px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 44px;
       line-height: 50px;
       min-height: auto;
@@ -24,6 +27,9 @@
 
     &.accordion-heading-large {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 50px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
         font-size: 60px;
         line-height: 70px;
       }
@@ -51,8 +57,8 @@
 
   .accordion-body {
     padding: 20px 40px 20px 0;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding: 0px 40px 20px 31px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding: 0px 80px 20px 31px;
     }
 
     .container {
@@ -75,7 +81,10 @@
     align-items: flex-start;
     padding: 17px 40px 23px 0;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding: 28px 31px;
+      padding: 28px 40px 28px 31px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding: 28px 60px 28px 31px;
     }
 
     &:before {
@@ -91,7 +100,7 @@
       background-color: $light;
       border-radius: 50px;
       transition: all 0.3s ease-in-out;
-      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
         width: 65px;
         height: 65px;
       }
@@ -109,7 +118,7 @@
       background-position: center;
       transition: all 0.3s ease-in-out;
       z-index: 2;
-      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
         width: 65px;
         height: 65px;
         background-size: 26px;
