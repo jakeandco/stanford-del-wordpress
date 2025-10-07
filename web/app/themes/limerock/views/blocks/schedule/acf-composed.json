@@ -1,0 +1,48 @@
+{
+  "name": "group_block_schedule",
+  "title": "Block Details: Schedule",
+  "fields": [
+  {
+    "label": "Schedule",
+    "name": "schedule",
+    "type": "repeater",
+    "layout": "block",
+    "sub_fields": [
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "text"
+      },
+      {
+        "label": "Start Date/Time ",
+        "name": "start_date_time",
+        "type": "date_time_picker"
+      },
+      {
+        "label": "End Date/Time",
+        "name": "end_date_time",
+        "type": "date_time_picker"
+      },
+      {
+        "label": "Content",
+        "name": "content",
+        "type": "wysiwyg"
+      },
+      {
+        "label": "Sidebar Content",
+        "name": "sidebar_content",
+        "type": "wysiwyg"
+      }
+    ]
+  }
+],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "limerock\/schedule"
+          }
+      ]
+  ]
+}

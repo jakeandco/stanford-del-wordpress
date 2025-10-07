@@ -49,6 +49,13 @@ class TwigCustomizer
 			}
 		));
 
+		$twig->addFunction(new Twig\TwigFunction('get_field_objects', function (...$args) {
+			return get_field_objects(...$args);
+		}));
+		$twig->addFunction(new Twig\TwigFunction('get_field_object', function (...$args) {
+			return get_field_object(...$args);
+		}));
+
 		$twig->addFunction(new Twig\TwigFunction('get_post_type_archive', function ($post_type) {
 			if (!empty($post_type) && post_type_exists($post_type)) {
 				$object        = get_post_type_object($post_type);

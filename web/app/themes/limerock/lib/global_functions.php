@@ -27,6 +27,7 @@ function LimeRockTheme_block_render_callback($block, $content = '', $is_preview 
 
 	// Store field values. These are the fields from your ACF field group for the block.
 	$context['fields'] = get_fields();
+	$context['field_objects'] = get_field_objects();
 
 	if (! empty($block['data']['is_example'])) {
 		$context['is_example'] = true;
