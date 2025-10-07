@@ -7,6 +7,10 @@
             <h5>{{fields.heading}}</h5>
           {% endif %}
           {{fields.content}}
+
+          {% if fields.button.url %}
+            <a href="{{fields.button.url}}" alt="{{fields.button.alt}}" class="btn btn-primary">{{fields.button.title}} →</a>
+          {% endif %}
         </div>
 
         {% if fields.image %}

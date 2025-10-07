@@ -13,6 +13,11 @@
       "type": "wysiwyg"
     },
     {
+      "label": "Button",
+      "name": "button",
+      "type": "link"
+    },
+    {
       "label": "Image",
       "name": "image",
       "type": "image"
