@@ -1,40 +1,54 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_people-callout' } %}
   {% set accordion_id = block.anchor|default(block.id) %}
+  {% set people = get_posts(fields.people) %}
 
   {% block content %}
     <div class="container">
       <h3 class="block-title">{{ fields.heading }}</h3>
 
       {% if fields.variation == 'accordion' %}
-        <h4>Select type: Accordion</h4>
 
         {% embed "@views/partial/accordion.twig" with {
-          rows: get_posts(fields.people),
+          rows: people,
           accordion_id,
         } %}
           {% block accordion_header %}
             {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
-              <p>{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</p>
-              <p>
-                {% for item in row.meta('titles') %}
-                  <span>{{ item.title }}</span>
-                {% endfor %}
-              </p>
-            {% endblock %}
-            {% block accordion_body %}
-              {% for layout in row.content %}
-                {% for item in row.meta('social_channels') %}
-                  <a href="{{ item.link.url }}">{{ item.link.title }}</a>
-                {% endfor %}
+            <p>{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</p>
+            <p>
+              {% for item in row.meta('titles') %}
+                <span>{{ item.title }}</span>
               {% endfor %}
-            {% endblock %}
-          {% endembed %}
-        {% elseif fields.variation == 'listing' %}
-          <h4>Select type: Listing</h4>
+            </p>
+          {% endblock %}
+          {% block accordion_body %}
+            {% for item in row.meta('social_channels') %}
+              <a href="{{ item.link.url }}">{{ item.link.title }}</a>
+            {% endfor %}
+            {{row.bio}}
+          {% endblock %}
+        {% endembed %}
 
-          {# Same fields as above, but just not in an accordion #}
+      {% elseif fields.variation == 'listing' %}
 
-        {% endif %}
+        {% for row in people %}
+          <div>
+            {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
+            <p>{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</p>
+            <p>
+              {% for item in row.meta('titles') %}
+                <span>{{ item.title }}</span>
+              {% endfor %}
+            </p>
+            {% for item in row.meta('social_channels') %}
+              <a href="{{ item.link.url }}">{{ item.link.title }}</a>
+            {% endfor %}
+            {{row.bio}}
+          </div>
+
+        {% endfor %}
+
+      {% endif %}
     </div>
 
   {% endblock %}
