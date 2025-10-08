@@ -16,27 +16,36 @@
   </button>
 
   <div class="dropdown-menu" aria-labelledby="{{row.id}}">
-    <ul class="menu main-nav list-unstyled">
-      {% for subrow in row.sub_menu_items %}
-        {% set page_post = get_post(subrow.page) %}
-        <li class="dropdown-item">
-          <a href="{{ page_post.path }}">
+    <div class="container">
+      <ul class="menu main-nav list-unstyled">
+        {% for subrow in row.sub_menu_items %}
+          {% set page_post = get_post(subrow.page) %}
+          <li class="dropdown-item">
+            <a href="{{ page_post.path }}">
+              {% include '@partial/media-item.twig' with { image: subrow.image } only %}
+              <div class="text">
+                <h4>{{ page_post.title }}</h4>
 
-            {% include '@partial/media-item.twig' with { image: subrow.image } only %}
+                <span class="subtitle d-none d-md-block">{{ subrow.subtitle }}</span>
+              </div>
 
-            <h4>{{ page_post.title }}</h4>
+              <div class="icon d-md-none">
+                <svg width="13" height="5" viewBox="0 0 13 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.722 4.95C9.902 4.566 10.076 4.23 10.244 3.942C10.424 3.654 10.598 3.414 10.766 3.222H0.272V2.466H10.766C10.598 2.262 10.424 2.016 10.244 1.728C10.076 1.44 9.902 1.11 9.722 0.738H10.352C11.108 1.614 11.9 2.262 12.728 2.682V3.006C11.9 3.414 11.108 4.062 10.352 4.95H9.722Z" fill="black"/>
+                </svg>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
 
-            {{ subrow.subtitle }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-    <ul class="utility-links list-unstyled">
-      {% for subrow in row.utility_links %}
-        <li>
-          <a href="{{ subrow.link.url }}">{{ subrow.link.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+      <ul class="utility-links list-unstyled">
+        {% for subrow in row.utility_links %}
+          <li>
+            <a href="{{ subrow.link.url }}">{{ subrow.link.title }} <span class="link-icon">→</span></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </li>

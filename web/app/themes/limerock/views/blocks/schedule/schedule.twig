@@ -1,29 +1,36 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_schedule' } %}
   {% block content %}
 
-  <div class="container">
+    <div class="container">
 
-    {% set schedule_object = field_objects.schedule %}
+      {% set schedule_object = field_objects.schedule %}
 
-    {% set start_time_obj = get_field_object(schedule_object.key ~ '_start_date_time') %}
-    {% set end_time_obj = get_field_object(schedule_object.key ~ '_end_date_time') %}
+      {% set start_time_obj = get_field_object(schedule_object.key ~ '_start_date_time') %}
+      {% set end_time_obj = get_field_object(schedule_object.key ~ '_end_date_time') %}
 
       {% for row in fields.schedule %}
-        <div class="row">
+        <div class="schedule-item">
+          <div class="row title-holder">
+            <div class="col-12 col-md-5">
+              <h2 class="block-title">{{row.subtitle}}</h2>
+            </div>
+            <div class="col-12 col-md-7 date">
+                <p>{{start_time_obj|merge({value:  row.start_date_time})|datetime('l, F j, Y ha')}}
+                –
+                {{end_time_obj|merge({value:  row.end_date_time})|datetime('l, F j, Y ha')}}</p>
+            </div>
+          </div>
 
-          <div class="col-9">
-            <p>{{row.title}}</p>
-          </div>
-          <div class="col-3">
-              <p>{{start_time_obj|merge({value:  row.start_date_time})|datetime('l, F j, Y ha')}}</p>
-              –
-              {{end_time_obj|merge({value:  row.end_date_time})|datetime('l, F j, Y ha')}}</p>
-          </div>
-          <div class="col">
-            {{row.content}}
-          </div>
-          <div class="col">
-            {{row.sidebar_content}}
+          <div class="row content-holder align-items-center">
+            <div class="col-12 col-md-8">
+              <h3 class="h5">{{row.title}}</h3>
+            </div>
+            <div class="col-12 col-md-8 text-holder">
+              {{row.content}}
+            </div>
+            <div class="col-12 col-md-4 col-xl-3 sidebar-holder">
+              {{row.sidebar_content}}
+            </div>
           </div>
         </div>
       {% endfor %}

@@ -9,8 +9,8 @@
     "layout": "block",
     "sub_fields": [
       {
-        "label": "Title",
-        "name": "title",
+        "label": "Subitle",
+        "name": "subtitle",
         "type": "text"
       },
       {
@@ -22,6 +22,11 @@
         "label": "End Date/Time",
         "name": "end_date_time",
         "type": "date_time_picker"
+      },
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "text"
       },
       {
         "label": "Content",

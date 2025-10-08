@@ -1,3 +1,139 @@
 .block_schedule {
   // Add your custom styles here
+  padding: 23px 0 17px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 43px 0 84px;
+  }
+
+  .block-title {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .date {
+    opacity: 0.5;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      text-align: right;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .title-holder {
+    padding: 16px 0 18px;
+    position: relative;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 15px 0 12px;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 25px;
+      right: 25px;
+      border-top: 1px solid;
+      height: 1px;
+    }
+
+    &:before {
+      top: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: none;
+      }
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+
+  .content-holder {
+    padding: 21px 0 19px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 50px 0 39px;
+    }
+  }
+
+  .h5 {
+    margin-bottom: 19px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 44px;
+      line-height: 50px;
+      margin-bottom: 32px;
+    }
+  }
+
+  ul:not(.navbar-nav):not(.list-unstyled) {
+    margin-bottom: 12px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+      padding-top: 10px;
+    }
+
+    li {
+      padding-left: 24px;
+      margin-bottom: 16px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg'))  {
+        padding-left: 32px;
+        margin-bottom: 15px;
+      }
+
+      &::before {
+        background: $black;
+        width: 4px;
+        height: 4px;
+        left: 10px;
+        top: 11px;
+        @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+          width: 6px;
+          height: 6px;
+          left: 12px;
+          top: 14px;
+        }
+      }
+    }
+  }
+
+  .sidebar-holder {
+    font-size: 12px;
+    line-height: 18px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-left: 16px;
+      padding-bottom: 20px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    strong {
+      font-weight: 500;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-weight: 600;
+      }
+    }
+
+    a {
+      font-family: 'FT System Mono';
+      line-height: 18px;
+      letter-spacing: 0.25px;
+      transition: color 0.3s ease-in-out;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-weight: 600;
+      }
+
+      &:hover {
+        color: $bright-red;
+      }
+    }
+  }
+
+  .schedule-item {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      border-bottom: 1px solid;
+    }
+  }
 }
