@@ -1,0 +1,42 @@
+{
+  "name": "group_block_four-up-text-callout",
+  "title": "Block Details: Four-up Text Callout",
+  "fields": [
+  {
+    "label": "Headline",
+    "name": "headline",
+    "type": "text"
+  },
+  {
+    "label": "Title",
+    "name": "title",
+    "type": "text"
+  },
+  {
+    "label": "Callouts",
+    "name": "callouts",
+    "type": "repeater",
+    "sub_fields": [
+      {
+        "label": "Label",
+        "name": "label",
+        "type": "text"
+      },
+      {
+        "label": "Content",
+        "name": "content",
+        "type": "wysiwyg"
+      }
+    ]
+  }
+],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "limerock\/four-up-text-callout"
+          }
+      ]
+  ]
+}

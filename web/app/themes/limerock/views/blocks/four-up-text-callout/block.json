@@ -1,0 +1,39 @@
+{
+  "name": "limerock/four-up-text-callout",
+  "title": "Four-up Text Callout",
+  "description": "Block Description",
+  "category": "text",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+      "mode": "preview",
+      "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+  "className": false,
+  "align": false,
+  "anchor": true,
+  "color": {
+    "gradient": true,
+    "background": true,
+    "text": false
+  },
+  "spacing": {
+    "padding": [
+      "top",
+      "bottom"
+    ],
+    "margin": [
+      "top",
+      "bottom"
+    ]
+  }
+},
+  "example": {
+    "attributes": {
+      "data":  {
+        "is_example": true
+      }
+    }
+  }
+}

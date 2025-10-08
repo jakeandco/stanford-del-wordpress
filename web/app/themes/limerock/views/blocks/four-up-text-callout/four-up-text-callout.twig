@@ -1,0 +1,11 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_four-up-text-callout' } %}
+  {% block content %}
+    <p>{{ fields.headline }}</p>
+
+    <p>{{ fields.title }}</p>
+    {% for row in fields.callouts %}
+      <p>{{ row.label }}</p>
+      {{ row.content }}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}
