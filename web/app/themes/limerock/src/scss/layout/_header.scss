@@ -2,39 +2,100 @@
 // This file contains all styles related to the header of the site
 // -----------------------------------------------------------------------------
 
-.navbar-nav {
-  .nav-link {
-    color: $black;
-    border-radius: 20px;
-    font-size: 22px;
-    line-height: 30px;
-    padding: 4px 16px;
-    border: 1px solid transparent;
+.header {
+  position: relative;
+  z-index: 99;
 
-    &:hover {
-      color: $white;
-      background: #303030;
-      border-color: #303030;
-    }
-
-    &.active {
-      border-color: #303030;
+  .container {
+    position: relative;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      position: static;
     }
   }
+}
 
-  .nav-item {
-    padding-left: 6px;
+.navbar {
+  padding: 7px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 30px 0 21px;
+    align-items: flex-start;
+  }
+}
+
+.search-form-holder {
+  position: absolute;
+  top: 11px;
+  right: 24px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    position: static;
+    margin-left: 19px;
+  }
+
+  .search-opener {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+      padding: 8px 0;
+    }
+  }
+}
+
+.navbar-nav {
+  padding: 27px 0 53px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 0;
+  }
+
+  .nav-link {
+    color: $black;
+    font-size: 40px;
+    line-height: 43px;
+    font-weight: 350;
+    letter-spacing: -0.5px;
+    padding: 6px 0;
+    border: 1px solid transparent;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 22px;
+      line-height: 30px;
+      padding: 4px 16px;
+      border-radius: 20px;
+      letter-spacing: 0;
+    }
 
     &:hover {
-
-      .nav-link {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
         color: $white;
         background: #303030;
         border-color: #303030;
       }
+    }
+
+    &.active {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+        border-color: #303030;
+      }
+    }
+  }
+
+  .nav-item {
+    border-bottom: 1px solid rgba($black, 0.2);
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-left: 9px;
+      border-bottom: 0;
+    }
+
+    &:hover {
+
+      .nav-link {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+          color: $white;
+          background: #303030;
+          border-color: #303030;
+        }
+      }
 
       .dropdown-toggle {
-        color: $white;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+          color: $white;
+        }
       }
     }
   }
@@ -44,16 +105,60 @@
     display: inline;
     border: 0;
     background: transparent;
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    padding: 12px 0 0;
+    font-size: 24px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-left: -30px;
+      font-size: inherit;
+      padding: 4px 9px 4px;
+    }
+
+    &[aria-expanded="true"] {
+      &:after {
+        transform: scale(-1);
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          transform: none;
+        }
+      }
+    }
+
+    &:after {
+      margin: 0;
+    }
   }
 
   .dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      position: static;
+      justify-content: flex-start;
+    }
 
     .nav-link {
-      padding-right: 40px;
+      padding-right: 23px;
+    }
+  }
+
+  .dropdown-menu {
+    border: 0;
+    border-top: 1px solid rgba($black,0.2);
+    padding: 0;
+    width: 100%;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      background: $white;
+      border: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+    }
+
+    .container {
+      padding: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 0 25px;
+      }
     }
   }
 }
@@ -61,16 +166,26 @@
 .top-navigation {
   font-family: 'FT System Mono';
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 7.5px;
   line-height: 1;
-  letter-spacing: 1px;
   font-weight: 600;
+  overflow: hidden;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 11px;
+  }
+
+  .top-navigation__links {
+    margin: 0;
+  }
 
   a {
     text-decoration: none;
     display: inline-block;
     vertical-align: top;
-    padding: 13px 0;
+    padding: 8px 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 13px 0;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -84,8 +199,12 @@
       content: '・';
       display: inline-block;
       vertical-align: top;
-      padding: 13px 0;
-      margin: 0 16px 0 10px;
+      padding: 8px 0;
+      margin: 0 4px 0 0px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin: 0 6px 0 0px;
+        padding: 13px 0;
+      }
     }
 
     &:last-child {
@@ -93,6 +212,219 @@
       &:after {
         display: none;
       }
+    }
+  }
+}
+
+.main-nav {
+  padding: 33px 0 5px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 14px;
+  }
+
+  &:has(a:hover) a:not(:hover),
+  &:has(a:focus) a:not(:focus) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      opacity: 0.65;
+    }
+  }
+
+  h4 {
+    font-family: 'Season';
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 470;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    padding-right: 30px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 26px;
+      padding-bottom: 13px;
+      padding-right: 0;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      font-size: 32px;
+    }
+  }
+
+  .text {
+    width: calc(100% - 93px);
+    padding-right: 20px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  li {
+    padding: 0;
+    white-space: normal;
+    margin-bottom: 35px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      width: 50%;
+      padding: 0 15px;
+      margin-bottom: 50px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      width: 25%;
+    }
+
+    &:hover {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      display: block;
+      position: relative;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+
+      h4 {
+        text-decoration: underline;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-top: -37px;
+        }
+      }
+
+      .subtitle {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  figure {
+    width: 68px;
+    padding-right: 20px;
+    margin: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin: 0 auto 28px;
+      padding-right: 0;
+      width: 90px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .icon {
+    background: $light;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+      margin: 0 auto;
+      max-width: 86%;
+      font-size: 16px;
+    }
+  }
+}
+
+.utility-links {
+  font-family: 'FT System Mono';
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    border-top: 1px solid $dark-gray;
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
+
+  li {
+    padding-right: 6px;
+    margin-bottom: 15px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 50px;
+    }
+  }
+
+  a {
+    color: $black;
+    background: $light;
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 11px;
+    border-radius: 30px;
+    text-decoration: none;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-family: 'FT System Grotesk';
+      background: transparent;
+      padding: 0;
+      font-size: 18px;
+      line-height: 24px;
+      border-radius: 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .link-icon {
+      margin-left: 4px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.navbar-toggler{
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-size: 29px;
+    width: 23px;
+  }
+
+  &[aria-expanded="true"] {
+
+    .navbar-toggler-icon {
+      background-image: url('../assets/images/close-icon.svg');
+      background-size: 19px;
     }
   }
 }
