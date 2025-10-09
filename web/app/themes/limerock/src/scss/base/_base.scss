@@ -68,11 +68,23 @@ svg {
   }
 }
 
-p {
-  color: var(--bs-body-color);
-}
-
 [data-bs-theme]:not([class*="bg-"]) {
   @extend .bg-primary;
   color: var(--#{$prefix}body-color);
+  --btn-color: var(--#{$prefix}btn-color);
+  --btn-bg: var(--#{$prefix}btn-bg);
+  --btn-hover-color: var(--#{$prefix}btn-hover-color);
+  --btn-hover-bg: var(--#{$prefix}btn-hover-bg);
+
+  .btn-primary {
+    color: var(--btn-color);
+    background: var(--btn-bg);
+    border-color: var(--btn-bg);
+
+    &:hover {
+      color: var(--btn-hover-color);
+      background: var(--btn-hover-bg);
+      border-color: var(--btn-hover-bg);
+    }
+  }
 }
