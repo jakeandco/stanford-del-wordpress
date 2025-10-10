@@ -1,6 +1,6 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_page-header' } %}
   {% block content %}
-    <div class="container">
+    {# <div class="container">
       {% if fields.title_size == 'small' %}
         <h4>Select type: Small</h4>
         ,
@@ -15,34 +15,14 @@
       {% endif %}
 
       {{fields.intro_copy}}
-    </div>
+    </div> #}
 
     {# Archive Header #}
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>Archive</h1>
-          <strong class="subtitle"></strong>
-        </div>
-      </div>
-    </div>
-
-    {# Archive Header with Search #}
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h1>Archive</h1>
-        </div>
-        <div class="col-12 col-md-6">
-          <form>
-            <input type="text" placeholder="Looking for someone specific? ">
-            <button type="submit">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="black" stroke-width="2"/>
-              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="black" stroke-width="2"/>
-              </svg>
-            </button>
-          </form>
+          <h1 class="h2">Events</h1>
+          <strong class="subtitle h5 d-block">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</strong>
         </div>
       </div>
     </div>
@@ -55,47 +35,86 @@
         </div>
         <div class="col-12">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Leadership</a></li>
-              <li class="breadcrumb-item"><a href="#">Education</a></li>
-              <li class="breadcrumb-item"><a href="#">Give</a></li>
-              <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
-            </ol>
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navigation1" aria-expanded="false" aria-controls="navigation1">
+              <span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation
+            </button>
+
+            <div class="collapse" id="navigation1">
+              <div class="card card-body p-0">
+                <ol class="breadcrumb list-unstyled">
+                  <li class="breadcrumb-item"><a href="#">Leadership</a></li>
+                  <li class="breadcrumb-item"><a href="#">Education</a></li>
+                  <li class="breadcrumb-item"><a href="#">Give</a></li>
+                  <li class="breadcrumb-item"><a href="#">Supporters</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
+                </ol>
+              </div>
+            </div>
           </nav>
+        </div>
+      </div>
+    </div>
+
+    {# Archive Header with Search #}
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h1>Archive</h1>
+        </div>
+        <div class="col-12 col-md-6">
+          <form>
+            <input type="text" placeholder="Looking for someone specific?">
+            <button type="submit">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="currentColor" stroke-width="2"/>
+              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>
 
     {# Basic Page Title  #}
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <a href="#" class="back-link">← About</a>
+    <div data-bs-theme="warm-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="back-link"><a href="#">About</a></div>
 
-          <h1 class="h2">Archive</h1>
-        </div>
-        <div class="col-12">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Leadership</a></li>
-              <li class="breadcrumb-item"><a href="#">Education</a></li>
-              <li class="breadcrumb-item"><a href="#">Give</a></li>
-              <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
-            </ol>
-          </nav>
+            <h1 class="h4">Basic page title</h1>
+          </div>
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navigation2" aria-expanded="false" aria-controls="navigation2">
+                <span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation
+              </button>
+              <div class="collapse" id="navigation1">
+                <div class="card card-body p-0">
+                  <ol class="breadcrumb list-unstyled">
+                    <li class="breadcrumb-item"><a href="#">Optional Sub-pages</a></li>
+                    <li class="breadcrumb-item"><a href="#">Opportunities</a></li>
+                    <li class="breadcrumb-item"><a href="#">Give</a></li>
+                    <li class="breadcrumb-item"><a href="#">Supporters</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
+                  </ol>
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
 
     {# Basic Page Title - No Subpages #}
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <a href="#" class="back-link">← About</a>
+    <div data-bs-theme="warm-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="back-link"><a href="#">About</a></div>
 
-          <h1 class="h2">Archive</h1>
+            <h1 class="h4">Basic page title</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -104,50 +123,23 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6">
-          <a href="#" class="back-link">← About</a>
+          <div class="back-link"><a href="#">About</a></div>
 
-          <h1>Archive</h1>
+          <h1 class="h3">All Work</h1>
         </div>
+
         <div class="col-12 col-md-6">
           <form>
-            <input type="text" placeholder="Looking for someone specific? ">
+            <input type="text" placeholder="Search by keyword lorem">
             <button type="submit">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="black" stroke-width="2"/>
-              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="black" stroke-width="2"/>
+              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="currentColor" stroke-width="2"/>
+              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="currentColor" stroke-width="2"/>
               </svg>
             </button>
           </form>
         </div>
       </div>
     </div>
-
-    {# Project Header #}
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <a href="#" class="back-link">← Research / All Work</a>
-
-          <h1 class="h2">Archive</h1>
-
-          <div class="category-list">
-            <div class="category"><a href="#">project</a></div>
-            <div class="category"><a href="#">Economics of Transformative AI</a></div>
-        </div>
-        <div class="col-12">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Leadership</a></li>
-              <li class="breadcrumb-item"><a href="#">Education</a></li>
-              <li class="breadcrumb-item"><a href="#">Give</a></li>
-              <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-
-
   {% endblock %}
 {% endembed %}
