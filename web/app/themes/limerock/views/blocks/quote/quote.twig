@@ -19,18 +19,20 @@
   {% block content %}
 
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <div class="col">
-            {% include '@partial/media-item.twig' with { image: quote_person.thumbnail } only %}
+      <div class="border-holder">
+        <div class="row">
+          <div class="col-12 col-md-4 quote-info d-flex">
+            <div class="col col-img">
+              {% include '@partial/media-item.twig' with { image: quote_person.thumbnail } only %}
+            </div>
+            <div class="col col-info">
+              <span class="name d-block">{{ ([quote_person.meta('first_name'), quote_person.meta('last_name')])|filter(v => v)|join(' ') }}</span>
+              <span class="titles d-block">{{ ((quote_person.meta('titles')|default([]))|map(v => v.title)|filter(v => v))|join(', ') }}</D>
+            </div>
           </div>
-          <div class="col">
-            <p>{{ ([quote_person.meta('first_name'), quote_person.meta('last_name')])|filter(v => v)|join(' ') }}</p>
-            <p>{{ ((quote_person.meta('titles')|default([]))|map(v => v.title)|filter(v => v))|join(', ') }}</p>
+          <div class="col-12 col-md-8 quote-content">
+            {{quote_content}}
           </div>
-        </div>
-        <div class="col-12 col-md-8">
-          {{quote_content}}
         </div>
       </div>
 
