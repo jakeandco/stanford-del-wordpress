@@ -1,0 +1,21 @@
+{
+  "name": "group_post-type_project",
+  "title": "Post Type: Project Details",
+  "fields": [
+        {
+      "label": "Researchers",
+      "name": "researchers",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/relationship",
+      "post_type": ["person"]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "project"
+      }
+    ]
+  ]
+}

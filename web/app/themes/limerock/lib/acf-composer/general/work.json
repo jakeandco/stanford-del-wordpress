@@ -1,0 +1,25 @@
+{
+  "name": "shared_work",
+  "title": "Shared: Work Details",
+  "fields": [
+    {
+      "label": "Header Background Color",
+      "name": "header_background_color",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/theme-color"
+    },
+    {
+      "label": "Work Description",
+      "name": "work_description",
+      "type": "wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "publication"
+      }
+    ]
+  ]
+}
