@@ -29,28 +29,92 @@
   }
 
   .breadcrumb {
-    border-top: 1px solid $warm-dark;
-    padding: 18px 0 1px;
-    font-size: 18px;
-    line-height: 24px;
+    padding: 27px 0 37px;
+    font-size: 16px;
+    line-height: 22px;
+    flex-direction: column;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      border-top: 1px solid $warm-dark;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 18px 0 1px;
+      align-items: center;
+      flex-direction: row;
+    }
 
     li {
       margin-bottom: 18px;
-      padding-right: 30px;
+      padding-left: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 30px;
+      }
+
+      &:before {
+        display: none;
+      }
     }
 
     a {
       display: inline-block;
       vertical-align: top;
-      padding: 3px 11px;
       border-radius: 20px;
       text-decoration: none;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 3px 11px;
+      }
 
       &:hover {
         background: $warm-light;
         color: $black;
+      }
+    }
 
+    span {
+      display: inline-block;
+      vertical-align: top;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 3px 11px;
+      }
+    }
+
+    .active {
+      color: inherit;
+    }
+  }
+
+  .breadcrumb-nav {
+
+    .btn {
+      font-family: 'FT System Grotesk';
+      font-size: 16px;
+      line-height: 22px;
+      padding: 15px 25px;
+      border-top: 1px solid rgba($black,0.1);
+      border-bottom: 1px solid rgba($black,0.1);
+      width: calc(100% + 50px);
+      margin: 0 -25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      border-radius: 0;
+
+      &:hover {
+        background: transparent;
+        color: inherit;
+      }
+
+      &[aria-expanded="true"] {
+
+        svg {
+          transform: scale(-1);
+        }
+      }
+
+      svg {
+        margin-left: auto;
+        transition: transform 0.3s ease-in-out;
       }
     }
   }
@@ -89,6 +153,8 @@
       font-size: 16px;
       line-height: 22px;
       width: 100%;
+      max-width: 100%;
+      background: transparent;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding: 21px 0;
         font-size: 22px;

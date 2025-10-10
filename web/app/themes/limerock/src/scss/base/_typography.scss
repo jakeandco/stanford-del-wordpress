@@ -16,9 +16,15 @@ h1 {
   line-height: 1;
   letter-spacing: -0.4px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    font-size: 110px;
+    font-size: 100px;
   }
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: 110px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    font-size: 120px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
     font-size: 140px;
     line-height: 110px;
   }
@@ -26,6 +32,8 @@ h1 {
 
 h2 {
   letter-spacing: -1px;
+  font-size: 50px;
+  line-height: 1;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     font-size: 95px;
     line-height: 95px;

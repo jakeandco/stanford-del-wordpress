@@ -34,21 +34,22 @@
           <h1>Archive</h1>
         </div>
         <div class="col-12">
-          <nav aria-label="breadcrumb">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navigation1" aria-expanded="false" aria-controls="navigation1">
-              <span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation
+          <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navigation1" aria-expanded="false" aria-controls="navigation1">
+              <span><span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation</span>
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 8L13.0622 0.500001L0.937822 0.500001L7 8Z" fill="black"/>
+              </svg>
             </button>
 
-            <div class="collapse" id="navigation1">
-              <div class="card card-body p-0">
-                <ol class="breadcrumb list-unstyled">
-                  <li class="breadcrumb-item"><a href="#">Leadership</a></li>
-                  <li class="breadcrumb-item"><a href="#">Education</a></li>
-                  <li class="breadcrumb-item"><a href="#">Give</a></li>
-                  <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
-                </ol>
-              </div>
+            <div class="collapse d-md-block" id="navigation1">
+              <ol class="breadcrumb list-unstyled">
+                <li class="breadcrumb-item"><a href="#">Leadership</a></li>
+                <li class="breadcrumb-item"><a href="#">Education</a></li>
+                <li class="breadcrumb-item"><a href="#">Give</a></li>
+                <li class="breadcrumb-item"><a href="#">Supporters</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span>Corporate Affiliates</span></li>
+              </ol>
             </div>
           </nav>
         </div>
@@ -57,11 +58,11 @@
 
     {# Archive Header with Search #}
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
           <h1>Archive</h1>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <form>
             <input type="text" placeholder="Looking for someone specific?">
             <button type="submit">
@@ -85,20 +86,21 @@
             <h1 class="h4">Basic page title</h1>
           </div>
           <div class="col-12">
-            <nav aria-label="breadcrumb">
-              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navigation2" aria-expanded="false" aria-controls="navigation2">
-                <span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+              <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navigation2" aria-expanded="false" aria-controls="navigation2">
+                <span><span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation</span>
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 8L13.0622 0.500001L0.937822 0.500001L7 8Z" fill="black"/>
+                </svg>
               </button>
-              <div class="collapse" id="navigation1">
-                <div class="card card-body p-0">
-                  <ol class="breadcrumb list-unstyled">
-                    <li class="breadcrumb-item"><a href="#">Optional Sub-pages</a></li>
-                    <li class="breadcrumb-item"><a href="#">Opportunities</a></li>
-                    <li class="breadcrumb-item"><a href="#">Give</a></li>
-                    <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Corporate Affiliates</li>
-                  </ol>
-                </div>
+              <div class="collapse d-md-block" id="navigation2">
+                <ol class="breadcrumb list-unstyled">
+                  <li class="breadcrumb-item"><a href="#">Optional Sub-pages</a></li>
+                  <li class="breadcrumb-item"><a href="#">Opportunities</a></li>
+                  <li class="breadcrumb-item"><a href="#">Give</a></li>
+                  <li class="breadcrumb-item"><a href="#">Supporters</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><span>Corporate Affiliates</span></li>
+                </ol>
               </div>
             </nav>
           </div>
@@ -121,14 +123,14 @@
 
     {# Archive Header with Search and Back #}
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
           <div class="back-link"><a href="#">About</a></div>
 
           <h1 class="h3">All Work</h1>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <form>
             <input type="text" placeholder="Search by keyword lorem">
             <button type="submit">
