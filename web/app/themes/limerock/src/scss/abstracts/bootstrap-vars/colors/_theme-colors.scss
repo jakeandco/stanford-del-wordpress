@@ -6,7 +6,8 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+// $light:         #F0E7DE !default;
+$light:         #F0E7DE !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
@@ -18,10 +19,11 @@ $theme-colors: (
   'info': $info,
   'warning': $warning,
   'danger': $danger,
-  'light': $light,
+  'light': $gray-100,
   'dark': $dark,
 
   'white': #fff,
+  'white-30': rgba(255, 255, 255, 0.3),
   'black': #000,
   'stanford-red': #8C1515,
   'dark-red': #401415,
@@ -32,6 +34,9 @@ $theme-colors: (
   'green-dark': #ADBDB4,
   'purple': #DED3E3,
   'violet': #201440,
+  'dark-gray': #303030,
+  'dark-color': #0D0F0F,
+  'light-text': #F6F2EE,
 ) !default;
 
 

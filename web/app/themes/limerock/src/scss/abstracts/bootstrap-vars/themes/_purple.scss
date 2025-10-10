@@ -5,7 +5,10 @@
   $dynamic-primary-color-label: $dynamic-color-label;
   $dynamic-secondary-color-label: $dynamic-color-label;
   $dynamic-tertiary-color-label: $dynamic-color-label;
-  $dynamic-btn-hover-text-color: 'black';
+  $dynamic-btn-bg: 'dark-gray';
+  $dynamic-btn-color: 'light-text';
+  $dynamic-btn-hover-bg: 'bright-red';
+  $dynamic-btn-hover-color: 'light-text';
 
   @include dynamic-theme(
     $dynamic-color-label,
@@ -13,6 +16,9 @@
     $dynamic-primary-color-label,
     $dynamic-secondary-color-label,
     $dynamic-tertiary-color-label,
-    $dynamic-btn-hover-text-color
+    $dynamic-btn-bg,
+    $dynamic-btn-hover-bg,
+    $dynamic-btn-color,
+    $dynamic-btn-hover-color
   );
 }

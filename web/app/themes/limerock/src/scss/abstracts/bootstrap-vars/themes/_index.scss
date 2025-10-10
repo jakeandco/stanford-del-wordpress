@@ -10,208 +10,158 @@
   $dynamic-primary-color-label,
   $dynamic-secondary-color-label,
   $dynamic-tertiary-color-label,
-  $dynamic-btn-hover-text-color) {
-  [data-bs-theme='#{$dynamic-color-label}'] {
-    --#{$prefix}body-color: #{map-get($theme-colors, $dynamic-text-color)};
-    --#{$prefix}body-color-rgb: #{map-get(
- $theme-colors-rgb,
-    $dynamic-text-color )
+  $dynamic-btn-bg,
+  $dynamic-btn-hover-bg,
+  $dynamic-btn-color,
+  $dynamic-btn-hover-color) {
+    [data-bs-theme='#{$dynamic-color-label}'] {
+      --#{$prefix}body-color: #{map-get($theme-colors, $dynamic-text-color)};
+      --#{$prefix}body-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-text-color )
+      };
+
+      --#{$prefix}body-bg: #{map-get($theme-colors, $dynamic-color-label)};
+      --#{$prefix}body-bg-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-color-label)
+      };
+
+      --#{$prefix}emphasis-color: #{map-get($theme-colors, $dynamic-text-color)};
+      --#{$prefix}emphasis-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-text-color )
+      };
+
+      --#{$prefix}primary: #{map-get($theme-colors, $dynamic-primary-color-label)};
+      --#{$prefix}primary-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-primary-color-label )
+      };
+
+      --#{$prefix}primary-color: #{map-get(
+        $theme-colors,
+        $dynamic-primary-color-label )
+      };
+
+      --#{$prefix}primary-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-primary-color-label )
+      };
+
+      --#{$prefix}primary-bg: #{map-get(
+        $theme-colors,
+        $dynamic-primary-color-label )
+      };
+
+      --#{$prefix}primary-bg-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-primary-color-label )
+      };
+
+      --#{$prefix}secondary: #{map-get(
+        $theme-colors,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}secondary-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}secondary-color: #{map-get(
+        $theme-colors,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}secondary-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}secondary-bg: #{map-get(
+        $theme-colors,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}secondary-bg-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-secondary-color-label )
+      };
+
+      --#{$prefix}tertiary: #{map-get(
+        $theme-colors,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}tertiary-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}tertiary-color: #{map-get(
+        $theme-colors,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}tertiary-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}tertiary-bg: #{map-get(
+        $theme-colors,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}tertiary-bg-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-tertiary-color-label )
+      };
+
+      --#{$prefix}heading-color: #{map-get($theme-colors, $dynamic-text-color)};
+      --#{$prefix}navbar-brand-color: #{map-get(
+        $theme-colors,
+        $dynamic-text-color )
+      };
+
+      --#{$prefix}link-color: #{map-get($theme-colors, $dynamic-text-color)};
+      --#{$prefix}link-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-text-color )
+      };
+      --#{$prefix}link-hover-color: #{map-get($theme-colors, $dynamic-text-color)};
+      --#{$prefix}link-hover-color-rgb: #{map-get(
+        $theme-colors-rgb,
+        $dynamic-text-color )
+      };
+
+      --#{$prefix}btn-bg: #{map-get($theme-colors, $dynamic-btn-bg)};
+      --#{$prefix}btn-bg: #{map-get(
+        $theme-colors,
+        $dynamic-btn-bg )
+      };
+
+      --#{$prefix}btn-hover-bg: #{map-get($theme-colors, $dynamic-btn-hover-bg)};
+      --#{$prefix}btn-hover-bg: #{map-get(
+        $theme-colors,
+        $dynamic-btn-hover-bg )
+      };
+
+      --#{$prefix}btn-color: #{map-get($theme-colors, $dynamic-btn-color)};
+      --#{$prefix}btn-color: #{map-get(
+        $theme-colors,
+        $dynamic-btn-color )
+      };
+
+      --#{$prefix}btn-hover-color: #{map-get($theme-colors, $dynamic-btn-hover-color)};
+      --#{$prefix}btn-hover-color: #{map-get(
+        $theme-colors,
+        $dynamic-btn-hover-color )
+      };
+
+      --#{$prefix}border-color: #{$dynamic-text-color};
   }
-
-  ;
-  --#{$prefix}body-bg: #{map-get($theme-colors, $dynamic-color-label)};
-  --#{$prefix}body-bg-rgb: #{map-get($theme-colors-rgb, $dynamic-color-label)};
-
-  --#{$prefix}emphasis-color: #{map-get($theme-colors, $dynamic-text-color)};
-  --#{$prefix}emphasis-color-rgb: #{map-get(
- $theme-colors-rgb,
-  $dynamic-text-color )
-}
-
-;
-
---#{$prefix}primary: #{map-get($theme-colors, $dynamic-primary-color-label)};
---#{$prefix}primary-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-primary-color-label )
-}
-
-;
---#{$prefix}primary-color: #{map-get(
- $theme-colors,
-$dynamic-primary-color-label )
-}
-
-;
---#{$prefix}primary-color-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-primary-color-label )
-}
-
-;
---#{$prefix}primary-bg: #{map-get(
- $theme-colors,
-$dynamic-primary-color-label )
-}
-
-;
---#{$prefix}primary-bg-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-primary-color-label )
-}
-
-;
-
---#{$prefix}secondary: #{map-get(
- $theme-colors,
-$dynamic-secondary-color-label )
-}
-
-;
---#{$prefix}secondary-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-secondary-color-label )
-}
-
-;
---#{$prefix}secondary-color: #{map-get(
- $theme-colors,
-$dynamic-secondary-color-label )
-}
-
-;
---#{$prefix}secondary-color-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-secondary-color-label )
-}
-
-;
---#{$prefix}secondary-bg: #{map-get(
- $theme-colors,
-$dynamic-secondary-color-label )
-}
-
-;
---#{$prefix}secondary-bg-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-secondary-color-label )
-}
-
-;
-
---#{$prefix}tertiary: #{map-get(
- $theme-colors,
-$dynamic-tertiary-color-label )
-}
-
-;
---#{$prefix}tertiary-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-tertiary-color-label )
-}
-
-;
---#{$prefix}tertiary-color: #{map-get(
- $theme-colors,
-$dynamic-tertiary-color-label )
-}
-
-;
---#{$prefix}tertiary-color-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-tertiary-color-label )
-}
-
-;
---#{$prefix}tertiary-bg: #{map-get(
- $theme-colors,
-$dynamic-tertiary-color-label )
-}
-
-;
---#{$prefix}tertiary-bg-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-tertiary-color-label )
-}
-
-;
-
---#{$prefix}heading-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}navbar-brand-color: #{map-get(
- $theme-colors,
-$dynamic-text-color )
-}
-
-;
-
---#{$prefix}link-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}link-color-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-text-color )
-}
-
-;
---#{$prefix}link-hover-color: #{map-get($theme-colors, $dynamic-text-color)};
---#{$prefix}link-hover-color-rgb: #{map-get(
- $theme-colors-rgb,
-$dynamic-text-color )
-}
-
-;
-
-// --#{$prefix}code-color: #{map-get($theme-colors, $dynamic-text-color)};
-// --#{$prefix}highlight-color: #{map-get($theme-colors, $dynamic-text-color)};
-// --#{$prefix}highlight-bg: #{map-get(
-//  $theme-colors,
-// $dynamic-highlight-color-label )
-// }
-
-// ;
-
---#{$prefix}btn-hover-text-color: #{map-get($theme-colors, $dynamic-btn-hover-text-color)};
---#{$prefix}btn-hover-text-color: #{map-get(
- $theme-colors,
-$dynamic-btn-hover-text-color )
-}
-
-;
-
-// --#{$prefix}btn-hover-bg: #{map-get($theme-colors, $dynamic-btn-hover-bg)};
-// --#{$prefix}btn-hover-bg: #{map-get(
-//  $theme-colors,
-// $dynamic-btn-hover-bg )
-// }
-
-// ;
-
-// --#{$prefix}hover-bg-color: #{map-get($theme-colors, $dynamic-text-color)};
-// --#{$prefix}hover-bg-color: #{map-get(
-//  $theme-colors,
-// $dynamic-hover-bg )
-// }
-
-// ;
-
-// @each $color, $value in $theme-colors-text-dark {
-//   --#{$prefix}#{$color}-text-emphasis: #{$value};
-// }
-
-// @each $color, $value in $theme-colors-text-dark {
-//   --#{$prefix}-bg-subtle: #{$value};
-// }
-
-// @each $color, $value in $theme-colors-border-subtle-dark {
-//   --#{$prefix}#{$color}-border-subtle: #{$value};
-// }
-
---#{$prefix}border-color: #{$dynamic-text-color};
-// --#{$prefix}border-color-translucent: #{$border-color-translucent-dark};
-
-// --#{$prefix}form-valid-color: #{$form-valid-color-dark};
-// --#{$prefix}form-valid-border-color: #{$form-valid-border-color-dark};
-// --#{$prefix}form-invalid-color: #{$form-invalid-color-dark};
-// --#{$prefix}form-invalid-border-color: #{$form-invalid-border-color-dark};
-}
 }
 
 @mixin when-themes($color-labels) {
@@ -237,14 +187,18 @@ $dynamic-btn-hover-text-color )
 
 @import 'white';
 @import 'black';
-@import 'dark-color';
 @import 'stanford-red';
 @import 'dark-red';
 @import 'bright-red';
 @import 'dark';
+@import 'dark-color';
 @import 'warm-light';
 @import 'warm-dark';
 @import 'green';
 @import 'green-dark';
 @import 'purple';
 @import 'violet';
+@import 'dark-gray';
+@import 'light-text';
+@import 'light';
+@import 'white-30';
