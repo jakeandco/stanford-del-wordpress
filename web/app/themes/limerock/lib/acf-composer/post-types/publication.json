@@ -1,0 +1,21 @@
+{
+  "name": "group_post-type_publication",
+  "title": "Post Type: Publication Details",
+  "fields": [
+    {
+      "label": "Authors",
+      "name": "authors",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/relationship",
+      "post_type": ["person"]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "publication"
+      }
+    ]
+  ]
+}

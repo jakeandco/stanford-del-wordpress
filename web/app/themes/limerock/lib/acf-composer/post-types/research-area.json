@@ -1,7 +1,14 @@
 {
   "name": "group_post-type_research-area",
   "title": "Post Type: Research Area Details",
-  "fields": [],
+  "fields": [
+    {
+      "label": "Research Area Icon",
+      "name": "research_area_icon",
+      "type": "image",
+      "instructions": "SVG with built-in animation"
+    }
+  ],
   "location": [
     [
       {

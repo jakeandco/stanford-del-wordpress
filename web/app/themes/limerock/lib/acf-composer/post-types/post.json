@@ -1,7 +1,15 @@
 {
   "name": "group_post-type_post",
   "title": "Post Type: Post",
-  "fields": [],
+  "fields": [
+    {
+      "label": "External Link",
+      "name": "external_link",
+      "type": "link",
+      "instructions": "For this link, set the title to the source. Example: New York Times"
+    },
+    { "label": "Intro Copy", "name": "intro_copy", "type": "wysiwyg" }
+  ],
   "location": [
     [
       {

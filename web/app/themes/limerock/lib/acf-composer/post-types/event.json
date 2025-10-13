@@ -1,7 +1,40 @@
 {
   "name": "group_post-type_event",
   "title": "Post Type: Event Details",
-  "fields": [],
+  "fields": [
+    {
+      "label": "Header Background",
+      "name": "header_background",
+      "type": "select"
+    },
+    {
+      "label": "Event Start Date",
+      "name": "event_start_date",
+      "type": "date_time_picker"
+    },
+    {
+      "label": "Event End Date",
+      "name": "event_end_date",
+      "type": "date_time_picker"
+    },
+    { "label": "Event Category", "name": "event_category", "type": "taxonomy" },
+    { "label": "Intro Copy", "name": "intro_copy", "type": "wysiwyg" },
+    { "label": "Intro Logo", "name": "intro_logo", "type": "image" },
+    {
+      "label": "Event Description",
+      "name": "event_description",
+      "type": "wysiwyg"
+    },
+    { "label": "Location", "name": "location", "type": "textarea" },
+    { "label": "Map Link", "name": "map_link", "type": "link" },
+    {
+      "label": "Registration Links",
+      "name": "registration_links",
+      "type": "repeater",
+      "instructions": "Used for Event Details CTAs",
+      "sub_fields": [{ "label": "Link", "name": "link", "type": "link" }]
+    }
+  ],
   "location": [
     [
       {

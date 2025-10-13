@@ -264,7 +264,21 @@
       "label": "Post Types",
       "name": "post_types",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "News",
+          "name": "news",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Internal News Label",
+              "name": "internal_news_label",
+              "instructions": "For the purposes of the \"Insight\" label as seen in the design.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     }
   ],
   "location": [
