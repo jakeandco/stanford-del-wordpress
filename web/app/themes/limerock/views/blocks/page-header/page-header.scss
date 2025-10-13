@@ -44,6 +44,15 @@
     }
   }
 
+  .h4 {
+    min-height: 103px;
+    margin-bottom: 20px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      min-height: 86px;
+      margin-bottom: 43px;
+    }
+  }
+
   .h5 {
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 44px;
@@ -198,7 +207,7 @@
     margin-top: -3px;
     margin-bottom: 4px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 13px;
+      margin-bottom: 7px;
       margin-top: 0;
     }
 
