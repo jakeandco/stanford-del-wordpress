@@ -21,7 +21,7 @@
     <div class="container">
       <div class="border-holder">
         <div class="row">
-          <div class="col-12 col-md-4 quote-info d-flex">
+          <div class="col-12 col-lg-4 quote-info d-flex">
             <div class="col col-img">
               {% include '@partial/media-item.twig' with { image: quote_person.thumbnail } only %}
             </div>
@@ -30,7 +30,7 @@
               <span class="titles d-block">{{ ((quote_person.meta('titles')|default([]))|map(v => v.title)|filter(v => v))|join(', ') }}</D>
             </div>
           </div>
-          <div class="col-12 col-md-8 quote-content">
+          <div class="col-12 col-lg-8 quote-content">
             {{quote_content}}
           </div>
         </div>

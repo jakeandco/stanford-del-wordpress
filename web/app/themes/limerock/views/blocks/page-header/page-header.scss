@@ -2,13 +2,45 @@
   // Add your custom styles here
 
   h1 {
-    margin-bottom: 30px;
+    @media screen and (max-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 50px;
+      line-height: 1;
+      font-weight: 400;
+      min-height: 115px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      min-height: 177px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 23px;
+    }
   }
 
   .h2 {
-    margin-bottom: 68px;
+    margin-bottom: 63px;
+    min-height: 116px;
+    display: flex;
+    align-items: flex-end;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 34px;
+      margin-bottom: 25px;
+      min-height: 188px;
+    }
+  }
+
+  .h3 {
+    font-size: 36px;
+    line-height: 39px;
+    font-weight: 350;
+    min-height: 0;
+    margin-bottom: 38px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 75px;
+      line-height: 81px;
+      font-weight: 300;
+      margin-top: 0;
     }
   }
 
@@ -16,12 +48,13 @@
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 44px;
       line-height: 50px;
+      max-width: 70%;
     }
   }
 
   .container {
     padding-top: 20px;
-    padding-bottom: 34px;
+    padding-bottom: 28px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       padding-top: 28px;
       padding-bottom: 14px;
@@ -29,10 +62,11 @@
   }
 
   .breadcrumb {
-    padding: 27px 0 37px;
+    padding: 27px 0 19px;
     font-size: 16px;
     line-height: 22px;
     flex-direction: column;
+    margin: 0;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       border-top: 1px solid $warm-dark;
       font-size: 18px;
@@ -43,10 +77,10 @@
     }
 
     li {
-      margin-bottom: 18px;
+      margin-bottom: 15px;
       padding-left: 0;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        padding-right: 30px;
+        padding-right: 8px;
       }
 
       &:before {
@@ -110,11 +144,23 @@
         svg {
           transform: scale(-1);
         }
+
+        .text-close {
+          display: inline;
+        }
+
+        .text-show {
+          display: none;
+        }
       }
 
       svg {
         margin-left: auto;
         transition: transform 0.3s ease-in-out;
+      }
+
+      .text-close {
+        display: none;
       }
     }
   }
@@ -141,14 +187,26 @@
     }
   }
 
+  .form-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding-left: 5px;
+    }
+  }
+
   form {
     position: relative;
+    margin-top: -3px;
+    margin-bottom: 4px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 13px;
+      margin-top: 0;
+    }
 
     input[type="text"] {
       border: 1px solid transparent;
       border-bottom-color: inherit;
       color: $black;
-      padding: 15px 0;
+      padding: 0px 0 13px;
       padding-right: 50px;
       font-size: 16px;
       line-height: 22px;
@@ -156,7 +214,7 @@
       max-width: 100%;
       background: transparent;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        padding: 21px 0;
+        padding: 0 0 21px;
         font-size: 22px;
         line-height: 30px;
       }
@@ -173,9 +231,8 @@
       border-radius: 50px;
       border: 1px solid;
       position: absolute;
-      top: 50%;
+      top: 0;
       right: 0;
-      transform: translateY(-50%);
       background: transparent;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
@@ -190,16 +247,33 @@
       }
     }
   }
+
+  .form-heading {
+
+    &.container {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 26px;
+      }
+    }
+
+    h1 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+        margin-top: 31px;
+      }
+    }
+  }
 }
 
 .back-link {
   opacity: 0.5;
-  margin-bottom: 23px;
+  margin-bottom: 12px;
   font-size: 12px;
   line-height: 22px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    margin-bottom: 12px;
     font-size: 16px;
+    margin-top: 9px;
+    margin-bottom: 27px;
   }
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 22px;

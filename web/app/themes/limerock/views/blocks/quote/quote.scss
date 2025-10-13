@@ -1,6 +1,6 @@
 .block_quote {
   // Add your custom styles here
-  padding: 52px 0 54;
+  padding: 52px 0 52px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     padding: 60px 0;
   }
@@ -11,6 +11,9 @@
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 22px;
       line-height: 30px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      margin-top: -6px;
     }
   }
 
@@ -30,17 +33,42 @@
     font-size: 24px;
     line-height: 28px;
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 40px;
+      line-height: 50px;
+      padding-left: 8px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
       font-size: 60px;
       line-height: 70px;
+    }
+
+    p {
+      position: relative;
+
+      &:first-child {
+        &:before {
+          content: '“';
+          position: absolute;
+          top: 0;
+          right: 100%;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          content: '”';
+        }
+      }
     }
   }
 
   .border-holder {
     border-top: 1px solid ;
     border-bottom: 1px solid;
-    padding: 28px 0 33px;
+    padding: 23px 0 14px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding: 45px 0 60px;
+      padding: 45px 30px 47px;
+      margin: 0 -36px;
     }
 
     & ~ .btn {
@@ -52,18 +80,26 @@
   }
 
   .quote-info {
-    margin-bottom: 36px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 37px;
+    align-items: center;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       margin-bottom: 0;
+      align-items: flex-start;
     }
   }
 
   .col-img {
     width: 69px;
+    flex: none;
     padding-right: 17px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       padding-right: 34px;
       width: 99px;
+    }
+
+    .media-item_holder {
+      position: relative;
+      padding-bottom: 100%;
     }
 
     figure {
@@ -74,6 +110,11 @@
 
       img {
         width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
