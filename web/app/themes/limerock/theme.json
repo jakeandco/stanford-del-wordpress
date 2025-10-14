@@ -40,7 +40,7 @@
         {
           "color": "#F0E7DE",
           "name": "Light",
-          "slug": "light"
+          "slug": "light-text"
         },
         {
           "color": "#000",
@@ -84,7 +84,7 @@
         },
         {
           "color": "#0D0F0F",
-          "name": "Dark Color",
+          "name": "Dark",
           "slug": "dark-color"
         },
         {
