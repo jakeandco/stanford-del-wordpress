@@ -43,5 +43,5 @@ fi
 echo "Running composer install in theme directory..."
 cd ./web/app/themes/limerock
 composer install
-npm install
+npm ci
 npm run build
