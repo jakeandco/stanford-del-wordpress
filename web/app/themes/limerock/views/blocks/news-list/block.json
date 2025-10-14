@@ -1,7 +1,7 @@
 {
   "name": "limerock/news-list",
   "title": "News List",
-  "description": "Block Description",
+  "description": "Displays a listing of News items, in a list format. If there are more posts than can be shown, pagination should be added.",
   "category": "post-type",
   "icon": "admin-comments",
   "keywords": [],
