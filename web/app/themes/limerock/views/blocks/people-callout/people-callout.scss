@@ -1,6 +1,9 @@
 .block_people-callout {
   // Add your custom styles here
-  padding: 53px 0 59px;
+  padding: 30px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 53px 0 59px;
+  }
 
   .block-title {
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
@@ -12,11 +15,28 @@
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 0;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
       font-size: 22px;
       line-height: 30px;
-      margin-top: 25px;
     }
+  }
+
+  .social-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 16px;
+      line-height: 20px;
+      transition: padding 0.3s ease-in-out;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 4px;
+    }
+  }
+
+  .social-title {
+    margin-bottom: 8px;
   }
 
   .accordion {
@@ -27,9 +47,18 @@
 
         .social-holder {
           @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            padding-top: 47px;
+          }
+          @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
             padding-top: 87px;
           }
         }
+      }
+    }
+
+    .titles {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        margin-top: 25px;
       }
     }
 
@@ -53,9 +82,22 @@
 
         .img-holder {
 
+          .media-item_holder {
+            padding-bottom: 116%;
+            @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+              padding-bottom: 74%;
+            }
+          }
+
           img {
-            height: calc(100% + 80px);
-            bottom: -80px;
+            @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+              height: calc(100% + 60px);
+              bottom: -60px;
+            }
+            @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+              height: calc(100% + 80px);
+              bottom: -80px;
+            }
           }
         }
       }
@@ -66,7 +108,9 @@
       }
 
       figure {
-        margin-bottom: 0;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 0;
+        }
       }
 
       .h5 {
@@ -86,6 +130,8 @@
     }
 
     .accordion-body {
+      padding-top: 0;
+      padding-bottom: 0;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding: 6px 80px 90px 0;
       }
@@ -96,25 +142,12 @@
           padding-right: 60px;
         }
       }
+    }
 
-      .social-holder {
-        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-          // padding-top: 87px;
-          font-size: 16px;
-          line-height: 20px;
-          transition: padding 0.3s ease-in-out;
-        }
-
-        a {
-          display: inline-block;
-          vertical-align: top;
-          margin-bottom: 4px;
-        }
-      }
-
-      .social-title {
-        margin-bottom: 8px;
-
+    .social-holder {
+      margin-bottom: 30px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
       }
     }
 
@@ -126,6 +159,7 @@
       .media-item_holder {
         position: relative;
         padding-bottom: 74%;
+        transition: all 0.3s ease-in-out;
       }
 
       img {
@@ -144,6 +178,66 @@
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding-left: 51px;
       }
+    }
+  }
+}
+
+.callout-listing {
+  padding-top: 34px;
+
+  .callout-item {
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-bottom: 70px;
+    }
+
+    & + .callout-item {
+      padding-top: 60px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 38px;
+      }
+    }
+  }
+
+  .h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 1px;
+    }
+  }
+
+  .titles {
+    margin-top: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .img-holder {
+    margin-bottom: 30px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 14px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figure {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 47px;
+      }
+    }
+  }
+
+  .text-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-left: 20px;
     }
   }
 }

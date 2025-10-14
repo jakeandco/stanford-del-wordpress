@@ -49,34 +49,38 @@
         {% endembed %}
 
       {% elseif fields.variation == 'listing' %}
+        <div class="callout-listing">
+          {% for row in people %}
+            <div class="callout-item">
+              <div class="row justify-content-between">
+                <div class="col-12 col-md-3 img-holder">
+                  {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
 
-        {% for row in people %}
-          <div class="row justify-content-between">
-            <div class="col-12 col-md-3 img-holder">
-              {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
+                  {% if row.meta('social_channels') %}
+                    <div class="social-holder">
+                      <span class="social-title d-block">Connect</span>
+                      {% for item in row.meta('social_channels') %}
+                        <a href="{{ item.social_link.url }}">{{ item.social_link.title }}</a><br/>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="col-12 col-md-8 text-holder">
+                  <h3 class="h5">{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
+                  {% if row.meta('titles') %}
+                    <p class="titles">
+                      {% for item in row.meta('titles') %}
+                        <span>{{ item.title }}</span>
+                      {% endfor %}
+                    </p>
+                  {% endif %}
 
-              {% if row.meta('social_channels') %}
-                <span class="social-title d-block">Connect</span>
-                {% for item in row.meta('social_channels') %}
-                  <a href="{{ item.social_link.url }}">{{ item.social_link.title }}</a><br/>
-                {% endfor %}
-              {% endif %}
+                  {{row.bio}}
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-md-8 text-holder">
-              <h3 class="h5">{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
-              {% if row.meta('titles') %}
-                <p class="titles">
-                  {% for item in row.meta('titles') %}
-                    <span>{{ item.title }}</span>
-                  {% endfor %}
-                </p>
-              {% endif %}
-
-              {{row.bio}}
-            </div>
-          </div>
-        {% endfor %}
-
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
 
