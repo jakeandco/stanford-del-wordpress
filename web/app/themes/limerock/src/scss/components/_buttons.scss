@@ -13,4 +13,17 @@
   svg {
     vertical-align: middle;
   }
+
+  &.btn-link {
+    padding: 0;
+    text-decoration: underline;
+    opacity: 0.5;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      background: transparent;
+      border-color: transparent;
+    }
+  }
 }
