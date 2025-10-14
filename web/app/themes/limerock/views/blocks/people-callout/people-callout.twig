@@ -1,4 +1,9 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_people-callout' } %}
+{% embed '@partial/block_wrapper.twig' with {
+   extra_classes: html_classes(
+    'block_people-callout',
+    'block_people-callout_items-per-row--' ~ fields.items_per_row,
+  )
+} %}
   {% set accordion_id = block.anchor|default(block.id) %}
   {% set people = get_posts(fields.people) %}
 

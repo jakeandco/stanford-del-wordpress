@@ -1,7 +1,7 @@
 {
   "name": "limerock/research-area-list",
   "title": "Research Area List",
-  "description": "Block Description",
+  "description": "Displays Research Area posts in a list format. The current page will always be omitted.",
   "category": "post-type",
   "icon": "admin-comments",
   "keywords": [],

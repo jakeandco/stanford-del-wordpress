@@ -1,7 +1,7 @@
 {
   "name": "limerock/news-cards",
   "title": "News Cards",
-  "description": "Block Description",
+  "description": "Displays a listing of News items, in a card format.",
   "category": "post-type",
   "icon": "admin-comments",
   "keywords": [],
