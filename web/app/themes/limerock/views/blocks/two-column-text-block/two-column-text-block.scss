@@ -5,6 +5,18 @@
     padding: 57px 0;
   }
 
+  .light-text {
+    opacity: 0.5;
+    color: inherit !important;
+  }
+
+  h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+
   .block-title {
     padding-bottom: 13px;
     border-bottom: 1px solid;

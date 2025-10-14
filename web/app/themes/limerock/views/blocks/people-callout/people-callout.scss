@@ -1,4 +1,243 @@
 .block_people-callout {
   // Add your custom styles here
-  padding: 51px 0 59px;
+  padding: 30px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 53px 0 59px;
+  }
+
+  .block-title {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 21px;
+    }
+  }
+
+  .titles {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  .social-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 16px;
+      line-height: 20px;
+      transition: padding 0.3s ease-in-out;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 4px;
+    }
+  }
+
+  .social-title {
+    margin-bottom: 8px;
+  }
+
+  .accordion {
+
+    .accordion-item:has(.accordion-button[aria-expanded="true"]) {
+
+      .accordion-body {
+
+        .social-holder {
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            padding-top: 47px;
+          }
+          @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+            padding-top: 87px;
+          }
+        }
+      }
+    }
+
+    .titles {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        margin-top: 25px;
+      }
+    }
+
+    .accordion-button {
+      display: block;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 17px 60px 18px 0;
+      }
+
+      &:hover {
+        &:after {
+          filter: none;
+        }
+      }
+
+      &[aria-expanded="true"] {
+
+        &:before {
+          background: black;
+        }
+
+        .img-holder {
+
+          .media-item_holder {
+            padding-bottom: 116%;
+            @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+              padding-bottom: 74%;
+            }
+          }
+
+          img {
+            @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+              height: calc(100% + 60px);
+              bottom: -60px;
+            }
+            @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+              height: calc(100% + 80px);
+              bottom: -80px;
+            }
+          }
+        }
+      }
+
+      &:before {
+        background: $white;
+        border: 1px solid $black;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 0;
+        }
+      }
+
+      .h5 {
+        margin-bottom: 0;
+        @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+          font-size: 44px;
+          line-height: 50px;
+          margin-bottom: -8px;
+        }
+      }
+
+      .title-holder {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-left: 30px;
+        }
+      }
+    }
+
+    .accordion-body {
+      padding-top: 0;
+      padding-bottom: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 6px 80px 90px 0;
+      }
+
+      .text-holder {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-left: 35px;
+          padding-right: 60px;
+        }
+      }
+    }
+
+    .social-holder {
+      margin-bottom: 30px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+      }
+    }
+
+    .img-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 3px;
+      }
+
+      .media-item_holder {
+        position: relative;
+        padding-bottom: 74%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .position-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-left: 51px;
+      }
+    }
+  }
+}
+
+.callout-listing {
+  padding-top: 34px;
+
+  .callout-item {
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-bottom: 70px;
+    }
+
+    & + .callout-item {
+      padding-top: 60px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 38px;
+      }
+    }
+  }
+
+  .h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 1px;
+    }
+  }
+
+  .titles {
+    margin-top: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .img-holder {
+    margin-bottom: 30px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 14px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figure {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 47px;
+      }
+    }
+  }
+
+  .text-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-left: 20px;
+    }
+  }
 }
