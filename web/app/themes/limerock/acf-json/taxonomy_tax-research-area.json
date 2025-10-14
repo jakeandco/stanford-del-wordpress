@@ -1,9 +1,9 @@
 {
-  "key": "taxonomy_research-area",
+  "key": "taxonomy_tax-research-area",
   "title": "Research Areas",
   "menu_order": 0,
   "active": true,
-  "taxonomy": "research-area",
+  "taxonomy": "tax-research-area",
   "object_type": ["post", "person", "project", "publication", "event"],
   "advanced_configuration": 1,
   "import_source": "",

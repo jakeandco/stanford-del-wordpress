@@ -1,0 +1,20 @@
+{
+  "name": "group_block_research-area-list",
+  "title": "Block Details: Research Area List",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/research-area-list"
+      }
+    ]
+  ]
+}

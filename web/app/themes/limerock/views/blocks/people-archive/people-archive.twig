@@ -1,0 +1,16 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_people-archive' } %}
+  {% block content %}
+    {% set post_type = 'event' %}
+
+
+    <p>{{fields.title}}</p>
+
+    <p>{{fields.featured_label}}</p>
+
+
+    {% include '@partial/post-repeater.twig' with { posts: fields.featured_people } only %}
+
+    <p>{{fields.archive_label}}</p>
+    {% include '@partial/post-repeater.twig' with { posts: get_posts({ post_type })} only %}
+  {% endblock %}
+{% endembed %}

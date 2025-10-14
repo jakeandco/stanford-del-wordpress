@@ -1,0 +1,46 @@
+{
+  "name": "group_block_news-list",
+  "title": "Block Details: News List",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Selection Type",
+      "name": "selection_type",
+      "type": "select",
+      "choices": {
+        "all": "All",
+        "past": "Past",
+        "related": "Related",
+        "manual": "Manual"
+      }
+    },
+    {
+      "label": "Selections",
+      "name": "selections",
+      "type": "relationship",
+      "post_type": ["post"],
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "selection_type",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/news-list"
+      }
+    ]
+  ]
+}
