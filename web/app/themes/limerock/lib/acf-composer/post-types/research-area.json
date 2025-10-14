@@ -7,6 +7,14 @@
       "name": "research_area_icon",
       "type": "image",
       "instructions": "SVG with built-in animation"
+    },
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/bidirectional-terms",
+      "taxonomy": "tax-research-area",
+      "multiple": 0,
+      "label": "Related Research Area Taxonomy",
+      "name": "related_research_area__tax",
+      "bidirectional_target": ["group_taxonomy_tax-research-area_related_research_area__post"]
     }
   ],
   "location": [

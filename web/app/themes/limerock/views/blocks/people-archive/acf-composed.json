@@ -1,0 +1,36 @@
+{
+  "name": "group_block_people-archive",
+  "title": "Block Details: People Archive",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Featured Label",
+      "name": "featured_label",
+      "type": "text"
+    },
+    {
+      "label": "Archive Label",
+      "name": "archive_label",
+      "type": "text"
+    },
+    {
+      "label": "Featured People",
+      "name": "featured_people",
+      "type": "relationship",
+      "post_type": ["person"]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/people-archive"
+      }
+    ]
+  ]
+}

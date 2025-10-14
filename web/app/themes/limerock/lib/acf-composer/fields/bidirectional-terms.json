@@ -1,0 +1,19 @@
+{
+  "limerock_base_type": "bidirectional-terms",
+  "label": "Bidirectional Terms",
+  "name": "bidirectional_terms",
+  "type": "acfe_taxonomy_terms",
+  "post_status": ["publish"],
+  "taxonomy": "",
+  "return_format": "object",
+  "multiple": 0,
+  "save_custom": 0,
+  "save_post_status": "publish",
+  "acfe_add_post": 1,
+  "allow_null": 0,
+  "allow_in_bindings": 0,
+  "bidirectional": 1,
+  "bidirectional_target": [],
+  "field_type": "select",
+  "ui": 1
+}

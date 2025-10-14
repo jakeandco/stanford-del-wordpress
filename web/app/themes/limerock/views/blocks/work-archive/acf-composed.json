@@ -1,0 +1,31 @@
+{
+  "name": "group_block_work-archive",
+  "title": "Block Details: Work Archive",
+  "fields": [
+  {
+    "label": "Featured Label",
+    "name": "featured_label",
+    "type": "text"
+  },
+  {
+    "label": "Archive Label",
+    "name": "archive_label",
+    "type": "text"
+  },
+  {
+    "label": "Featured Work",
+    "name": "featured_work",
+    "type": "post_object",
+    "post_type": ["project", "publication"]
+  }
+],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "limerock\/work-archive"
+          }
+      ]
+  ]
+}

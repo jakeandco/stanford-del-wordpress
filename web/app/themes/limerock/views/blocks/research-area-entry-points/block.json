@@ -1,0 +1,33 @@
+{
+  "name": "limerock/research-area-entry-points",
+  "title": "Research Area Entry Points",
+  "description": "Displays Research Area posts in a 4-up block format. The current page will not be omitted.",
+  "category": "post-type",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

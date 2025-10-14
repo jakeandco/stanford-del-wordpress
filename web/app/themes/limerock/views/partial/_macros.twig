@@ -10,7 +10,7 @@
       {% set rendered_item %}
       {{key}}="{{'data-limerock' in key ? (value|json_encode|escape) : value}}"
       {% endset %}
-      {% set rendered_items = rendered_items|merge([rendered_item|trim]) %}
+      {% set rendered_items = rendered_items|merge([rendered_item ?: '' |trim]) %}
     {% endfor %}
 
     {{ rendered_items|join(' ') }}

@@ -1,13 +1,21 @@
 {
-  "key": "group_post-type_research-area",
+  "name": "group_taxonomy_tax-research-area",
   "title": "Taxonomy: Research Area Details",
-  "fields": [],
+  "fields": [
+    {
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/bidirectional-post_object",
+      "post_type": ["research-area"],
+      "label": "Related Research Area Post",
+      "name": "related_research_area__post",
+      "bidirectional_target": ["group_post-type_research-area_related_research_area__tax"]
+    }
+  ],
   "location": [
     [
       {
         "param": "taxonomy",
         "operator": "==",
-        "value": "research-area"
+        "value": "tax-research-area"
       }
     ]
   ]

@@ -1,0 +1,11 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_research-area-list' } %}
+  {% block content %}
+    {% set post_type = 'research-area' %}
+
+    <p>{{fields.title}}</p>
+
+    {% set selections = get_posts({ post_type, post__not_in: [post.id] }) %}
+
+    {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+  {% endblock %}
+{% endembed %}

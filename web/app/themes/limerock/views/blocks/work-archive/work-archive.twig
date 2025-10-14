@@ -1,0 +1,11 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_work-archive' } %}
+  {% block content %}
+    {% set post_type = ['project', 'publication'] %}
+
+    <p>{{fields.featured_label}}</p>
+    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.featured_work) } only %}
+
+    <p>{{fields.archive_label}}</p>
+    {% include '@partial/post-repeater.twig' with { posts: get_posts({ post_type })} only %}
+  {% endblock %}
+{% endembed %}
