@@ -2,34 +2,54 @@
   "name": "group_block_people-callout",
   "title": "Block Details: People Callout",
   "fields": [
-  {
-    "label": "Heading",
-    "name": "heading",
-    "type": "text"
-  },
-  {
-    "label": "People",
-    "name": "people",
-    "acf_composer_extend": "LimeRockTheme/ACF/fields/relationship",
-    "post_type": ["person"]
-  },
-  {
-    "label": "Variation",
-    "name": "variation",
-    "type": "select",
-    "choices": {
-      "accordion": "Accordion",
-      "listing": "Listing"
-    }
-  }
-],
-  "location": [
-      [
+    {
+      "label": "Heading",
+      "name": "heading",
+      "type": "text"
+    },
+    {
+      "label": "People",
+      "name": "people",
+      "acf_composer_extend": "LimeRockTheme/ACF/fields/relationship",
+      "post_type": ["person"]
+    },
+    {
+      "label": "Variation",
+      "name": "variation",
+      "type": "select",
+      "choices": {
+        "accordion": "Accordion",
+        "listing": "Listing"
+      }
+    },
+    {
+      "label": "Items per row",
+      "name": "items_per_row",
+      "type": "select",
+      "choices": {
+        "3": "3",
+        "4": "4",
+        "6": "6"
+      },
+      "default_value": 3,
+      "conditional_logic": [
+        [
           {
-              "param": "block",
-              "operator": "==",
-              "value": "limerock\/people-callout"
+            "fieldPath": "variation",
+            "operator": "==",
+            "value": "listing"
           }
+        ]
       ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/people-callout"
+      }
+    ]
   ]
 }
