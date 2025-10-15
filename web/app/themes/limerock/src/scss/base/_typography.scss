@@ -98,10 +98,11 @@ h6, .subheader {
 .subheader-sans {
   font-family: 'FT System Grotesk';
   font-weight: 400;
-  letter-spacing: -0.5px;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+  letter-spacing: -0.2px;
+  font-size: 18px;
+  line-height: 28px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 28px;
-    line-height: 28px;
   }
 }
 

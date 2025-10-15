@@ -12,49 +12,51 @@
       <h3 class="block-title">{{ fields.heading }}</h3>
 
       {% if fields.variation == 'accordion' %}
-
-        {% embed "@views/partial/accordion.twig" with {
-          rows: people,
-          accordion_id,
-        } %}
-          {% block accordion_header %}
-            <div class="row align-items-center">
-              <div class="col-12 col-md-2 img-holder">
-                {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
+        <div class="callout callout-accordion">
+          {% embed "@views/partial/accordion.twig" with {
+            rows: people,
+            accordion_id,
+          } %}
+            {% block accordion_header %}
+              <div class="row align-items-center">
+                <div class="col-12 col-md-2 img-holder">
+                  {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
+                </div>
+                <div class="col-12 col-md-5 title-holder">
+                  <h3 class="h5">{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
+                </div>
+                <div class="col-12 col-md-5 position-holder">
+                  {% if row.meta('titles') %}
+                    <p class="titles">
+                      {% for item in row.meta('titles') %}
+                        <span>{{ item.title }}</span>
+                      {% endfor %}
+                    </p>
+                  {% endif %}
+                </div>
               </div>
-              <div class="col-12 col-md-5 title-holder">
-                <h3 class="h5">{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
-              </div>
-              <div class="col-12 col-md-5 position-holder">
-                {% if row.meta('titles') %}
-                  <p class="titles">
-                    {% for item in row.meta('titles') %}
-                      <span>{{ item.title }}</span>
+            {% endblock %}
+            {% block accordion_body %}
+              <div class="row">
+                <div class="col-12 col-md-2 social-holder">
+                  {% if row.meta('social_channels') %}
+                    <span class="social-title d-block">Connect</span>
+                    {% for item in row.meta('social_channels') %}
+                      <a href="{{ item.social_link.url }}">{{ item.social_link.title }}</a><br/>
                     {% endfor %}
-                  </p>
-                {% endif %}
+                  {% endif %}
+                </div>
+                <div class="col-12 col-md-9 text-holder">
+                  {{row.bio}}
+                </div>
               </div>
-            </div>
-          {% endblock %}
-          {% block accordion_body %}
-            <div class="row">
-              <div class="col-12 col-md-2 social-holder">
-                {% if row.meta('social_channels') %}
-                  <span class="social-title d-block">Connect</span>
-                  {% for item in row.meta('social_channels') %}
-                    <a href="{{ item.social_link.url }}">{{ item.social_link.title }}</a><br/>
-                  {% endfor %}
-                {% endif %}
-              </div>
-              <div class="col-12 col-md-9 text-holder">
-                {{row.bio}}
-              </div>
-            </div>
-          {% endblock %}
-        {% endembed %}
+            {% endblock %}
+          {% endembed %}
+        </div>
+
 
       {% elseif fields.variation == 'listing' %}
-        <div class="callout-listing">
+        <div class="callout callout-listing">
           {% for row in people %}
             <div class="callout-item">
               <div class="row justify-content-between">
@@ -85,6 +87,40 @@
               </div>
             </div>
           {% endfor %}
+        </div>
+
+      {% elseif fields.variation == 'cards' %}
+
+        {% if fields.items_per_row == '3' %}
+          {% set column_classes = 'col-md-4' %}
+        {% elseif fields.items_per_row == '4' %}
+          {% set column_classes = 'col-md-4 col-lg-3' %}
+        {% elseif fields.items_per_row == '6' %}
+          {% set column_classes = 'col-md-4 col-lg-3 col-xl-2' %}
+        {% endif %}
+
+        <div class="callout callout-cards">
+          <div class="row">
+            {% for row in people %}
+              <div class="col-12 {{column_classes}}">
+                <div class="callout-item">
+                  {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
+
+                  <div class="text-holder">
+                    <h3>{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
+
+                    {% if row.meta('titles') %}
+                      <p class="titles">
+                        {% for item in row.meta('titles') %}
+                          <span>{{ item.title }}</span>
+                        {% endfor %}
+                      </p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         </div>
       {% endif %}
     </div>
