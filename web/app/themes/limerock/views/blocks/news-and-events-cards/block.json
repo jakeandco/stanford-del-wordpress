@@ -1,0 +1,33 @@
+{
+  "name": "limerock/news-and-events-cards",
+  "title": "News and Event Cards",
+  "description": "Displays a listing of selected News and Event items, in a card format",
+  "category": "post-type",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

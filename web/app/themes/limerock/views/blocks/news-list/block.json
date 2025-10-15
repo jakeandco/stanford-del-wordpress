@@ -1,0 +1,33 @@
+{
+  "name": "limerock/news-list",
+  "title": "News List",
+  "description": "Displays a listing of News items, in a list format. If there are more posts than can be shown, pagination should be added.",
+  "category": "post-type",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

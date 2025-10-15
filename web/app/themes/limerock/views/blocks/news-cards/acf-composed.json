@@ -1,0 +1,56 @@
+{
+  "name": "group_block_news-cards",
+  "title": "Block Details: News Cards",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Selection Type",
+      "name": "selection_type",
+      "type": "select",
+      "choices": {
+        "all": "All",
+        "past": "Past",
+        "related": "Related",
+        "manual": "Manual"
+      }
+    },
+    {
+      "label": "Selections",
+      "name": "selections",
+      "type": "relationship",
+      "post_type": ["post"],
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "selection_type",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Variation",
+      "name": "variation",
+      "type": "select",
+      "choices": {
+        "with_image": "With Image",
+        "without_image": "Without Image"
+      },
+      "default_value": "with_image"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/news-cards"
+      }
+    ]
+  ]
+}

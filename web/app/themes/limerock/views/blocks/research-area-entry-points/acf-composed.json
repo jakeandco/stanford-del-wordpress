@@ -1,0 +1,30 @@
+{
+  "name": "group_block_research-area-entry-points",
+  "title": "Block Details: Research Area Entry Points",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Variation",
+      "name": "variation",
+      "type": "select",
+      "choices": {
+        "carousel": "Carousel",
+        "cards": "Cards"
+      },
+      "default_value": "carousel"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/research-area-entry-points"
+      }
+    ]
+  ]
+}

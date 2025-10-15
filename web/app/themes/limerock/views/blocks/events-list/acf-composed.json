@@ -1,0 +1,46 @@
+{
+  "name": "group_block_events-list",
+  "title": "Block Details: Events List",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Selection Type",
+      "name": "selection_type",
+      "type": "select",
+      "choices": {
+        "all": "All",
+        "past": "Past",
+        "related": "Related",
+        "manual": "Manual"
+      }
+    },
+    {
+      "label": "Selections",
+      "name": "selections",
+      "type": "relationship",
+      "post_type": ["event"],
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "selection_type",
+            "operator": "==",
+            "value": "manual"
+          }
+        ]
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/events-list"
+      }
+    ]
+  ]
+}

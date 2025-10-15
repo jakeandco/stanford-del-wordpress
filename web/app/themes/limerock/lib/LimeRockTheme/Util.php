@@ -70,7 +70,7 @@ class Util
 			return str_contains($current_url, 'post=' . $comparison_post);
 		}
 
-		return rtrim($current_url, '/') == rtrim($comparison_url, '/');
+		return rtrim($current_url ?? '', '/') == rtrim($comparison_url ?? '', '/');
 	}
 
 
