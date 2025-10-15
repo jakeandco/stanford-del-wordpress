@@ -1,32 +1,42 @@
 .block_four-up-text-callout {
   // Add your custom styles here
 
-  padding: 25px 0;
+  padding: 27px 0 11px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 73px 0;
+    padding: 75px 0 53px;
   }
 
   .block-title {
     padding-bottom: 0;
     margin-bottom: 14px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
   }
 
   .h4 {
-    margin-bottom: 36px;
+    font-family: 'Season';
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       margin-bottom: 71px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 60px;
+      line-height: 70px;
+      max-width: 90%;
     }
   }
 
   .subheader-sans {
     margin-bottom: 21px;
-    padding-left: 40px;
+    padding-left: 42px;
     position: relative;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
+      padding-top: 2px;
     }
 
     &::before {
@@ -58,7 +68,7 @@
   .text-callout-item {
     background: rgba($white, 0.2);
     counter-increment: step-counter;
-    padding: 19px 15px;
+    padding: 19px 15px 16px;
     margin-bottom: 14px;
     min-height: 262px;
     display: flex;
@@ -69,6 +79,10 @@
       margin-bottom: 33px;
       height: calc(100% - 33px);
       min-height: 320px;
+    }
+
+    p {
+      margin-bottom: 0;
     }
   }
 }
