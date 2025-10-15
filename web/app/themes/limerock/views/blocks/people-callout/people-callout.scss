@@ -5,7 +5,89 @@
     padding: 53px 0 59px;
   }
 
+  &.block_people-callout_items-per-row- {
+
+    &-3 {
+
+      .callout-item {
+        display: block;
+        margin-bottom: 39px;
+
+        h3 {
+          margin-bottom: 11px;
+          font-size: 24px;
+          line-height: 28px;
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 7px;
+          }
+        }
+      }
+
+      figure {
+        width: 100%;
+        margin-bottom: 21px;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 28px;
+        }
+      }
+
+      .text-holder {
+        width: 100%;
+      }
+    }
+
+    &-4 {
+
+      .callout {
+
+        .media-item_holder {
+          padding-bottom: 119%;
+        }
+      }
+    }
+
+    &-6 {
+      .callout-cards {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-top: 9px;
+        }
+      }
+
+      .callout {
+        h3 {
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            font-size: 22px;
+            line-height: 1;
+            margin-bottom: 11px;
+          }
+        }
+
+        .media-item_holder {
+          padding-bottom: 119%;
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            padding-bottom: 118%;
+          }
+        }
+
+        figure {
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &:has(.callout-accordion) {
+    .block-title {
+      border: 0;
+    }
+  }
+
   .block-title {
+    border-bottom: 1px solid;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       margin-bottom: 21px;
     }
@@ -38,8 +120,11 @@
   .social-title {
     margin-bottom: 8px;
   }
+}
 
-  .accordion {
+.callout {
+
+  &-accordion {
 
     .accordion-item:has(.accordion-button[aria-expanded="true"]) {
 
@@ -180,64 +265,142 @@
       }
     }
   }
-}
 
-.callout-listing {
-  padding-top: 34px;
+  &-listing {
+    padding-top: 34px;
 
-  .callout-item {
-    padding-bottom: 30px;
-    border-bottom: 1px solid;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-bottom: 70px;
-    }
-
-    & + .callout-item {
-      padding-top: 60px;
-    }
-
-    &:last-child {
-      border-bottom: 0;
+    .callout-item {
+      padding-bottom: 30px;
+      border-bottom: 1px solid;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        padding-bottom: 38px;
+        padding-bottom: 70px;
+      }
+
+      & + .callout-item {
+        padding-top: 60px;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-bottom: 38px;
+        }
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 1px;
+      }
+    }
+
+    .titles {
+      margin-top: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .img-holder {
+      margin-bottom: 30px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 14px;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 47px;
+        }
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-left: 20px;
       }
     }
   }
 
-  .h5 {
+  &-cards {
+    padding-top: 11px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 1px;
-    }
-  }
-
-  .titles {
-    margin-top: 0;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 50px;
-    }
-  }
-
-  .img-holder {
-    margin-bottom: 30px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 14px;
-      margin-bottom: 0;
+      padding-top: 4px;
     }
 
-    img {
-      width: 100%;
+    .row {
+      margin: 0 -18px;
+
+      &>.col-12 {
+        padding: 0 18px;
+      }
+    }
+
+    .callout-item {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 38px;
+        display: block;
+      }
     }
 
     figure {
+      margin: 0;
+      width: 96px;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        margin-bottom: 47px;
+        margin-bottom: 24px;
+        width: 100%;
       }
     }
-  }
 
-  .text-holder {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-left: 20px;
+    .text-holder {
+      width: calc(100% - 137px);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 100%;
+      }
+    }
+
+    .media-item_holder {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 126%;
+    }
+
+    .media-item {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h3 {
+      font-family: 'Season';
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0;
+      font-weight: 470;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+
+    .titles {
+      font-size: 16px;
+      line-height: 22px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        line-height: 20px;
+      }
     }
   }
 }

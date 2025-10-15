@@ -19,7 +19,8 @@
       "type": "select",
       "choices": {
         "accordion": "Accordion",
-        "listing": "Listing"
+        "listing": "Listing",
+        "cards": "Cards"
       }
     },
     {
@@ -37,7 +38,7 @@
           {
             "fieldPath": "variation",
             "operator": "==",
-            "value": "listing"
+            "value": "cards"
           }
         ]
       ]
