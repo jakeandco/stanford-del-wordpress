@@ -103,7 +103,7 @@
           <div class="row">
             {% for row in people %}
               <div class="col-12 {{column_classes}}">
-                <div class="callout-item">
+                <a href="{{ row.link }}" class="callout-item">
                   {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
 
                   <div class="text-holder">
@@ -117,7 +117,7 @@
                       </p>
                     {% endif %}
                   </div>
-                </div>
+                </a>
               </div>
             {% endfor %}
           </div>

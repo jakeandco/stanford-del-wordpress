@@ -2,6 +2,15 @@
 // This file contains all styles related to the common layout of the site
 // -----------------------------------------------------------------------------
 
+.content-wrapper {
+  margin-top: 54px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-top: 184px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    margin-top: 188px;
+  }
+}
 
 .block-title {
   font-size: 16px;

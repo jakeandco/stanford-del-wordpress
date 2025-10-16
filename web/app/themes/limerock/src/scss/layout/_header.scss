@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  position: relative;
-  z-index: 99;
+  background: var(--#{$prefix}body-bg);
 
   .container {
     position: relative;
@@ -148,6 +147,7 @@
     width: 100%;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       background: $white;
+      margin: 0;
       border: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -222,40 +222,13 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 14px;
+    padding: 0;
   }
 
   &:has(a:hover) a:not(:hover),
   &:has(a:focus) a:not(:focus) {
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       opacity: 0.65;
-    }
-  }
-
-  h4 {
-    font-family: 'Season';
-    font-size: 20px;
-    line-height: 1;
-    font-weight: 470;
-    margin-bottom: 0;
-    letter-spacing: 0;
-    padding-right: 30px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      font-size: 26px;
-      padding-bottom: 13px;
-      padding-right: 0;
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
-      font-size: 32px;
-    }
-  }
-
-  .text {
-    width: calc(100% - 93px);
-    padding-right: 20px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 0;
-      width: 100%;
     }
   }
 
@@ -266,7 +239,7 @@
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       width: 50%;
       padding: 0 15px;
-      margin-bottom: 50px;
+      margin-bottom: 5px;
     }
     @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
       width: 25%;
@@ -310,6 +283,49 @@
     }
   }
 
+  .dropdown-item {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      min-height: 223px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      min-height: 287px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+      min-height: 255px;
+    }
+
+    &:active {
+      background: transparent;
+    }
+  }
+
+  h4 {
+    font-family: 'Season';
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 470;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    padding-right: 30px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 26px;
+      padding-bottom: 13px;
+      padding-right: 0;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      font-size: 32px;
+    }
+  }
+
+  .text {
+    width: calc(100% - 93px);
+    padding-right: 20px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
   figure {
     width: 68px;
     padding-right: 20px;
@@ -340,10 +356,6 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
