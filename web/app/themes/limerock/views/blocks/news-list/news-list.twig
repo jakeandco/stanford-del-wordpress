@@ -38,7 +38,9 @@
         }) %}
       {% endif %}
 
-      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+      <div class="posts-wrap posts-list">
+        {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+      </div>
     </div>
 
   {% endblock %}

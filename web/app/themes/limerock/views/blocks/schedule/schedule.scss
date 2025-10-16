@@ -5,11 +5,6 @@
     padding: 43px 0 84px;
   }
 
-  .block-title {
-    padding: 0;
-    margin-bottom: 0;
-  }
-
   .date {
     opacity: 0.5;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
