@@ -42,7 +42,7 @@
         }) %}
       {% endif %}
 
-      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'card' } only %}
     </div>
 
   {% endblock %}
