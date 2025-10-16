@@ -61,12 +61,20 @@
       "instructions": "Optional short quote."
     },
     {
-      "label": "Publish to Site",
-      "name": "publish_to_site",
+      "label": "Display on Archive",
+      "name": "display_on_archive",
       "type": "true_false",
       "instructions": "Used to determine if appears in People archive.",
-      "message": "Publish",
-      "default_value": 1
+      "message": "Enable",
+      "default_value": 0
+    },
+    {
+      "label": "Display Detail Page",
+      "name": "display_detail_page",
+      "type": "true_false",
+      "instructions": "Used to determine if this person has a detail page",
+      "message": "Enable",
+      "default_value": 0
     }
   ],
   "location": [
