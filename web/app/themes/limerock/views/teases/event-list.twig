@@ -1,14 +1,9 @@
-{% set container_el = tease_options.container_el|default("article") %}
-{% set container_classes = html_classes(
-	'tease',
-	('tease-' ~ post.post_type),
-	{
-		('tease-' ~ post.post_type ~ '--' ~ tease_options.variant): tease_options.variant is not empty,
-	},
-	tease_options.extra_classes ?? '',
-) %}
-
-<{{container_el}} class="{{ container_classes }}" {{ tease_options.extra_attributes}} id="tease-{{post.post_id}}">
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_classes:'has-overlay-background',
+  },
+  post
+} only %}
   {% block content %}
     <div class="row">
       <div class="col-12 col-md-3 img-holder">
@@ -34,4 +29,4 @@
       </div>
     </div>
   {% endblock %}
-</{{container_el}}>
+{% endembed %}

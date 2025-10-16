@@ -1,0 +1,11 @@
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_classes:'has-overlay-background',
+  },
+  post
+} only %}
+  {% block content %}
+    <h1>event</h1>
+
+  {% endblock %}
+{% endembed %}

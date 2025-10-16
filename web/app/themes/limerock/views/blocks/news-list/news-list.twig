@@ -1,44 +1,45 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_news-list' } %}
   {% block content %}
-    {% set post_type = 'event' %}
+    <div class="container">
+      {% set post_type = 'post' %}
 
+      <span class="d-block block-title">{{fields.title}}</span>
 
-    <p>{{fields.title}}</p>
+      {% set selections = [] %}
+      {% if fields.selection_type == 'manual' %}
+        {% set selections = fields.selections %}
+      {% elseif fields.selection_type == 'all' %}
+        {% set selections = get_posts({ post_type }) %}
+      {% elseif fields.selection_type == 'past' %}
+        {% set today = fn('getdate') %}
+        {% set selections = get_posts({
+          post_type,
+          date_query:
+            [
+              {
+                year : today.year,
+                month : today.mon,
+                day : today.mday,
+              },
+            ],
+        }) %}
+      {% elseif fields.selection_type == 'related' %}
+        {% set relation_taxonomy = 'tax-research-area' %}
+        {% set selections = get_posts({
+          post_type,
+          post__not_in: [post.ID],
+          tax_query: [
+              {
+                taxonomy: relation_taxonomy,
+                field: 'slug',
+                terms: post.terms(relation_taxonomy)|default([])|map(t => t.slug)
+              },
+            ],
+        }) %}
+      {% endif %}
 
-    {% set selections = [] %}
-    {% if fields.selection_type == 'manual' %}
-      {% set selections = fields.selections %}
-    {% elseif fields.selection_type == 'all' %}
-      {% set selections = get_posts({ post_type }) %}
-    {% elseif fields.selection_type == 'past' %}
-      {% set today = fn('getdate') %}
-      {% set selections = get_posts({
-        post_type,
-        date_query: 
-          [ 
-            {
-              year : today.year,
-              month : today.mon,
-              day : today.mday,
-            },
-          ],
-      }) %}
-    {% elseif fields.selection_type == 'related' %}
-      {% set relation_taxonomy = 'tax-research-area' %}
-      {% set selections = get_posts({
-        post_type,
-        post__not_in: [post.ID],
-        tax_query: [ 
-            {
-              taxonomy: relation_taxonomy,
-              field: 'slug',
-              terms: post.terms(relation_taxonomy)|default([])|map(t => t.slug)
-            },
-          ],
-      }) %}
-    {% endif %}
-
-    {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+    </div>
 
   {% endblock %}
 {% endembed %}
