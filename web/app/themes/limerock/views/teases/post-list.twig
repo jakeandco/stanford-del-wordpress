@@ -6,7 +6,7 @@
 } only %}
   {% block content %}
     <div class="row">
-      <div class="col-12 col-md-7 text-holder">
+      <div class="col-12 col-md-9 text-holder">
         <div class="date">Friday May, 23 <span class="mark">/</span> 11:30a to 12:30p Pacific Time</div>
         <h2 class="h5"><a href="{{post.link}}">{{post.post_title}}</a></h2>
 
@@ -15,17 +15,16 @@
         </ul>
       </div>
 
-      <div class="col-12 col-md-2 text-holder">
+      <div class="col-12 col-md-3 img-holder">
+        {% if post.thumbnail %}
+          {% include "@partial/media-item.twig" with { image: post.thumbnail } only %}
+        {% endif %}
+
         <a href="{{post.link}}" class="btn btn-secondary">
           <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.44738 8.14616L0.851562 7.55034L6.69624 1.70566H1.33389V0.854492H8.14323V7.66383H7.29206V2.30148L1.44738 8.14616Z" fill="black"/>
           </svg>
         </a>
-      </div>
-      <div class="col-12 col-md-3 img-holder">
-        {% if post.thumbnail %}
-          {% include "@partial/media-item.twig" with { image: post.thumbnail } only %}
-        {% endif %}
       </div>
     </div>
 

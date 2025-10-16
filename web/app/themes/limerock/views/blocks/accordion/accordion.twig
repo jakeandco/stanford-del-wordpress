@@ -2,7 +2,7 @@
   {% block content %}
     <div class="container">
       {% set accordion_id = block.anchor|default(block.id) %}
-      <h2 class="block-title">{{fields.headline}}</h2>
+      <h2 class="block-title border-0 padding-0">{{fields.headline}}</h2>
 
       {% embed "@views/partial/accordion.twig" with {
         rows: fields.rows,
