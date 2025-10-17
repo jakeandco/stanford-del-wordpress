@@ -11,6 +11,9 @@
 }
 
 .tease {
-  padding: 30px 20px;
+  padding: 26px 0 9px;
   border-bottom: 1px solid;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 38px 12px;
+  }
 }

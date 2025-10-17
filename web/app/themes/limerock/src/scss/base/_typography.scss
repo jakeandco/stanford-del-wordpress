@@ -11,7 +11,7 @@ h1, .h1 {
   color: inherit;
 }
 
-h1 {
+h1, .h1 {
   font-size: 90px;
   line-height: 1;
   letter-spacing: -0.4px;
@@ -30,7 +30,7 @@ h1 {
   }
 }
 
-h2 {
+h2, .h2 {
   letter-spacing: -1px;
   font-size: 50px;
   line-height: 1;
@@ -40,7 +40,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   letter-spacing: 0;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     font-size: 75px;
@@ -48,7 +48,7 @@ h3 {
   }
 }
 
-h4 {
+h4, .h4 {
   letter-spacing: -0.5px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     font-size: 65px;
@@ -56,7 +56,7 @@ h4 {
   }
 }
 
-h5 {
+h5, .h5 {
   font-family: 'Season';
   font-weight: 470;
   letter-spacing: 0;

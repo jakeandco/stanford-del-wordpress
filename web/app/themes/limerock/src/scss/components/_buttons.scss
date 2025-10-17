@@ -27,3 +27,12 @@
     }
   }
 }
+
+.btn-secondary {
+  background-color: $warm-light;
+  color: $black;
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
