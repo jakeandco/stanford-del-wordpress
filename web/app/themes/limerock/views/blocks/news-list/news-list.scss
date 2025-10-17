@@ -3,19 +3,12 @@
 
   .posts-list {
 
-    .date {
-
-      .mark {
-        color: inherit;
-        margin: 0 1px;
-        background: transparent;
-      }
-    }
-
     .text-holder {
       padding-right: 0;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding-right: 25px;
+        display: flex;
+        flex-direction: column;
       }
     }
 
@@ -62,38 +55,6 @@
 
       &:hover {
         text-decoration: underline;
-      }
-    }
-  }
-
-  .date {
-    margin-bottom: 12px;
-    font-size: 12px;
-    line-height: 22px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 11px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  .category-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    li {
-      padding-right: 10px;
-    }
-
-    .btn {
-      text-transform: uppercase;
-      font-size: 9px;
-      line-height: 20px;
-      font-weight: 600;
-      padding: 1px 10px;
-      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        font-size: 12px;
-        padding: 3px 12px;
       }
     }
   }
@@ -159,30 +120,6 @@
     }
   }
 
-  .more-link {
-    color: $black;
-    padding: 0;
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      background-color: $warm-light;
-    }
-
-    &:hover {
-      color: $black;
-      background: transparent;
-      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        background-color: $black;
-        color: $white;
-      }
-    }
-  }
-
   .img-data {
     color: $black;
     font-size: 44px;
@@ -196,6 +133,71 @@
       line-height: 1;
       top: 37px;
       left: 29px;
+    }
+  }
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-top: auto;
+  }
+
+  li {
+    padding-right: 10px;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-size: 9px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 1px 10px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      font-size: 12px;
+      padding: 3px 12px;
+    }
+  }
+}
+
+.date {
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 22px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .mark {
+    color: inherit;
+    margin: 0 1px;
+    background: transparent;
+  }
+}
+
+.more-link {
+  color: $black;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    background-color: $warm-light;
+  }
+
+  &:hover {
+    color: $black;
+    background: transparent;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      background-color: $black;
+      color: $white;
     }
   }
 }

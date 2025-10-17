@@ -19,7 +19,7 @@
         <a href="{{post.link}}">
 
           {% if post.thumbnail %}
-            <div class="d-none d-md-block media-wrapper">
+            <div class="d-none d-md-block">
               {% include "@partial/media-item.twig" with { image: post.thumbnail } only %}
             </div>
           {% endif %}

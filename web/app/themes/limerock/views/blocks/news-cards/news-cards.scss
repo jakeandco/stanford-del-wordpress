@@ -1,3 +1,128 @@
 .block_news-cards {
   // Add your custom styles here
+  padding: 28px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 62px 0;
+  }
+
+  figure {
+    margin-bottom: 12px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 30px;
+      margin-right: -9px;
+    }
+  }
+
+  .media-item_holder {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 85%;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-bottom: 100%;
+    }
+  }
+
+  .media-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .h5 {
+    margin-bottom: 21px;
+  }
+
+  .tease {
+    padding: 25px 0 9px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding: 45px 0 6px;
+    }
+
+    &:has(.media-item) {
+      .btn-holder {
+        display: none !important;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+  .img-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 0;
+    }
+  }
+
+  .btn-holder {
+    padding-left: 10px;
+  }
+
+  .text-holder {
+    padding-right: 0;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 25px;
+      padding-left: 56px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.col-md-5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-left: 7%;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+    }
+
+    &.col-md-11 {
+
+      .date {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 47px;
+        }
+      }
+
+      .h5 {
+        @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+          font-size: 60px;
+          line-height: 70px;
+          margin-bottom: 50px;
+          min-height: 211px;
+        }
+      }
+    }
+  }
+
+  .date {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 57px;
+    }
+  }
+
+  .h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .category-list {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')){
+      margin-bottom: 20px;
+    }
+  }
 }

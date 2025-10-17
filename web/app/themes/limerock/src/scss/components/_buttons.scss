@@ -31,8 +31,20 @@
 .btn-secondary {
   background-color: $warm-light;
   color: $black;
+
   &:hover {
     background-color: $black;
     color: $white;
+  }
+}
+
+[data-bs-theme="green"] {
+
+  .btn-secondary {
+    background: $white;
+
+    &:hover {
+      background-color: $black;
+    }
   }
 }
