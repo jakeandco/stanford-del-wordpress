@@ -48,17 +48,16 @@
 
     .category-list {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        margin-top: auto;
         margin-bottom: -3px;
       }
     }
 
     .btn-holder {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        padding-right: 0px;
+        padding-right: 12px;
         padding-left: 0px;
       }
-      @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
         padding-left: 25px;
         padding-right: 37px;
       }

@@ -9,28 +9,28 @@
 
     <div class="row">
       {% if post.thumbnail %}
-        <div class="col-12 col-md-5 img-holder">
+        <div class="col-12 col-md-6 img-holder">
           {% include "@partial/media-item.twig" with { image: post.thumbnail } only %}
         </div>
-        <div class="col-12 col-md-5 text-holder">
+        <div class="col-10 col-md-5 text-holder">
       {% else %}
-        <div class="col-12 col-md-10 text-holder">
+        <div class="col-10 col-md-11 text-holder">
       {% endif %}
 
-        <div class="date">Insight  ·  July 12, 2025</div>
+        <div class="date">Insight <span class="mark">·</span> July 12, 2025</div>
         <h2 class="h5"><a href="{{post.link}}">{{post.post_title}}</a></h2>
 
         <ul class="category-list list-unstyled">
           <li>
-            <a href="{{full_post.link}}" class="btn btn--secondary">{{ full_post.category().name }}</a>
+            <a href="{{full_post.link}}" class="btn btn-secondary">Research area tag</a>
           </li>
         </ul>
       </div>
 
-      <div class="col-12 col-md-2 text-holder">
-        <a href="{{post.link}}" class="btn btn-secondary">
-          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.71928 10.0212L0.980469 9.28234L8.22787 2.03494H1.57856V0.979492H10.0221V9.42307H8.96669V2.77375L1.71928 10.0212Z" fill="black"/>
+      <div class="col-2 col-md-1 btn-holder d-flex justify-content-end">
+        <a href="{{post.link}}" class="btn btn-secondary more-link">
+          <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.71928 10.0212L0.980469 9.28234L8.22787 2.03494H1.57856V0.979492H10.0221V9.42307H8.96669V2.77375L1.71928 10.0212Z" fill="currentColor"/>
           </svg>
         </a>
       </div>
