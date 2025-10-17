@@ -11,6 +11,21 @@
         background: transparent;
       }
     }
+
+    .text-holder {
+      padding-right: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 25px;
+      }
+    }
+
+    .img-holder {
+      padding-left: 14px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-left: 15px;
+        padding-right: 17px;
+      }
+    }
   }
 
   .tease {
@@ -32,14 +47,7 @@
   }
 }
 
-.posts-list {
-
-  .text-holder {
-    padding-right: 0;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 25px;
-    }
-  }
+.posts-wrap {
 
   .h5 {
     margin-bottom: 23px;
@@ -92,11 +100,6 @@
 
   .img-holder {
     position: relative;
-    padding-left: 14px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-left: 15px;
-      padding-right: 17px;
-    }
 
     figure {
       margin: 0;
@@ -106,6 +109,23 @@
       position: relative;
       padding-bottom: 62%;
       overflow: hidden;
+    }
+
+    .media-wrapper {
+      position: relative;
+      padding-bottom: 85%;
+      overflow: hidden;
+      margin-bottom: 12px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 93%;
+        margin-bottom: 0;
+      }
+
+      .media-item_holder {
+        position: static;
+        padding: 0;
+        overflow: visible;
+      }
     }
 
     .media-item {
@@ -160,6 +180,22 @@
         background-color: $black;
         color: $white;
       }
+    }
+  }
+
+  .img-data {
+    color: $black;
+    font-size: 44px;
+    line-height: 43px;
+    position: absolute;
+    top: 16px;
+    left: 19px;
+    max-width: 130px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 65px;
+      line-height: 1;
+      top: 37px;
+      left: 29px;
     }
   }
 }
