@@ -21,7 +21,9 @@
   .tease-event {
 
     .category-list {
-      margin-bottom: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+      }
     }
 
     .text-holder {
@@ -45,6 +47,21 @@
         position: static;
         padding: 0;
         overflow: visible;
+      }
+    }
+
+    .btn-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 12px;
+        padding-left: 0px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        padding-left: 25px;
+        padding-right: 37px;
+      }
+
+      .btn {
+        padding: 14px 20px;
       }
     }
   }
