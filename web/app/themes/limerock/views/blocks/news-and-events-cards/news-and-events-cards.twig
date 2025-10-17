@@ -1,9 +1,9 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_events-list' } %}
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_news-and-events-cards' } %}
   {% block content %}
     <div class="container">
       {% set post_type = 'event' %}
 
-      <span class="d-block block-title">{{fields.title}}</span>
+      <span class="d-block block-title mb-0">{{fields.title}}</span>
 
       {% set selections = [] %}
       {% if fields.selection_type == 'manual' %}
@@ -42,7 +42,9 @@
         }) %}
       {% endif %}
 
-      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'card' } only %}
+      <div class="posts-cards-list">
+        {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'card' } only %}
+      </div>
     </div>
 
   {% endblock %}
