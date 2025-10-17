@@ -1,13 +1,13 @@
 {
-  "name": "group_post-type_work-type",
-  "title": "Taxonomy: Work Type Details",
+  "name": "group_post-type_publication-type",
+  "title": "Taxonomy: Publication Type Details",
   "fields": [],
   "location": [
     [
       {
         "param": "taxonomy",
         "operator": "==",
-        "value": "work-type"
+        "value": "publication-type"
       }
     ]
   ]

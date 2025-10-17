@@ -242,7 +242,20 @@
       "label": "General",
       "name": "general",
       "type": "group",
-      "sub_fields": []
+      "sub_fields": [
+        {
+          "label": "Featured Searches",
+          "name": "featured_searches",
+          "type": "repeater",
+          "sub_fields": [
+            {
+              "label": "Search Term",
+              "name": "search_term",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "Blocks",
