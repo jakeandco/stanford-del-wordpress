@@ -8,9 +8,80 @@
   .block-title {
     margin: 0;
   }
+
+  .events-list {
+
+    .date {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        line-height: 18px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+        margin-bottom: 52px;
+      }
+
+      .mark {
+        color: $bright-red;
+        margin: 0 1px;
+        background: transparent;
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        line-height: 53px;
+      }
+    }
+
+    .img-holder {
+
+      .media-item_holder {
+        padding-bottom: 100%;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .category-list {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-top: auto;
+        margin-bottom: -3px;
+      }
+    }
+
+    .btn-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+        padding-left: 25px;
+        padding-right: 37px;
+      }
+
+      .btn {
+        padding: 14px 20px;
+      }
+    }
+
+    .tease {
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $light-text;
+      }
+    }
+  }
 }
 
 .tease {
-  padding: 30px 20px;
+  padding: 24px 0 6px;
   border-bottom: 1px solid;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 33px 20px;
+  }
 }

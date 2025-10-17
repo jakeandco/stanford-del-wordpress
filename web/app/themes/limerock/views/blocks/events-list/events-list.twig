@@ -1,4 +1,4 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_events-list' } %}
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_events-list block_post-list' } %}
   {% block content %}
     <div class="container">
       {% set post_type = 'event' %}
@@ -42,7 +42,9 @@
         }) %}
       {% endif %}
 
-      {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+      <div class="posts-wrap events-list">
+        {% include '@partial/post-repeater.twig' with { posts: selections, variant: 'list' } only %}
+      </div>
     </div>
 
   {% endblock %}
