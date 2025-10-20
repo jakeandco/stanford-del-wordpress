@@ -26,13 +26,6 @@
       }
     }
 
-    .text-holder {
-      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
     .media-wrapper {
       position: relative;
       padding-bottom: 85%;

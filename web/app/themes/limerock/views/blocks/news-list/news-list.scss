@@ -7,8 +7,6 @@
       padding-right: 0;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding-right: 25px;
-        display: flex;
-        flex-direction: column;
       }
     }
 
@@ -34,10 +32,6 @@
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     padding: 60px 0 84px;
   }
-
-  .block-title {
-    margin-bottom: 0;
-  }
 }
 
 .posts-wrap {
@@ -52,17 +46,6 @@
   }
 
   .img-holder {
-    position: relative;
-
-    figure {
-      margin: 0;
-    }
-
-    .media-item_holder {
-      position: relative;
-      padding-bottom: 62%;
-      overflow: hidden;
-    }
 
     .media-wrapper {
       position: relative;
@@ -86,21 +69,6 @@
         position: absolute;
         top: 10px;
         right: 29px;
-      }
-    }
-
-    a {
-
-      &:hover {
-
-        .btn {
-          color: $white;
-          background: transparent;
-          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-            background-color: $black;
-            color: $white;
-          }
-        }
       }
     }
   }
