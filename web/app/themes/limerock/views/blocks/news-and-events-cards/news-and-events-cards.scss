@@ -1,3 +1,68 @@
 .block_news-and-events-cards {
   // Add your custom styles here
+  padding: 37px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 60px 0;
+  }
+
+  .tease-post {
+
+    .img-holder {
+      display: none;
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 91.66666667%;
+      }
+    }
+  }
+
+  .tease-event {
+
+    .category-list {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .media-wrapper {
+      position: relative;
+      padding-bottom: 85%;
+      overflow: hidden;
+      margin-bottom: 12px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 93%;
+        margin-bottom: 0;
+      }
+
+      .media-item_holder {
+        position: static;
+        padding: 0;
+        overflow: visible;
+      }
+    }
+
+    .btn-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 12px;
+        padding-left: 0px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        padding-left: 25px;
+        padding-right: 37px;
+      }
+
+      .btn {
+        padding: 14px 20px;
+      }
+    }
+  }
 }
