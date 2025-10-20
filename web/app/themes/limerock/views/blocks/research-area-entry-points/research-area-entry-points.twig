@@ -17,7 +17,7 @@
         <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="research-area-wrapper swiper-wrapper variation-{{fields.variation}}">
-            {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="white"' } only %}
+            {% include '@partial/post-repeater.twig' with { posts: selections } only %}
           </div>
 
           <!-- If we need pagination -->
