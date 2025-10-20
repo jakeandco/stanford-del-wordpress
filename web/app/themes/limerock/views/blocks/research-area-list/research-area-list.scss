@@ -15,22 +15,33 @@
   .tease-research-area {
 
     .wrap {
-      @extend .container;
-      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 0 25px;
+        margin: 0 auto;
+        max-width: 720px;
         display: flex;
         align-items: center;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        max-width: 960px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        max-width: 1140px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xxl')) {
+        max-width: 1334px;
       }
     }
 
     .text-holder {
-      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         width: 70%;
         padding-right: 40px;
       }
     }
 
     .image-holder {
-      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         width: 30%;
       }
     }
@@ -38,12 +49,16 @@
 }
 
 .research-area-list {
-  padding: 0 6px;
+  padding: 0 25px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 0 6px;
+  }
 }
 
 .tease-research-area {
   border-radius: 12px;
   margin-bottom: 8px;
+  padding: 19px 18px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     font-size: 24px;
     line-height: 32px;

@@ -9,7 +9,7 @@
     {% set selections = get_posts({ post_type, post__not_in: [post.id] }) %}
 
     <div class="research-area-list">
-      {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+      {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="warm-light"' } only %}
     </div>
   {% endblock %}
 {% endembed %}

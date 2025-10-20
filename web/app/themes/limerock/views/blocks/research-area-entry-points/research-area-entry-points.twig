@@ -7,20 +7,32 @@
 
       {% set selections = get_posts({ post_type }) %}
 
-      <p>Selected Variation:
-        <label>
-          cards
-          <input type="radio" name="variation" value="cards" {{fields.variation == 'cards' ? 'checked' : ''}}/>
-        </label>
-        <label>
-          carousel
-          <input type="radio" name="variation" value="carousel" {{fields.variation == 'carousel' ? 'checked' : ''}}/>
-        </label>
-      </p>
+      {% if fields.variation == 'cards' %}
+        <div class="research-area-wrapper variation-{{fields.variation}}">
+          {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="white"' } only %}
+        </div>
 
-      <div class="research-area-wrapper variation-{{fields.variation}}">
-        {% include '@partial/post-repeater.twig' with { posts: selections } only %}
-      </div>
+      {% else %}
+
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="research-area-wrapper swiper-wrapper variation-{{fields.variation}}">
+            {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="white"' } only %}
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination">
+            {% for post in selections %}
+              <div class="pagination-item">{{ post.title }}</div>
+            {% endfor %}
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      {% endif %}
+
     </div>
   {% endblock %}
 {% endembed %}
