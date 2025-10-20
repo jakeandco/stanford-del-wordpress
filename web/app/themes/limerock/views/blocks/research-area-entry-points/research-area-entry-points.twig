@@ -1,22 +1,26 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_research-area-entry-points' } %}
   {% block content %}
-    {% set post_type = 'research-area' %}
+    <div class="container">
+      {% set post_type = 'research-area' %}
 
-    <p>{{fields.title}}</p>
+      <span class="block-title d-block">{{fields.title}}</span>
 
-    {% set selections = get_posts({ post_type }) %}
+      {% set selections = get_posts({ post_type }) %}
 
-    <p>Selected Variation:
-      <label>
-        cards
-        <input type="radio" name="variation" value="cards" {{fields.variation == 'cards' ? 'checked' : ''}}/>
-      </label>
-      <label>
-        carousel
-        <input type="radio" name="variation" value="carousel" {{fields.variation == 'carousel' ? 'checked' : ''}}/>
-      </label>
-    </p>
+      <p>Selected Variation:
+        <label>
+          cards
+          <input type="radio" name="variation" value="cards" {{fields.variation == 'cards' ? 'checked' : ''}}/>
+        </label>
+        <label>
+          carousel
+          <input type="radio" name="variation" value="carousel" {{fields.variation == 'carousel' ? 'checked' : ''}}/>
+        </label>
+      </p>
 
-    {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+      <div class="research-area-wrapper variation-{{fields.variation}}">
+        {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+      </div>
+    </div>
   {% endblock %}
 {% endembed %}

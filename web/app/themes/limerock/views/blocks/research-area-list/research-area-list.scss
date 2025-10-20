@@ -1,3 +1,77 @@
 .block_research-area-list {
   // Add your custom styles here
+  padding: 37px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 60px 0;
+  }
+
+  .block-title {
+    margin-bottom: 25px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 41px;
+    }
+  }
+
+  .tease-research-area {
+
+    .wrap {
+      @extend .container;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        width: 70%;
+        padding-right: 40px;
+      }
+    }
+
+    .image-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.research-area-list {
+  padding: 0 6px;
+}
+
+.tease-research-area {
+  border-radius: 12px;
+  margin-bottom: 8px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 52px 0;
+  }
+
+  .h5 {
+    margin-bottom: 14px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      margin-bottom: 18px;
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 17px;
+  }
+
+  .image-holder {
+    text-align: right;
+  }
 }

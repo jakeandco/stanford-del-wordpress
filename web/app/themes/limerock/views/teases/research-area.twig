@@ -1,0 +1,25 @@
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_attributes: 'data-bs-theme="warm-light"',
+  },
+  post
+} only %}
+  {% block content %}
+    {% set full_post = get_post(post) %}
+      <div class="wrap">
+        <div class="text-holder">
+          <h2 class="h5">
+            <a href="{{post.link}}">{{post.post_title}}→</a>
+          </h2>
+          <p>{{post.excerpt}}</p>
+        </div>
+        {% if post.meta('research_area_icon') %}
+          <div class="image-holder">
+            <a href="{{post.link}}">
+              {% include "@partial/media-item.twig" with { image: post.meta('research_area_icon') } only %}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endblock %}
+{% endembed %}

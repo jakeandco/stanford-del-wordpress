@@ -1,0 +1,19 @@
+<svg width="345" height="344" viewBox="0 0 345 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="left-pill">
+  <mask id="path-3-inside-1_6003_746" fill="white">
+  <path d="M86.5 1C134.273 1 173 39.7274 173 87.5V257.5C173 305.273 134.273 344 86.5 344C38.7274 344 2.49308e-06 305.273 0 257.5V87.5C0 39.7274 38.7274 1 86.5 1Z"/>
+  </mask>
+  <path d="M86.5 1C134.273 1 173 39.7274 173 87.5V257.5C173 305.273 134.273 344 86.5 344C38.7274 344 2.49308e-06 305.273 0 257.5V87.5C0 39.7274 38.7274 1 86.5 1Z" fill="#E54A2B"/>
+  <path d="M173 257.5H175H173ZM0 257.5H-2H0ZM86.5 1V3C133.168 3 171 40.8319 171 87.5H173H175C175 38.6228 135.377 -1 86.5 -1V1ZM173 87.5H171V257.5H173H175V87.5H173ZM173 257.5H171C171 304.168 133.168 342 86.5 342V344V346C135.377 346 175 306.377 175 257.5H173ZM86.5 344V342C39.8319 342 2 304.168 2 257.5H0H-2C-2 306.377 37.6228 346 86.5 346V344ZM0 257.5H2V87.5H0H-2V257.5H0ZM0 87.5H2C2 40.8319 39.8319 3 86.5 3V1V-1C37.6228 -1 -2 38.6228 -2 87.5H0Z" fill="#E54A2B" mask="url(#path-3-inside-1_6003_746)"/>
+  </g>
+  <g id="right-shapes">
+  <path d="M258.5 172C305.72 172 344 210.28 344 257.5V343H173L173 257.5C173 210.28 211.28 172 258.5 172Z" fill="#E54A2B" stroke="#E54A2B" stroke-width="2"/>
+  <path d="M258.5 1C305.72 1 344 39.2797 344 86.5V172L173 172L173 86.5C173 39.2797 211.28 1 258.5 1Z" fill="#7F1414" stroke="#7F1414" stroke-width="2"/>
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,-344; 0,-344" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.25 0.1 0.25 1; 0 0 1 1" keyTimes="0; 0.6; 1" begin="indefinite"/>
+  </g>
+  <g id="right-shapes-duplicate">
+  <path d="M258.5 172C305.72 172 344 210.28 344 257.5V343H173L173 257.5C173 210.28 211.28 172 258.5 172Z" fill="#E54A2B" stroke="#E54A2B" stroke-width="2"/>
+  <path d="M258.5 1C305.72 1 344 39.2797 344 86.5V172L173 172L173 86.5C173 39.2797 211.28 1 258.5 1Z" fill="#7F1414" stroke="#7F1414" stroke-width="2"/>
+  <animateTransform attributeName="transform" type="translate" values="0,344; 0,0; 0,0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.25 0.1 0.25 1; 0 0 1 1" keyTimes="0; 0.6; 1" begin="indefinite"/>
+  </g>
+</svg>

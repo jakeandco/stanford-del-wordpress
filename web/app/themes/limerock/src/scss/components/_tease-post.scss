@@ -1,4 +1,4 @@
-.tease {
+.tease:not(.tease-research-area) {
   padding: 24px 0 6px;
   border-bottom: 1px solid;
   transition: background-color 0.3s ease-in-out;
