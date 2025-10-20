@@ -172,3 +172,6 @@ Thumbs.db
 # DDEV #
 ##########
 .ddev/traefik
+
+# ignore `Zone.Identifier` files
+*.Identifier
