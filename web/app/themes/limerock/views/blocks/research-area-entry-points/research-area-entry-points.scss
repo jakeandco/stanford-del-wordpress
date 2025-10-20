@@ -1,3 +1,24 @@
 .block_research-area-entry-points {
   // Add your custom styles here
+  padding: 37px 0;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 60px 0;
+  }
+}
+
+.research-area-wrapper {
+  &.variation-cards {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .tease {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      width: calc(50% - 4px);
+      padding: 36px 41px;
+    }
+  }
 }
