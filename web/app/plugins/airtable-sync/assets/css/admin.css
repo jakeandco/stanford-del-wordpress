@@ -1,0 +1,304 @@
+/**
+ * Admin styles for Airtable Sync plugin
+ */
+
+/* Settings page container */
+.wrap h1 {
+	margin-bottom: 20px;
+}
+
+/* API Section */
+#airtable_sync_api_key {
+	width: 100%;
+	max-width: 500px;
+}
+
+#airtable_sync_base_id {
+	width: 300px;
+	margin-right: 10px;
+}
+
+#airtable_sync_base_loading {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* Table Mappings */
+#airtable_sync_table_mappings {
+	max-width: 100%;
+}
+
+#airtable_sync_mappings_container {
+	margin-bottom: 15px;
+}
+
+.airtable-sync-mapping-row {
+	margin-bottom: 15px;
+	padding: 20px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.airtable-sync-mapping-row .mapping-header {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.mapping-selects {
+	display: flex;
+	align-items: flex-end;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.mapping-select-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	flex: 1;
+	min-width: 200px;
+}
+
+.mapping-select-group label {
+	font-weight: 600;
+	font-size: 13px;
+	color: #23282d;
+	margin: 0;
+}
+
+.mapping-select-group select {
+	width: 100%;
+}
+
+.mapping-selects .mapping-arrow {
+	font-size: 24px;
+	color: #0073aa;
+	font-weight: bold;
+	margin-bottom: 8px;
+	flex-shrink: 0;
+}
+
+.mapping-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+.mapping-actions .configure-fields {
+	white-space: nowrap;
+}
+
+.mapping-actions .remove-mapping {
+	color: #b32d2e;
+	white-space: nowrap;
+}
+
+.mapping-actions .remove-mapping:hover {
+	color: #dc3232;
+	border-color: #dc3232;
+}
+
+#airtable_sync_add_mapping {
+	margin-top: 10px;
+}
+
+/* Field Mappings Container */
+.field-mappings-container {
+	margin-top: 15px;
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.field-mappings-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #0073aa;
+}
+
+.field-mappings-header h4 {
+	margin: 0;
+	color: #0073aa;
+}
+
+.field-mappings-list {
+	margin-bottom: 15px;
+}
+
+/* Field Mapping Row */
+.field-mapping-row {
+	display: grid;
+	grid-template-columns: 2fr auto 3fr auto;
+	align-items: center;
+	gap: 15px;
+	padding: 15px;
+	margin-bottom: 10px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+}
+
+.field-mapping-row:hover {
+	background: #f0f0f0;
+}
+
+.field-mapping-airtable {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.field-mapping-airtable strong {
+	color: #23282d;
+	font-size: 14px;
+}
+
+.field-mapping-airtable .field-type {
+	font-size: 12px;
+	color: #666;
+	font-style: italic;
+}
+
+.field-mapping-arrow {
+	font-size: 20px;
+	color: #0073aa;
+	font-weight: bold;
+}
+
+.field-mapping-destination {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.field-mapping-destination select {
+	flex: 1;
+	min-width: 150px;
+}
+
+.destination-type-select {
+	max-width: 180px;
+}
+
+.remove-field-mapping {
+	width: 32px;
+	height: 32px;
+	font-size: 20px;
+	line-height: 1;
+	padding: 0;
+	color: #b32d2e;
+	border-color: #ddd;
+}
+
+.remove-field-mapping:hover {
+	color: #dc3232;
+	border-color: #dc3232;
+	background: #fee;
+}
+
+.field-mappings-empty {
+	padding: 30px;
+	text-align: center;
+	color: #666;
+	background: #fafafa;
+	border: 2px dashed #ddd;
+	border-radius: 4px;
+}
+
+.field-mappings-empty p {
+	margin: 0;
+}
+
+/* Loading states */
+.airtable-sync-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+/* Error messages */
+.airtable-sync-error {
+	color: #dc3232;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 10px;
+	background: #fee;
+	border-left: 4px solid #dc3232;
+	border-radius: 2px;
+}
+
+/* Success messages */
+.airtable-sync-success {
+	color: #46b450;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 10px;
+	background: #efe;
+	border-left: 4px solid #46b450;
+	border-radius: 2px;
+}
+
+/* Disabled state */
+button:disabled,
+select:disabled,
+input:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Help text */
+.description {
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+	.field-mapping-row {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.field-mapping-arrow {
+		display: none;
+	}
+
+	.field-mapping-destination {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.field-mapping-destination select {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.mapping-selects {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.mapping-selects .mapping-arrow {
+		display: none;
+	}
+
+	.mapping-select-group {
+		min-width: 100%;
+	}
+
+	.mapping-actions {
+		flex-direction: column;
+	}
+
+	.mapping-actions button {
+		width: 100%;
+	}
+}
