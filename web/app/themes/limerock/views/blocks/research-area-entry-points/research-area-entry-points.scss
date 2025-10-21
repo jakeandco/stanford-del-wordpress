@@ -83,6 +83,12 @@
         color: var(--bs-body-color);
         opacity: 0.5;
         position: relative;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 1;
+        }
 
         &:before {
           content: '';
@@ -93,6 +99,25 @@
           width: 100%;
           border-top: 1px solid;
           opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          border-top: 1px solid;
+        }
+
+        &.is-active {
+          opacity: 1;
+
+          &:after {
+            right: 0;
+            transition: all 3s ease;
+          }
         }
       }
     }
@@ -134,6 +159,79 @@
       img {
         width: 100%;
       }
+    }
+
+    .swiper-pagination {
+      visibility: hidden;
+      position: absolute;
+      left: -9999px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-stop-play {
+      background: $white;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      justify-content: center;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      margin-top: 0;
+      transition: color 0.3s ease-in-out,
+                  background-color 0.3s ease-in-out;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        position: static;
+        width: 65px;
+        height: 65px;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        background: $black;
+
+        svg {
+          opacity: 1;
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        opacity: 0.2;
+        height: auto;
+        max-width: 19px;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          max-width: 25px;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: auto;
+      right: 48px;
+    }
+
+    .swiper-button-next {
+      left: auto;
+      right: 0;
+    }
+
+    .swiper-stop-play {
+      &:hover {
+        background: $bright-red;
+      }
+    }
+
+    .swiper-buttons-holder {
+      display: flex;
+      cursor: pointer;
     }
   }
 }
