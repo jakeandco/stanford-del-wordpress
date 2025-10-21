@@ -27,12 +27,19 @@
   right: 24px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     position: static;
-    margin-left: 19px;
+    margin-left: 3px;
   }
 
   .search-opener {
     @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
-      padding: 8px 0;
+      padding: 0;
+      width: 38px;
+      height: 38px;
+    }
+
+    &:hover {
+      background-color: $black;
+      color: $white;
     }
   }
 }

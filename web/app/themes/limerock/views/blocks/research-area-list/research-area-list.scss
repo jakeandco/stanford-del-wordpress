@@ -1,14 +1,16 @@
 .block_research-area-list {
   // Add your custom styles here
-  padding: 37px 0;
+  padding: 37px 0 14px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 60px 0;
+    padding: 60px 0 14px;
   }
 
   .block-title {
     margin-bottom: 25px;
+    padding-bottom: 19px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       margin-bottom: 41px;
+      padding-bottom: 15px;
     }
   }
 
@@ -35,8 +37,10 @@
 
     .text-holder {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        width: 70%;
+        width: 58%;
         padding-right: 40px;
+        margin-right: auto;
+        padding-top: 30px;
       }
     }
 
@@ -50,16 +54,26 @@
 
 .research-area-list {
   padding: 0 25px;
+  margin: 0 auto;
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    max-width: 540px;
+  }
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
     padding: 0 6px;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
 .tease-research-area {
   border-radius: 12px;
-  margin-bottom: 8px;
-  padding: 19px 18px;
+  margin-bottom: 21px;
+  padding: 19px 18px 13px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-bottom: 8px;
+    padding: 25px 0;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 24px;
     line-height: 32px;
     padding: 52px 0;
@@ -68,7 +82,7 @@
   .h5 {
     margin-bottom: 14px;
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
       font-size: 44px;
       line-height: 50px;
     }
@@ -88,5 +102,23 @@
 
   .image-holder {
     text-align: right;
+
+    figure {
+      margin: 0;
+      margin-left: auto;
+      margin-right: -6px;
+      max-width: 62%;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-right: 0;
+        max-width: 71%;
+      }
+    }
+  }
+
+  .text-holder {
+    max-width: 95%;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      max-width: 100%;
+    }
   }
 }
