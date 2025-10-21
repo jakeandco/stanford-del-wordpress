@@ -7,18 +7,137 @@
 }
 
 .research-area-wrapper {
-  &.variation-cards {
+  &--cards {
+    padding: 0 25px;
+    margin: 0 auto;
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      max-width: 540px;
+    }
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding: 0 10px;
+      max-width: 1440px;
+    }
+
+    .tease {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        height: auto;
+        width: calc(50% - 4px);
+        padding: 25px 20px 18px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        padding: 35px 40px 18px;
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        max-width: 78%;
+        margin-bottom: 67px;
+      }
+    }
+
+    .image-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-top: auto;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-right: -5px;
+        }
+      }
+    }
+
+    .wrap {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
     }
   }
 
-  .tease {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      width: calc(50% - 4px);
-      padding: 36px 41px;
+  &--carousel {
+
+    .swiper-titles-pagination {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+
+      .pagination-item {
+        padding-top: 18px;
+        width: 24%;
+        color: var(--bs-body-color);
+        opacity: 0.5;
+        position: relative;
+
+        &:before {
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          border-top: 1px solid;
+          opacity: 0.2;
+        }
+      }
+    }
+
+    .wrap {
+      @extend .container;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 26px;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 45%;
+        padding-right: 40px;
+        margin-right: auto;
+      }
+    }
+
+    .image-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 45%;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          max-width: 100%;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
     }
   }
+}
+
+.research-swiper {
+  overflow: hidden;
 }

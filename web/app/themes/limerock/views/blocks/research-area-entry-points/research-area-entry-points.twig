@@ -4,35 +4,41 @@
       {% set post_type = 'research-area' %}
 
       <span class="block-title d-block">{{fields.title}}</span>
+    </div>
 
-      {% set selections = get_posts({ post_type }) %}
+    {% set selections = get_posts({ post_type }) %}
 
-      {% if fields.variation == 'cards' %}
-        <div class="research-area-wrapper variation-{{fields.variation}}">
-          {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="white"' } only %}
+    {% if fields.variation == 'cards' %}
+
+      <div class="research-area-wrapper research-area-wrapper--{{fields.variation}}">
+        {% include '@partial/post-repeater.twig' with { posts: selections, theme_attr: 'data-bs-theme="white"' } only %}
+      </div>
+
+    {% else %}
+
+      <div class="research-area-wrapper research-area-wrapper--{{fields.variation}}">
+        <div class="swiper-titles-pagination container d-none d-md-flex">
+          {% for post in selections %}
+            <div class="pagination-item">{{ post.title }}</div>
+          {% endfor %}
         </div>
 
-      {% else %}
+        <div class="research-swiper">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
-        <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="research-area-wrapper swiper-wrapper variation-{{fields.variation}}">
             {% include '@partial/post-repeater.twig' with { posts: selections } only %}
           </div>
 
-          <!-- If we need pagination -->
-          <div class="swiper-pagination">
-            {% for post in selections %}
-              <div class="pagination-item">{{ post.title }}</div>
-            {% endfor %}
-          </div>
-
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+          <div class="swiper-stop-play">play/stop</div>
         </div>
-      {% endif %}
+      </div>
+    {% endif %}
 
-    </div>
   {% endblock %}
 {% endembed %}
