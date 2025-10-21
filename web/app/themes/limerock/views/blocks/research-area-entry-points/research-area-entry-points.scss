@@ -1,8 +1,11 @@
 .block_research-area-entry-points {
   // Add your custom styles here
-  padding: 37px 0;
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    padding: 60px 0;
+  padding: 27px 0;
+
+  &:has(.variation-carousel) {
+    .block-title {
+      border: 0;
+    }
   }
 }
 
@@ -70,16 +73,21 @@
   }
 
   &--carousel {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-top: 10px;
+      padding-bottom: 44px;
+    }
 
     .swiper-titles-pagination {
       display: flex;
       justify-content: space-between;
       font-size: 16px;
       line-height: 20px;
+      margin-bottom: 75px;
 
       .pagination-item {
-        padding-top: 18px;
-        width: 24%;
+        padding-top: 20px;
+        width: 23%;
         color: var(--bs-body-color);
         opacity: 0.5;
         position: relative;
@@ -122,8 +130,13 @@
       }
     }
 
+    .tease-research-area {
+      padding: 9px 0;
+    }
+
     .wrap {
       @extend .container;
+      box-sizing: border-box;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         display: flex;
       }
@@ -138,22 +151,23 @@
     }
 
     .text-holder {
+      margin-bottom: 42px;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         width: 45%;
         padding-right: 40px;
         margin-right: auto;
+        margin-bottom: 0;
       }
     }
 
     .image-holder {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        width: 45%;
+        width: 48.5%;
       }
 
       figure {
-        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-          max-width: 100%;
-        }
+        max-width: 100%;
+        margin-right: 0;
       }
 
       img {
@@ -179,7 +193,7 @@
       justify-content: center;
       border-radius: 50px;
       position: absolute;
-      top: 0;
+      top: 31px;
       margin-top: 0;
       transition: color 0.3s ease-in-out,
                   background-color 0.3s ease-in-out;
@@ -187,7 +201,7 @@
         position: static;
         width: 65px;
         height: 65px;
-        margin-left: 10px;
+        margin-right: 15px;
       }
 
       &:hover {
@@ -206,7 +220,7 @@
       svg {
         opacity: 0.2;
         height: auto;
-        max-width: 19px;
+        max-width: 16px;
         @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
           max-width: 25px;
         }
@@ -215,12 +229,12 @@
 
     .swiper-button-prev {
       left: auto;
-      right: 48px;
+      right: 62px;
     }
 
     .swiper-button-next {
       left: auto;
-      right: 0;
+      right: 25px;
     }
 
     .swiper-stop-play {
@@ -232,6 +246,7 @@
     .swiper-buttons-holder {
       display: flex;
       cursor: pointer;
+      margin-top: -82px;
     }
   }
 }
