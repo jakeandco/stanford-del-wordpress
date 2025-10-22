@@ -1,0 +1,33 @@
+{
+  "name": "limerock/research-area-circle",
+  "title": "Research Area Circle",
+  "description": "Circular layout featuring four research areas positioned at N/E/S/W around a faint ring; each shows icon + title and links to its archive/landing.",
+  "category": "post-type",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

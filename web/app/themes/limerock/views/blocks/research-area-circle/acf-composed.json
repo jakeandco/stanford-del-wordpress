@@ -1,0 +1,20 @@
+{
+  "name": "group_block_research-area-circle",
+  "title": "Block Details: Research Area Circle",
+  "fields": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/research-area-circle"
+      }
+    ]
+  ]
+}
