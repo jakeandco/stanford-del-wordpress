@@ -14,10 +14,18 @@
           </h2>
           <p>{{post.excerpt}}</p>
         </div>
-        {% if post.meta('research_area_icon') %}
-          <div class="image-holder">
+        {% if post.meta('research_area_icon_svg') %}
+          <div class="image-holder style-svg image-holder--{{ post.ID }}">
             <a href="{{post.link}}">
-              {% include "@partial/media-item.twig" with { image: post.meta('research_area_icon') } only %}
+              {% set chars = 'abcdefghijklmnopqrstuvwxyz0123456789'|split('') %}
+              {% set unique_prefix = 'svg-' ~ (range(1, 6)|map(i => random(chars))|join) %}
+
+              {% set svg_raw = post.meta('research_area_icon_svg')|file_get_contents_raw %}
+              {% set svg_unique = svg_raw|replace({
+                'id="': 'id="' ~ unique_prefix ~ '-',
+                'url(#': 'url(#' ~ unique_prefix ~ '-'
+              }) %}
+              {{ svg_unique|raw }}
             </a>
           </div>
         {% endif %}

@@ -4,9 +4,10 @@
   "fields": [
     {
       "label": "Research Area Icon",
-      "name": "research_area_icon",
-      "type": "image",
-      "instructions": "SVG with built-in animation"
+      "name": "research_area_icon_svg",
+      "type": "file",
+      "instructions": "SVG with built-in animation",
+      "return_format": "url"
     },
     {
       "acf_composer_extend": "LimeRockTheme/ACF/fields/bidirectional-terms",

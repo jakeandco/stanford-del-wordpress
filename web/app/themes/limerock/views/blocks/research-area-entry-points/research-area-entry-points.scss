@@ -29,15 +29,41 @@
         height: auto;
         width: calc(50% - 4px);
         padding: 25px 20px 18px;
+        transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
       }
       @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
         padding: 35px 40px 18px;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $stanford-red !important;
+        border-radius: 0;
+
+        .h5 {
+          text-decoration: underline;
+        }
+
+        svg {
+
+          path[fill="#7F1414"] {
+            fill: $dark-red;
+          }
+
+          rect[fill="#7F1414"] {
+            fill: $dark-red;
+          }
+        }
       }
     }
 
     .h5 {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         margin-bottom: 33px;
+      }
+
+      a {
+        color: inherit;
       }
     }
 
