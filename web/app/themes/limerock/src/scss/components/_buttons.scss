@@ -38,6 +38,16 @@
   }
 }
 
+.btn-info {
+  background-color: $bright-red;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-gray;
+    color: $white;
+  }
+}
+
 [data-bs-theme="green"] {
 
   .btn-secondary {

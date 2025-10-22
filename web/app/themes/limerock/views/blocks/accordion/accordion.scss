@@ -126,20 +126,34 @@
     }
 
     &:hover {
+
       &:before {
         background-color: $bright-red;
+        border-color: $bright-red;
       }
+
       &:after {
         filter: brightness(0) invert(1);
       }
     }
 
     &[aria-expanded="true"] {
+
+      &:hover {
+
+        &:before {
+          background-color: $bright-red;
+          border-color: $bright-red;
+        }
+      }
+
       &:before {
         background-color: $black;
+        border-color: $black;
         bottom: 25px;
         transform: none;
       }
+
       &:after {
         filter: brightness(0) invert(1);
         bottom: 25px;
