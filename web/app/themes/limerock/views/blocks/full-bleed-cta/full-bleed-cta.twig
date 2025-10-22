@@ -1,0 +1,24 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_full-bleed-cta' } %}
+  {% block content %}
+
+
+    {% include '@partial/media-item.twig' with { image: fields.background_image } only %}
+
+    {{fields.text}}
+
+
+    {% if fields.text_size == 'large' %}
+      <h4>Select type: Large</h4>
+    {% elseif fields.text_size == 'small' %}
+      <h4>Select type: Small</h4>
+    {% endif %}
+
+    {% for row in fields.buttons %}
+
+
+      <a href="{{row['button'].url}}" alt="{{row['button'].alt}}">{{row['button'].title}}</a>
+
+    {% endfor %}
+
+  {% endblock %}
+{% endembed %}
