@@ -5,6 +5,12 @@
     padding: 53px 0 78px;
   }
 
+  &[data-bs-theme="warm-light"] {
+    .tease:not(.tease-research-area):hover {
+      background-color: $white;
+    }
+  }
+
   .events-list {
 
     .date {
