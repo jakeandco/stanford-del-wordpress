@@ -45,3 +45,18 @@ function LimeRockTheme_block_render_callback($block, $content = '', $is_preview 
 		$context
 	);
 }
+
+
+add_filter('timber/twig', function($twig) {
+    $twig->addFilter(new \Twig\TwigFilter('file_get_contents_raw', function($url) {
+        $uploads = wp_upload_dir();
+        $baseurl = $uploads['baseurl'];   // URL до папки uploads
+        $basedir = $uploads['basedir'];   // Фізичний шлях до папки uploads
+
+        $relative_path = str_replace($baseurl, '', $url); // /2025/10/research-area-icon-1.svg
+        $path = $basedir . $relative_path;
+
+        return file_exists($path) ? file_get_contents($path) : '';
+    }));
+    return $twig;
+});
