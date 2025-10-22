@@ -1,0 +1,39 @@
+{
+  "name": "limerock/publication-entry-point",
+  "title": "Publication Entry Point",
+  "description": "This block contains a link to a single Publication post. This entry point displays the featured image, and has a customizable quote and "read more"  text.",
+  "category": "theme",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+      "mode": "preview",
+      "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+  "className": false,
+  "align": true,
+  "anchor": true,
+  "color": {
+    "gradient": true,
+    "background": true,
+    "text": false
+  },
+  "spacing": {
+    "padding": [
+      "top",
+      "bottom"
+    ],
+    "margin": [
+      "top",
+      "bottom"
+    ]
+  }
+},
+  "example": {
+    "attributes": {
+      "data":  {
+        "is_example": true
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_photo-and-caption-carousel' } %}
+  {% block content %}
+
+
+    <p>{{fields.headline}}</p>
+
+    {% for row in fields.carousel %}
+
+
+      <p>{{row['title']}}</p>
+
+      {{row['content']}}
+
+
+      {% include '@partial/media-item.twig' with { image: row['image'] } only %}
+
+    {% endfor %}
+
+  {% endblock %}
+{% endembed %}

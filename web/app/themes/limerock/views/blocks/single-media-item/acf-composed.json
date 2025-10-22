@@ -1,0 +1,25 @@
+{
+  "name": "group_block_single-media-item",
+  "title": "Block Details: Single Media Item",
+  "fields": [
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Media Item",
+      "name": "media_item",
+      "type": "image"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/single-media-item"
+      }
+    ]
+  ]
+}
