@@ -1,0 +1,24 @@
+{% if posts.pagination.pages is not empty %}
+  <nav class="pagination-block-alt">
+    <ul class="pagination-alt">
+
+      {# Previous page link #}
+      {% if posts.pagination.prev %}
+        <li class="prev"><a href="{{ posts.pagination.prev.link }}">previous</a></li>
+      {% else %}
+        <li class="prev disabled"><span>previous</span></li>
+      {% endif %}
+
+      {# Page info #}
+      <li class="pages-info">Page {{ posts.pagination.current }} / {{ posts.pagination.total }}</li>
+
+      {# Next page link #}
+      {% if posts.pagination.next %}
+        <li class="next"><a href="{{ posts.pagination.next.link }}">next</a></li>
+      {% else %}
+        <li class="next disabled"><span>next</span></li>
+      {% endif %}
+
+    </ul>
+  </nav>
+{% endif %}

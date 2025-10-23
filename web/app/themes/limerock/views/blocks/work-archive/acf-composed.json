@@ -3,20 +3,66 @@
   "title": "Block Details: Work Archive",
   "fields": [
   {
-    "label": "Featured Label",
-    "name": "featured_label",
+    "label": "",
+    "name": "section_title",
+    "type": "message",
+    "message": "<h2>Work Archive</h2>",
+    "new_lines": "",
+    "esc_html": 0
+  },
+  {
+    "label": "Back to Link",
+    "name": "back_to_link",
+    "type": "link"
+  },
+  {
+    "label": "Header Title",
+    "name": "header_title",
+    "type": "text",
+    "wrapper": {
+      "width": 50
+    }
+  },
+  {
+    "label": "Title Size",
+    "name": "title_size",
+    "type": "select",
+    "choices": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "extra_large": "Extra Large"
+    },
+    "wrapper": {
+      "width": 50
+    }
+  },
+  {
+    "label": "Search placeholder",
+    "name": "search_placeholder",
     "type": "text"
   },
   {
-    "label": "Archive Label",
-    "name": "archive_label",
-    "type": "text"
+    "label": "Featured Label",
+    "name": "featured_label",
+    "type": "text",
+    "wrapper": {
+      "width": 50
+    }
   },
   {
     "label": "Featured Work",
     "name": "featured_work",
     "type": "post_object",
-    "post_type": ["project", "publication"]
+    "post_type": ["project", "publication", "post"],
+    "wrapper": {
+      "width": 50
+    }
+  },
+  {
+    "label": "Archive Label",
+    "name": "archive_label",
+    "type": "text"
   }
 ],
   "location": [
