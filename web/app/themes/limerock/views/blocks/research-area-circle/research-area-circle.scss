@@ -1,3 +1,24 @@
 .block_research-area-circle {
   // Add your custom styles here
+
+  .tease-research-area {
+    text-align: center;
+
+    .h5 {
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 470;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 32px;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+
+    p {
+      display: none;
+    }
+  }
 }
