@@ -1,0 +1,30 @@
+{
+  "name": "group_block_event-details",
+  "title": "Block Details: Event Details",
+  "fields": [
+    {
+      "label": "Heading",
+      "name": "heading",
+      "type": "text"
+    },
+    {
+      "label": "Column 1",
+      "name": "column_1",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Column 2",
+      "name": "column_2",
+      "type": "wysiwyg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/event-details"
+      }
+    ]
+  ]
+}

@@ -1,21 +1,29 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_two-column-text-block' } %}
-  {% block content %}
-    <div class="container">
-      {% if fields.heading %}
-        <h2 class="block-title">{{fields.heading}}</h2>
-      {% endif %}
+{% set extra_classes = [extra_classes, 'block_two-column-text-block']|filter(v => v)|join(' ') %}
 
-      <div class="row">
-        <div class="col-12 col-md-2 two-column-sidebar">
+{% extends '@partial/block_wrapper.twig' %}
+
+{% block content %}
+  <div class="container">
+    {% if fields.heading %}
+      <h2 class="block-title">{{fields.heading}}</h2>
+    {% endif %}
+
+    <div class="row">
+      <div class="col-12 col-md-2 two-column-sidebar">
+        {% block sidebar_content %}
           {{fields.sidebar_content}}
-        </div>
-        <div class="col-12 col-md-5">
+        {% endblock %}
+      </div>
+      <div class="col-12 col-md-5">
+        {% block column_1_content %}
           {{fields.column_1}}
-        </div>
-        <div class="col-12 col-md-5">
+        {% endblock %}
+      </div>
+      <div class="col-12 col-md-5">
+        {% block column_2_content %}
           {{fields.column_2}}
-        </div>
+        {% endblock %}
       </div>
     </div>
-  {% endblock %}
-{% endembed %}
+  </div>
+{% endblock %}

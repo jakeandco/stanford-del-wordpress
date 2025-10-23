@@ -1,0 +1,34 @@
+{
+  "name": "limerock/event-details",
+  "title": "Event Details",
+  "description": "Two equal-width text columns with optional CTA buttons; stacks on mobile.",
+  "category": "post-type",
+  "icon": "tickets-alt",
+  "keywords": [],
+  "acf": {
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": false,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}
