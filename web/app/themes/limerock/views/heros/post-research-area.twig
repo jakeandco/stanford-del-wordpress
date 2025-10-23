@@ -1,0 +1,21 @@
+<section class="bg-primary hero hero--post" data-bs-theme="stanford-red">
+  {% block content %}
+    <div class="container">
+      <h1>{{title|default(post.title)}}</h1>
+      {% if post.meta('research_area_icon_svg') %}
+        <div class="image-holder style-svg image-holder--{{ post.ID }}">
+          {% set chars = 'abcdefghijklmnopqrstuvwxyz0123456789'|split('') %}
+          {% set unique_prefix = 'svg-' ~ (range(1, 6)|map(i => random(chars))|join) %}
+
+          {% set svg_raw = post.meta('research_area_icon_svg')|file_get_contents_raw %}
+          {% set svg_unique = svg_raw|replace({
+            'id="': 'id="' ~ unique_prefix ~ '-',
+            'url(#': 'url(#' ~ unique_prefix ~ '-'
+          }) %}
+          {{ svg_unique|raw }}
+        </div>
+      {% endif %}
+    </div>
+  {% endblock %}
+</section>
+

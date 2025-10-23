@@ -1,0 +1,24 @@
+{% set align = block.align|default('full') %}
+{% embed '@partial/block_wrapper.twig' with {
+  extra_classes: html_classes(
+    'block_single-media-item',
+    ('block_single-media-item--' ~ align),
+    {
+      'full-block-width': align == 'wide'
+    },
+  )
+} %}
+  {% block content %}
+    <div class="container">
+      {% if fields.headline %}
+        <div class="row heading-holder">
+          <div class="col-12 col-md-9">
+            <h2 class="h5 mb-0">{{fields.headline}}</h2>
+          </div>
+        </div>
+      {% endif %}
+
+      {% include '@partial/media-item.twig' with { image: fields.media_item } only %}
+    </div>
+  {% endblock %}
+{% endembed %}

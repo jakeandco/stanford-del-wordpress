@@ -1,0 +1,15 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_three-up-entry-points' } %}
+  {% block content %}
+
+
+    {% for row in fields.entry_points %}
+
+
+      <a href="{{row['link'].url}}" alt="{{row['link'].alt}}">{{row['link'].title}}</a>
+
+      {{row['description']}}
+
+    {% endfor %}
+
+  {% endblock %}
+{% endembed %}

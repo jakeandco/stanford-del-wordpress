@@ -1,0 +1,53 @@
+{
+  "name": "group_block_two-up-cta",
+  "title": "Block Details: 2-Up CTA",
+  "fields": [
+    {
+      "label": "CTAs",
+      "name": "ctas",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Background Image",
+          "name": "background_image",
+          "type": "image"
+        },
+        {
+          "label": "Text",
+          "name": "text",
+          "type": "wysiwyg"
+        },
+        {
+          "label": "Text Size",
+          "name": "text_size",
+          "type": "select",
+          "choices": {
+            "large": "Large",
+            "small": "Small"
+          }
+        },
+        {
+          "label": "Buttons",
+          "name": "buttons",
+          "type": "repeater",
+          "sub_fields": [
+            {
+              "label": "Button",
+              "name": "button",
+              "type": "link"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/two-up-cta"
+      }
+    ]
+  ]
+}

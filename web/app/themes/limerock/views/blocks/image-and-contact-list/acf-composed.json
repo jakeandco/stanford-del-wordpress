@@ -1,0 +1,57 @@
+{
+  "name": "group_block_image-and-contact-list",
+  "title": "Block Details: Image and Contact List",
+  "fields": [
+    {
+      "label": "Image",
+      "name": "image",
+      "type": "image"
+    },
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "label": "Subtitle",
+      "name": "subtitle",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Contacts",
+      "name": "contacts",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Label",
+          "name": "label",
+          "type": "text"
+        },
+        {
+          "label": "Contact Name",
+          "name": "contact_name",
+          "type": "text"
+        },
+        {
+          "label": "Link",
+          "name": "link",
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/image-and-contact-list"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "group_block_year-carousel",
+  "title": "Block Details: Year Carousel",
+  "fields": [
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Carousel",
+      "name": "carousel",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Year",
+          "name": "year",
+          "type": "date_picker"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "label": "Content",
+          "name": "content",
+          "type": "wysiwyg"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/year-carousel"
+      }
+    ]
+  ]
+}

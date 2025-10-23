@@ -1,6 +1,9 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_body-copy' } %}
   {% block content %}
     <div class="container">
+      {% if fields.title %}
+        <span class="d-block block-title">{{fields.title}}</span>
+      {% endif %}
       <div class="row justify-content-between">
         <div class="col-12 col-md-8 text-holder">
           {% if fields.heading %}

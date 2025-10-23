@@ -1,3 +1,282 @@
 .block_research-area-entry-points {
   // Add your custom styles here
+  padding: 27px 0;
+
+  &:has(.variation-carousel) {
+    .block-title {
+      border: 0;
+    }
+  }
+}
+
+.research-area-wrapper {
+  &--cards {
+    padding: 0 25px;
+    margin: 0 auto;
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      max-width: 540px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 10px;
+      max-width: 1440px;
+    }
+
+    .tease {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        height: auto;
+        width: calc(50% - 4px);
+        padding: 25px 20px 18px;
+        transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        padding: 35px 40px 18px;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $stanford-red !important;
+        border-radius: 0;
+
+        .h5 {
+          text-decoration: underline;
+        }
+
+        svg {
+
+          path[fill="#7F1414"] {
+            fill: $dark-red;
+          }
+
+          rect[fill="#7F1414"] {
+            fill: $dark-red;
+          }
+        }
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 33px;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .text-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        max-width: 78%;
+        margin-bottom: 67px;
+      }
+    }
+
+    .image-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-top: auto;
+      }
+
+      figure {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-right: -5px;
+        }
+      }
+    }
+
+    .wrap {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+  }
+
+  &--carousel {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-top: 10px;
+      padding-bottom: 44px;
+    }
+
+    .swiper-titles-pagination {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 75px;
+
+      .pagination-item {
+        padding-top: 20px;
+        width: 23%;
+        color: var(--bs-body-color);
+        opacity: 0.5;
+        position: relative;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:before {
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          border-top: 1px solid;
+          opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          border-top: 1px solid;
+        }
+
+        &.is-active {
+          opacity: 1;
+
+          &:after {
+            right: 0;
+            transition: all 3s ease;
+          }
+        }
+      }
+    }
+
+    .tease-research-area {
+      padding: 9px 0;
+    }
+
+    .wrap {
+      @extend .container;
+      box-sizing: border-box;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+      }
+    }
+
+    .h5 {
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 26px;
+      }
+    }
+
+    .text-holder {
+      margin-bottom: 42px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 45%;
+        padding-right: 40px;
+        margin-right: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    .image-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 48.5%;
+      }
+
+      figure {
+        max-width: 100%;
+        margin-right: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .swiper-pagination {
+      visibility: hidden;
+      position: absolute;
+      left: -9999px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-stop-play {
+      background: $white;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      justify-content: center;
+      border-radius: 50px;
+      position: absolute;
+      top: 31px;
+      margin-top: 0;
+      transition: color 0.3s ease-in-out,
+                  background-color 0.3s ease-in-out;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        position: static;
+        width: 65px;
+        height: 65px;
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background: $black;
+
+        svg {
+          opacity: 1;
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        opacity: 0.2;
+        height: auto;
+        max-width: 16px;
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          max-width: 25px;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: auto;
+      right: 62px;
+    }
+
+    .swiper-button-next {
+      left: auto;
+      right: 25px;
+    }
+
+    .swiper-stop-play {
+      &:hover {
+        background: $bright-red;
+      }
+    }
+
+    .swiper-buttons-holder {
+      display: flex;
+      cursor: pointer;
+      margin-top: -82px;
+    }
+  }
+}
+
+.research-swiper {
+  overflow: hidden;
 }

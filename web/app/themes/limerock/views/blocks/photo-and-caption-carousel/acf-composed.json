@@ -1,0 +1,42 @@
+{
+  "name": "group_block_photo-and-caption-carousel",
+  "title": "Block Details: Photo and Caption Carousel",
+  "fields": [
+    {
+      "label": "Headline",
+      "name": "headline",
+      "type": "text"
+    },
+    {
+      "label": "Carousel",
+      "name": "carousel",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "label": "Content",
+          "name": "content",
+          "type": "wysiwyg"
+        },
+        {
+          "label": "Image",
+          "name": "image",
+          "type": "image"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/photo-and-caption-carousel"
+      }
+    ]
+  ]
+}

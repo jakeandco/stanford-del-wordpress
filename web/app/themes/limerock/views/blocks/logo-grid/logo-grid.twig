@@ -1,0 +1,13 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_logo-grid' } %}
+  {% block content %}
+    <div class="container">
+      <div class="row">
+        {% for image in fields.gallery %}
+          <div class="col-12 col-md-4 col-lg-3 text-center">
+            {% include '@partial/media-item.twig' with { image } only %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,34 @@
+{
+  "name": "group_block_image-and-text-callout",
+  "title": "Block Details: Image and Text Callout",
+  "fields": [
+    {
+      "label": "Image",
+      "name": "image",
+      "type": "image"
+    },
+    {
+      "label": "Text",
+      "name": "text",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Image Size",
+      "name": "image_size",
+      "type": "select",
+      "choices": {
+        "large": "Large",
+        "small": "Small"
+      }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/image-and-text-callout"
+      }
+    ]
+  ]
+}

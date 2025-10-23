@@ -1,0 +1,88 @@
+<svg width="342" height="342" viewBox="0 0 342 342" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+  <clipPath id="clip-1">
+  <path d="M341.996 170C341.997 170.237 342 170.474 342 170.711C342 265.311 264.993 342 170 342V170H341.996Z"/>
+  </clipPath>
+  <clipPath id="clip-2">
+  <path d="M171.996 170C171.997 170.237 172 170.474 172 170.711C172 265.311 94.9929 342 0 342V170H171.996Z"/>
+  </clipPath>
+  <clipPath id="clip-3">
+  <path d="M171.996 0C171.997 0.236871 172 0.473841 172 0.710938C172 95.3113 94.9929 172 0 172V0H171.996Z"/>
+  </clipPath>
+  <clipPath id="clip-4">
+  <path d="M341.996 0C341.997 0.236871 342 0.473841 342 0.710938C342 95.3113 264.993 172 170 172V0H341.996Z"/>
+  </clipPath>
+  <mask id="diagonal-wipe-1">
+  <rect x="170" y="170" width="172" height="172" fill="black"/>
+  <g clip-path="url(#clip-1)">
+  <g transform="rotate(45 256 256)">
+  <rect x="-250" y="100" width="300" height="300" fill="white">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 350,0; 0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" begin="indefinite"/>
+  </rect>
+  </g>
+  </g>
+  </mask>
+  <mask id="diagonal-wipe-2">
+  <rect x="0" y="170" width="172" height="172" fill="black"/>
+  <g clip-path="url(#clip-2)">
+  <g transform="rotate(45 86 256)">
+  <rect x="-420" y="100" width="300" height="300" fill="white">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 350,0; 0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" begin="indefinite"/>
+  </rect>
+  </g>
+  </g>
+  </mask>
+  <mask id="diagonal-wipe-3">
+  <rect x="0" y="0" width="172" height="172" fill="black"/>
+  <g clip-path="url(#clip-3)">
+  <g transform="rotate(45 86 86)">
+  <rect x="-420" y="-70" width="300" height="300" fill="white">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 350,0; 0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" begin="indefinite"/>
+  </rect>
+  </g>
+  </g>
+  </mask>
+  <mask id="diagonal-wipe-4">
+  <rect x="170" y="0" width="172" height="172" fill="black"/>
+  <g clip-path="url(#clip-4)">
+  <g transform="rotate(45 256 86)">
+  <rect x="-250" y="-70" width="300" height="300" fill="white">
+  <animateTransform attributeName="transform" type="translate" values="0,0; 350,0; 0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" begin="indefinite"/>
+  </rect>
+  </g>
+  </g>
+  </mask>
+  </defs>
+  <g id="quarter-1">
+  <mask id="path-1-inside-1_6003_724" fill="white">
+  <path d="M341.996 170C341.997 170.237 342 170.474 342 170.711C342 265.311 264.993 342 170 342V170H341.996Z"/>
+  </mask>
+  <path d="M341.996 170C341.997 170.237 342 170.474 342 170.711C342 265.311 264.993 342 170 342V170H341.996Z" fill="#E54A2B"/>
+  <path d="M341.996 170L343.996 169.992L343.988 168H341.996V170ZM342 170.711L344 170.711V170.711L342 170.711ZM170 342H168V344H170L170 342ZM170 170V168H168V170H170ZM341.996 170L339.996 170.008C339.997 170.274 340 170.473 340 170.711L342 170.711L344 170.711C344 170.475 343.997 170.2 343.996 169.992L341.996 170ZM342 170.711L340 170.711C340 264.199 263.896 340 170 340L170 342L170 344C266.09 344 344 266.424 344 170.711L342 170.711ZM170 342H172V170H170H168V342H170ZM170 170V172H341.996V170V168H170V170Z" fill="#E54A2B" mask="url(#path-1-inside-1_6003_724)"/>
+  <path d="M341.996 170C341.997 170.237 342 170.474 342 170.711C342 265.311 264.993 342 170 342V170H341.996Z" fill="#7F1414" mask="url(#diagonal-wipe-1)"/>
+  </g>
+  <g id="quarter-2">
+  <mask id="path-3-inside-2_6003_724" fill="white">
+  <path d="M171.996 170C171.997 170.237 172 170.474 172 170.711C172 265.311 94.9929 342 0 342V170H171.996Z"/>
+  </mask>
+  <path d="M171.996 170C171.997 170.237 172 170.474 172 170.711C172 265.311 94.9929 342 0 342V170H171.996Z" fill="#7F1414"/>
+  <path d="M171.996 170L173.996 169.992L173.988 168H171.996V170ZM172 170.711L174 170.711V170.711L172 170.711ZM0 342H-2V344H-1.74846e-07L0 342ZM0 170V168H-2V170H0ZM171.996 170L169.996 170.008C169.997 170.274 170 170.473 170 170.711L172 170.711L174 170.711C174 170.475 173.997 170.2 173.996 169.992L171.996 170ZM172 170.711L170 170.711C170 264.199 93.8962 340 1.74846e-07 340L0 342L-1.74846e-07 344C96.0897 344 174 266.424 174 170.711L172 170.711ZM0 342H2V170H0H-2V342H0ZM0 170V172H171.996V170V168H0V170Z" fill="#7F1414" mask="url(#path-3-inside-2_6003_724)"/>
+  <path d="M171.996 170C171.997 170.237 172 170.474 172 170.711C172 265.311 94.9929 342 0 342V170H171.996Z" fill="#E54A2B" mask="url(#diagonal-wipe-2)"/>
+  </g>
+  <g id="quarter-3">
+  <mask id="path-5-inside-3_6003_724" fill="white">
+  <path d="M171.996 0C171.997 0.236871 172 0.473841 172 0.710938C172 95.3113 94.9929 172 0 172V0H171.996Z"/>
+  </mask>
+  <path d="M171.996 0C171.997 0.236871 172 0.473841 172 0.710938C172 95.3113 94.9929 172 0 172V0H171.996Z" fill="#E54A2B"/>
+  <path d="M171.996 0L173.996 -0.00816044L173.988 -2H171.996V0ZM172 0.710938L174 0.71094V0.710938L172 0.710938ZM0 172H-2V174H-1.74846e-07L0 172ZM0 0V-2H-2V0H0ZM171.996 0L169.996 0.00816044C169.997 0.27368 170 0.472829 170 0.710937L172 0.710938L174 0.710938C174 0.474852 173.997 0.200062 173.996 -0.00816044L171.996 0ZM172 0.710938L170 0.710935C170 94.1989 93.8962 170 1.74846e-07 170L0 172L-1.74846e-07 174C96.0897 174 174 96.4237 174 0.71094L172 0.710938ZM0 172H2V0H0H-2V172H0ZM0 0V2H171.996V0V-2H0V0Z" fill="#E54A2B" mask="url(#path-5-inside-3_6003_724)"/>
+  <path d="M171.996 0C171.997 0.236871 172 0.473841 172 0.710938C172 95.3113 94.9929 172 0 172V0H171.996Z" fill="#7F1414" mask="url(#diagonal-wipe-3)"/>
+  </g>
+  <g id="quarter-4">
+  <mask id="path-7-inside-4_6003_724" fill="white">
+  <path d="M341.996 0C341.997 0.236871 342 0.473841 342 0.710938C342 95.3113 264.993 172 170 172V0H341.996Z"/>
+  </mask>
+  <path d="M341.996 0C341.997 0.236871 342 0.473841 342 0.710938C342 95.3113 264.993 172 170 172V0H341.996Z" fill="#7F1414"/>
+  <path d="M341.996 0L343.996 -0.00816044L343.988 -2H341.996V0ZM342 0.710938L344 0.71094V0.710938L342 0.710938ZM170 172H168V174H170L170 172ZM170 0V-2H168V0H170ZM341.996 0L339.996 0.00816044C339.997 0.27368 340 0.472829 340 0.710937L342 0.710938L344 0.710938C344 0.474852 343.997 0.200062 343.996 -0.00816044L341.996 0ZM342 0.710938L340 0.710935C340 94.1989 263.896 170 170 170L170 172L170 174C266.09 174 344 96.4237 344 0.71094L342 0.710938ZM170 172H172V0H170H168V172H170ZM170 0V2H341.996V0V-2H170V0Z" fill="#7F1414" mask="url(#path-7-inside-4_6003_724)"/>
+  <path d="M341.996 0C341.997 0.236871 342 0.473841 342 0.710938C342 95.3113 264.993 172 170 172V0H341.996Z" fill="#E54A2B" mask="url(#diagonal-wipe-4)"/>
+  </g>
+</svg>

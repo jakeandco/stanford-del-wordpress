@@ -5,32 +5,22 @@
     padding: 62px 0;
   }
 
-  figure {
-    margin-bottom: 12px;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 30px;
-      margin-right: -9px;
-    }
-  }
-
-  .media-item_holder {
-    padding-bottom: 85%;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-bottom: 100%;
-    }
-  }
-
   .h5 {
     margin-bottom: 21px;
   }
 
-  .tease {
+  .tease:not(.tease-research-area) {
     padding: 25px 0 9px;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       padding: 45px 0 6px;
     }
 
+    &:hover {
+      background-color: transparent;
+    }
+
     &:has(.media-item) {
+
       .btn-holder {
         display: none !important;
         @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
@@ -38,70 +28,85 @@
         }
       }
     }
-  }
 
-  .img-holder {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 0;
-    }
-  }
-
-  .btn-holder {
-    padding-left: 10px;
-  }
-
-  .text-holder {
-    padding-right: 0;
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 25px;
-      padding-left: 56px;
-    }
-
-    &.col-md-5 {
+    figure {
+      margin-bottom: 12px;
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-        padding-left: 7%;
-      }
-      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
-        padding-bottom: 30px;
-        padding-top: 20px;
+        margin-bottom: 30px;
+        margin-right: -9px;
       }
     }
 
-    &.col-md-11 {
+    .media-item_holder {
+      padding-bottom: 85%;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 100%;
+      }
+    }
 
-      .date {
+    .img-holder {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 0;
+      }
+    }
+
+    .btn-holder {
+      padding-left: 10px;
+
+      .btn-primary {
         @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-          margin-bottom: 47px;
-        }
-      }
-
-      .h5 {
-        @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-          font-size: 60px;
-          line-height: 70px;
-          margin-bottom: 50px;
-          min-height: 211px;
+          margin-bottom: auto;
+          margin-left: auto;
         }
       }
     }
-  }
 
-  .date {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      margin-bottom: 57px;
+    .text-holder {
+      padding-right: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: 25px;
+        padding-left: 56px;
+      }
+
+      &.col-md-5 {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-left: 7%;
+        }
+        @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+          padding-bottom: 30px;
+          padding-top: 20px;
+        }
+      }
+
+      &.col-md-11 {
+
+        .date {
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            margin-bottom: 47px;
+          }
+        }
+
+        .h5 {
+          @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+            font-size: 60px;
+            line-height: 70px;
+            margin-bottom: 50px;
+            min-height: 211px;
+          }
+        }
+      }
     }
-  }
 
-  .h5 {
-    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
-      font-size: 44px;
-      line-height: 50px;
+    .date {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 57px;
+      }
     }
-  }
 
-  .category-list {
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')){
-      margin-bottom: 20px;
+    .category-list {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')){
+        margin-bottom: 20px;
+      }
     }
   }
 }

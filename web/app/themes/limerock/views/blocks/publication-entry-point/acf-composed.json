@@ -1,0 +1,54 @@
+{
+  "name": "group_block_publication-entry-point",
+  "title": "Block Details: Publication Entry Point",
+  "fields": [
+    {
+      "label": "Publication",
+      "name": "publication",
+      "type": "post_object"
+    },
+    {
+      "label": "Read More Text",
+      "name": "read_more_text",
+      "type": "text"
+    },
+    {
+      "label": "Quote",
+      "name": "quote",
+      "type": "group",
+      "sub_fields": [
+        {
+          "label": "Content",
+          "name": "content",
+          "type": "wysiwyg"
+        },
+        {
+          "label": "Attribution",
+          "name": "attribution",
+          "type": "group",
+          "sub_fields": [
+            {
+              "label": "Title",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "label": "Subtitle",
+              "name": "subtitle",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/publication-entry-point"
+      }
+    ]
+  ]
+}

@@ -82,6 +82,7 @@ web/app/mu-plugins/*/
 # !web/app/plugins/my-plugin
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/airtable-sync
 
 # Themes
 # We don't ignore all themes by default as these are most commonly where a

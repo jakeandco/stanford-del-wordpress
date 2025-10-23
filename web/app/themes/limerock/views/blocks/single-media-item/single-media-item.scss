@@ -1,0 +1,59 @@
+.block_single-media-item {
+  // Add your custom styles here
+  overflow: hidden;
+
+  .heading-holder {
+    padding-top: 49px;
+    padding-bottom: 49px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-top: 67px;
+      padding-bottom: 72px;
+    }
+  }
+
+  .media-item_caption {
+    margin-bottom: 1em;
+  }
+
+  &--full {
+
+    figure {
+      margin-bottom: 0;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        width: 100%;
+      }
+
+      .media-item_caption {
+        @extend .container;
+      }
+    }
+  }
+
+  &--wide {
+
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &--right {
+
+    .media-item_holder {
+      text-align: right;
+    }
+  }
+
+  &--center {
+
+    .media-item_holder {
+      text-align: center;
+    }
+  }
+}

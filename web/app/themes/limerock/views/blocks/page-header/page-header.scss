@@ -55,8 +55,6 @@
 
   .h5 {
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-      font-size: 44px;
-      line-height: 50px;
       max-width: 70%;
     }
   }
@@ -250,8 +248,8 @@
       }
 
       &:hover {
-        background: $bright-red;
-        border-color: $bright-red;
+        background: $black;
+        border-color: $black;
         color: $white;
       }
     }

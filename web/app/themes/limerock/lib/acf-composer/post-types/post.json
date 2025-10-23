@@ -3,10 +3,24 @@
   "title": "Post Type: Post",
   "fields": [
     {
+      "label": "Is External Link",
+      "name": "is_external_link",
+      "type": "true_false"
+    },
+    {
       "label": "External Link",
       "name": "external_link",
       "type": "link",
-      "instructions": "For this link, set the title to the source. Example: New York Times"
+      "instructions": "For this link, set the title to the source. Example: New York Times",
+      "conditional_logic": [
+        [
+          {
+            "fieldPath": "is_external_link",
+            "operator": "==",
+            "value": 1
+          }
+        ]
+      ]
     },
     { "label": "Intro Copy", "name": "intro_copy", "type": "wysiwyg" }
   ],

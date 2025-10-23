@@ -39,8 +39,6 @@
   .h5 {
     margin-bottom: 23px;
     @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-      font-size: 44px;
-      line-height: 50px;
       margin-bottom: 35px;
     }
   }

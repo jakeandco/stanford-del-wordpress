@@ -1,0 +1,34 @@
+{% embed '@views/tease.twig' with {
+  tease_options: {
+    extra_classes: 'swiper-slide',
+    extra_attributes: theme_attr
+  },
+  post
+} only %}
+  {% block content %}
+    {% set full_post = get_post(post) %}
+      <div class="wrap">
+        <div class="text-holder">
+          <h2 class="h5">
+            <a href="{{post.link}}">{{post.post_title}} <span class="icon">→</span></a>
+          </h2>
+          <p>{{post.excerpt}}</p>
+        </div>
+        {% if post.meta('research_area_icon_svg') %}
+          <div class="image-holder style-svg image-holder--{{ post.ID }}">
+            <a href="{{post.link}}">
+              {% set chars = 'abcdefghijklmnopqrstuvwxyz0123456789'|split('') %}
+              {% set unique_prefix = 'svg-' ~ (range(1, 6)|map(i => random(chars))|join) %}
+
+              {% set svg_raw = post.meta('research_area_icon_svg')|file_get_contents_raw %}
+              {% set svg_unique = svg_raw|replace({
+                'id="': 'id="' ~ unique_prefix ~ '-',
+                'url(#': 'url(#' ~ unique_prefix ~ '-'
+              }) %}
+              {{ svg_unique|raw }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endblock %}
+{% endembed %}
