@@ -1,0 +1,33 @@
+{
+  "name": "limerock/image-and-contact-list",
+  "title": "Image and Contact List",
+  "description": "This block displays a contact list section on a page. It features an image, a headline, a title, a subtitle, and a repeatable list of contacts. Each contact includes a label, contact name, and a link",
+  "category": "theme",
+  "icon": "admin-comments",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
+  },
+  "supports": {
+    "className": false,
+    "align": true,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "is_example": true
+      }
+    }
+  }
+}

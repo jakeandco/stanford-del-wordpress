@@ -1,0 +1,19 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_image-and-text-callout' } %}
+  {% block content %}
+
+
+    {% include '@partial/media-item.twig' with { image: fields.image } only %}
+
+    {{fields.text}}
+
+
+    {% if fields.image_size == 'large' %}
+      <h4>Select type: Large</h4>
+      ,
+    {% elseif fields.image_size == 'small' %}
+      <h4>Select type: Small</h4>
+
+    {% endif %}
+
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,20 @@
+{
+  "name": "group_block_logo-grid",
+  "title": "Block Details: Logo Grid",
+  "fields": [
+    {
+      "label": "Gallery",
+      "name": "gallery",
+      "type": "gallery"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/logo-grid"
+      }
+    ]
+  ]
+}

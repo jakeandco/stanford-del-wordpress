@@ -1,0 +1,32 @@
+{
+  "name": "group_block_three-up-entry-points",
+  "title": "Block Details: 3-Up Entry Points",
+  "fields": [
+    {
+      "label": "Entry Points",
+      "name": "entry_points",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Link",
+          "name": "link",
+          "type": "link"
+        },
+        {
+          "label": "Description",
+          "name": "description",
+          "type": "wysiwyg"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/three-up-entry-points"
+      }
+    ]
+  ]
+}

@@ -2,6 +2,12 @@
 // This file contains all styles related to the common layout of the site
 // -----------------------------------------------------------------------------
 
+body:has(.hero) {
+  .content-wrapper {
+    margin-top: 0;
+  }
+}
+
 .content-wrapper {
   margin-top: 54px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {

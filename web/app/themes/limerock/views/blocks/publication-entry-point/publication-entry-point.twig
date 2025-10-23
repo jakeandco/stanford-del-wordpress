@@ -1,0 +1,28 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_publication-entry-point' } %}
+  {% block content %}
+
+
+    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.publication) } only %}
+
+    <p>{{fields.read_more_text}}</p>
+
+    <div>
+      <h3>Field Group: quote</h3>
+
+
+      {{fields.quote['content']}}
+
+      <div>
+        <h3>Field Group: attribution</h3>
+
+
+        <p>{{fields.quote['attribution']['title']}}</p>
+
+        <p>{{fields.quote['attribution']['subtitle']}}</p>
+
+      </div>
+
+    </div>
+
+  {% endblock %}
+{% endembed %}

@@ -1,1 +1,69 @@
-.hero {}
+.hero {
+  margin-top: 54px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    margin-top: 184px;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    margin-top: 188px;
+  }
+
+  &--post {
+    color: var(--bs-body-color);
+    padding-top: 9px;
+    padding-bottom: 31px;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-top: 25px;
+      padding-bottom: 76px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      color: inherit;
+      font-size: 40px;
+      line-height: 1;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 50px;
+        max-width: 796px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+        font-size: 95px;
+        font-weight: 300;
+        letter-spacing: -2.8px;
+        margin-bottom: -33px;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    .image-holder {
+      text-align: right;
+      margin-bottom: 27px;
+      max-width: 114px;
+      margin-left: auto;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+        max-width: 270px;
+      }
+
+      svg {
+        path {
+          &[fill="#7F1414"] {
+            fill: $dark-red;
+          }
+          &[stroke="#7F1414"] {
+            stroke: $dark-red;
+          }
+        }
+      }
+    }
+  }
+}

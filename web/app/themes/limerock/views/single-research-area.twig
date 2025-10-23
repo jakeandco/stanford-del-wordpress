@@ -1,0 +1,11 @@
+{% extends "@views/base.twig" %}
+
+{% block hero %}
+  {% include "@views/heros/post-research-area.twig" with { post } %}
+{% endblock %}
+
+{% block content %}
+  <div class="content-wrapper post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+    {{post.content}}
+  </div>
+{% endblock %}

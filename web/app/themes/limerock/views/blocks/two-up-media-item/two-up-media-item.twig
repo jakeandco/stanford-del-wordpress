@@ -1,0 +1,11 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_two-up-media-item' } %}
+  {% block content %}
+
+
+    {% include '@partial/media-item.twig' with { image: fields.left } only %}
+
+
+    {% include '@partial/media-item.twig' with { image: fields.right } only %}
+
+  {% endblock %}
+{% endembed %}

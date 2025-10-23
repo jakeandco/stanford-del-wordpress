@@ -1,0 +1,46 @@
+{
+  "name": "group_block_full-bleed-cta",
+  "title": "Block Details: Full Bleed CTA",
+  "fields": [
+    {
+      "label": "Background Image",
+      "name": "background_image",
+      "type": "image"
+    },
+    {
+      "label": "Text",
+      "name": "text",
+      "type": "wysiwyg"
+    },
+    {
+      "label": "Text Size",
+      "name": "text_size",
+      "type": "select",
+      "choices": {
+        "large": "Large",
+        "small": "Small"
+      }
+    },
+    {
+      "label": "Buttons",
+      "name": "buttons",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "label": "Button",
+          "name": "button",
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/full-bleed-cta"
+      }
+    ]
+  ]
+}
