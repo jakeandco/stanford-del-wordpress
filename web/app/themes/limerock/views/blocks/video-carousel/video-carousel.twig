@@ -1,0 +1,12 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_video-carousel' } %}
+  {% block content %}
+
+
+    {% for image in fields.gallery %}
+      {% include '@partial/media-item.twig' with { image } only %}
+    {% endfor %}
+
+    <p>{{fields.title}}</p>
+
+  {% endblock %}
+{% endembed %}

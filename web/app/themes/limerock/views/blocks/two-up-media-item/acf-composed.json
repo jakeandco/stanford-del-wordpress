@@ -1,0 +1,25 @@
+{
+  "name": "group_block_two-up-media-item",
+  "title": "Block Details: 2-Up Media Item",
+  "fields": [
+    {
+      "label": "Left",
+      "name": "left",
+      "type": "image"
+    },
+    {
+      "label": "Right",
+      "name": "right",
+      "type": "image"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/two-up-media-item"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "group_block_video-carousel",
+  "title": "Block Details: Video Carousel",
+  "fields": [
+    {
+      "label": "Gallery",
+      "name": "gallery",
+      "type": "gallery"
+    },
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "text"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "limerock/video-carousel"
+      }
+    ]
+  ]
+}
