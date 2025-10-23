@@ -6,7 +6,7 @@
   "icon": "info-outline",
   "keywords": [],
   "acf": {
-    "mode": "preview",
+    "mode": "edit",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },
   "supports": {
