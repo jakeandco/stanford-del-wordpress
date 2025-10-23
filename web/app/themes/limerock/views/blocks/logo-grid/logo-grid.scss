@@ -1,3 +1,13 @@
 .block_logo-grid {
   // Add your custom styles here
+  padding: 30px 0 10px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 40px 0 1px;
+  }
+
+  figure {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 40px;
+    }
+  }
 }
