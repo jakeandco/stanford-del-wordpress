@@ -3,9 +3,10 @@
   "title": "Video Carousel",
   "description": "This block is used to display a carousel of videos with captions, with an optional title field.",
   "category": "media",
-  "icon": "admin-comments",
+  "icon": "slides",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

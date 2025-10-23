@@ -29,7 +29,7 @@
       {
         "param": "block",
         "operator": "==",
-        "value": "limerock\/factoids"
+        "value": "limerock/factoids"
       }
     ]
   ]

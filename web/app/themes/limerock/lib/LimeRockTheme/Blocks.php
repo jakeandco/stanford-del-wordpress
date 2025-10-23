@@ -14,15 +14,19 @@ class Blocks
 	public static $categories = [
 		[
 			'slug' => 'header',
-			'title' => 'Header'
+			'title' => 'Headers'
+		],
+		[
+			'slug' => 'entry-points',
+			'title' => 'Entry Points'
 		],
 		[
 			'slug' => 'post-type',
-			'title' => 'Post Type'
+			'title' => 'Post Types'
 		],
 		[
 			'slug' => 'cta',
-			'title' => 'CTA'
+			'title' => 'CTAs'
 		],
 	];
 	public static $added_block_types = [];
@@ -71,13 +75,15 @@ class Blocks
 		);
 	}
 
-	public static function filter_allowed_block_types()
+	public static function filter_allowed_block_types($block_types)
 	{
-		return array_values(
+		$thing = array_merge( array_values(
 			array_filter(
 				static::$added_block_types,
 				fn($block_name) => $block_name !== 'limerock/example-block'
 			)
-		);
+		));
+
+		return $thing;
 	}
 }

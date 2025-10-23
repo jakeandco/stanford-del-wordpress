@@ -2,10 +2,11 @@
   "name": "limerock/image-and-contact-list",
   "title": "Image and Contact List",
   "description": "This block displays a contact list section on a page. It features an image, a headline, a title, a subtitle, and a repeatable list of contacts. Each contact includes a label, contact name, and a link",
-  "category": "theme",
-  "icon": "admin-comments",
+  "category": "widgets",
+  "icon": "email",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

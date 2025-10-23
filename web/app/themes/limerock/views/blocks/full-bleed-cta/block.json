@@ -3,9 +3,10 @@
   "title": "Full Bleed CTA",
   "description": "This full-bleed block contains text of customizable size, CTA buttons, and an optional background image.",
   "category": "cta",
-  "icon": "admin-comments",
+  "icon": "migrate",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

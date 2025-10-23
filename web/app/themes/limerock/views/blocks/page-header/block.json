@@ -3,9 +3,10 @@
   "title": "Page Header",
   "description": "General page header with varying title sizes and display options.",
   "category": "header",
-  "icon": "admin-comments",
+  "icon": "heading",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

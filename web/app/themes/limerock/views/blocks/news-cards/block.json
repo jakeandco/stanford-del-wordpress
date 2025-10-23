@@ -3,9 +3,10 @@
   "title": "News Cards",
   "description": "Displays a listing of News items, in a card format.",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "grid-view",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

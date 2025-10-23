@@ -3,9 +3,10 @@
   "title": "Photo and Caption Carousel",
   "description": "This block is used to display a carousel of photos with titles and content, with an optional headline field.",
   "category": "media",
-  "icon": "admin-comments",
+  "icon": "slides",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

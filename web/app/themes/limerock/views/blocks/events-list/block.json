@@ -3,9 +3,10 @@
   "title": "Events List",
   "description": "Displays a listing of selected Event items, in a list format",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "list-view",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

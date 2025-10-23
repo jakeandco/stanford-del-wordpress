@@ -1,37 +1,32 @@
 {
   "name": "limerock/four-up-text-callout",
   "title": "Four-up Text Callout",
-  "description": "Block Description",
+  "description": "This block displays a 2x2 grid of text callouts, with optional headline and title.",
   "category": "text",
-  "icon": "admin-comments",
+  "icon": "grid-view",
   "keywords": [],
   "acf": {
-      "mode": "preview",
-      "renderCallback": "LimeRockTheme_block_render_callback"
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "LimeRockTheme_block_render_callback"
   },
   "supports": {
-  "className": false,
-  "align": false,
-  "anchor": true,
-  "color": {
-    "gradient": true,
-    "background": true,
-    "text": false
+    "className": false,
+    "align": false,
+    "anchor": true,
+    "color": {
+      "gradient": true,
+      "background": true,
+      "text": false
+    },
+    "spacing": {
+      "padding": ["top", "bottom"],
+      "margin": ["top", "bottom"]
+    }
   },
-  "spacing": {
-    "padding": [
-      "top",
-      "bottom"
-    ],
-    "margin": [
-      "top",
-      "bottom"
-    ]
-  }
-},
   "example": {
     "attributes": {
-      "data":  {
+      "data": {
         "is_example": true
       }
     }
