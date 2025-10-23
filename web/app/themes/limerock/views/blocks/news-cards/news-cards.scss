@@ -103,13 +103,6 @@
       }
     }
 
-    .h5 {
-      @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
-        font-size: 44px;
-        line-height: 50px;
-      }
-    }
-
     .category-list {
       @media screen and (min-width: map-get($grid-breakpoints, 'md')){
         margin-bottom: 20px;

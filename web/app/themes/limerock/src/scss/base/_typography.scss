@@ -69,8 +69,8 @@ h5, .h5 {
     margin-bottom: 24px;
   }
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 44px;
+    line-height: 50px;
     margin-bottom: 51px;
   }
 }
@@ -134,6 +134,7 @@ p {
   font-weight: 400;
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
     font-size: 14px;
+    line-height: 20px;
     padding-top: 19px;
     letter-spacing: 0.1px;
   }
