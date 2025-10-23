@@ -21,6 +21,12 @@
           "name": "title"
         },
         {
+          "acf_composer_extend": "LimeRockTheme/ACF/fields/single-line-basic-wysiwyg",
+          "limerock_option_autop": false,
+          "label": "Subtitle",
+          "name": "subtitle"
+        },
+        {
           "label": "Title Size",
           "name": "title_size",
           "type": "select",
