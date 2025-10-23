@@ -13,19 +13,9 @@
       "type": "wysiwyg"
     },
     {
-      "label": "Column 1 Button",
-      "name": "button_column_1",
-      "type": "link"
-    },
-    {
       "label": "Column 2",
       "name": "column_2",
       "type": "wysiwyg"
-    },
-    {
-      "label": "Column 2 Button",
-      "name": "button_column_2",
-      "type": "link"
     },
     {
       "label": "Sidebar Content",
