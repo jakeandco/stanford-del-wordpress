@@ -1,14 +1,89 @@
 .block_research-area-circle {
   // Add your custom styles here
+  padding: 35px 0 157px;
+  overflow: hidden;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 40px 0 158px;
+  }
 
   .tease-research-area {
     text-align: center;
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 160px;
+    width: 100%;
+    z-index: 2;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md'))  {
+      max-width: 305px;
+    }
+
+    &:nth-child(1) {
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: 0;
+        top: 0;
+        transform: translate3d(-15%, -9%, 0);
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        transform: translate3d(-31%, -9%, 0);
+      }
+    }
+
+    &:nth-child(2) {
+      top: 40.6%;
+      left: 0;
+      transform: translateX(-17px);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: 100%;
+        top: 0;
+        transform: translate3d(-85%, -9%, 0);
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        transform: translate3d(-74%, -9%, 0);
+      }
+    }
+
+    &:nth-child(3) {
+      top: 40.6%;
+      right: 0;
+      transform: translateX(17px);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        bottom: 0;
+        top: auto;
+        right: auto;
+        left: 0;
+        transform: translate3d(-15%, 3%, 0);
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg'))  {
+        transform: translate3d(-31%, 3%, 0);
+      }
+    }
+
+    &:nth-child(4) {
+      top: 100%;
+      left: 50%;
+      transform: translate3d(-50%, -43%, 0);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        bottom: 0;
+        top: auto;
+        left: 100%;
+        transform: translate3d(-85%, -15%, 0);
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        transform: translate3d(-74%, -15%, 0);
+      }
+    }
 
     .h5 {
       font-size: 22px;
       line-height: 1;
       font-weight: 470;
-      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         font-size: 32px;
       }
 
@@ -19,6 +94,112 @@
 
     p {
       display: none;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .image-holder {
+      background-color: var(--bs-body-bg);
+      text-align: center;
+      max-width: 62px;
+      margin-bottom: 22px;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        max-width: 90px;
+        margin-bottom: 33px;
+      }
+    }
+
+    .text-holder {
+      background-color: var(--bs-body-bg);
+      max-width: 100%;
+    }
+  }
+}
+
+.research-area-circle {
+  position: relative;
+  padding-bottom: 130%;
+  max-width: 671px;
+  margin: 0 auto;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding-bottom: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: 1px solid #BCAC9B;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .decor {
+    background-color: var(--bs-body-bg);
+    position: absolute;
+    border-radius: 50%;
+    width: 114px;
+    aspect-ratio: 1 / 1.5088;
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      aspect-ratio: 1 / 0.8863;
+      width: 255px;
+    }
+
+    &-1 {
+      top: 0;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: 0;
+        top: 0;
+        transform: translate3d(-27%, -8%, 0);
+      }
+    }
+
+    &-2 {
+      aspect-ratio: 1 / 1.34215;
+      top: 50%;
+      left: 0;
+      transform: translate3d(-22%, -30%, 0);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        aspect-ratio: 1 / 0.56398;
+        top: 0;
+        left: 100%;
+        width: 305px;
+        transform: translate3d(-74%, 23%, 0);
+      }
+    }
+
+    &-3 {
+      aspect-ratio: 1 / 0.9211;
+      top: 50%;
+      left: 100%;
+      transform: translate3d(-81%, 20%, 0);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 311px;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        transform: translate3d(-28%, 12%, 0);
+        aspect-ratio: 1 / 0.94215;
+      }
+    }
+
+    &-4 {
+      top: 100%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 320px;
+        aspect-ratio: 1 / 0.8125;
+        left: 100%;
+        transform: translate3d(-69%, -95%, 0);
+      }
     }
   }
 }

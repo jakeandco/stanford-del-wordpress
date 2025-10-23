@@ -9,7 +9,13 @@
 
       {% set selections = get_posts({ post_type }) %}
 
-      {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+      <div class="research-area-circle">
+        {% include '@partial/post-repeater.twig' with { posts: selections } only %}
+        <span class="decor decor-1"></span>
+        <span class="decor decor-2"></span>
+        <span class="decor decor-3"></span>
+        <span class="decor decor-4"></span>
+      </div>
     </div>
   {% endblock %}
 {% endembed %}
