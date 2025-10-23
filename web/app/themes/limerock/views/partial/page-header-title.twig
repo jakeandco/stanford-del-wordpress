@@ -1,0 +1,19 @@
+{% if fields.header_title %}
+  {% if fields.title_size == 'small' %}
+    <h1 class="h3 title-size-{{ fields.title_size }}">
+      {{ fields.header_title }}
+    </h1>
+  {% elseif fields.title_size == 'medium' %}
+    <h1 class="h3 title-size-{{ fields.title_size }}">
+      {{ fields.header_title }}
+    </h1>
+  {% elseif fields.title_size == 'large' %}
+    <h1 class="h3 title-size-{{ fields.title_size }}">
+      {{ fields.header_title }}
+    </h1>
+  {% elseif fields.title_size == 'extra_large' %}
+    <h1 class="h3 title-size-{{ fields.title_size }}">
+      {{ fields.header_title }}
+    </h1>
+  {% endif %}
+{% endif %}
