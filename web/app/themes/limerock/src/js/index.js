@@ -9,6 +9,7 @@ import * as swiper from './swiper';
 import * as tags from './tags';
 import * as video from './video';
 import * as svgAnimation from './svgAnimation';
+import * as workArchive from './workArchive';
 
 export function setup() {
   accordion.setup();
@@ -22,6 +23,7 @@ export function setup() {
   tags.setup();
   video.setup();
   svgAnimation.setup();
+  workArchive.setup();
 }
 
 // necessary for storybook to use this file in its entirety
@@ -37,6 +39,7 @@ export function teardown() {
   tags.teardown();
   video.teardown();
   svgAnimation.teardown();
+  workArchive.teardown();
 }
 
 document.addEventListener('DOMContentLoaded', setup, false);

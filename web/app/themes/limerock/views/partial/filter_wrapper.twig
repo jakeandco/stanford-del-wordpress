@@ -1,0 +1,9 @@
+<div class="filter-block labels-js {{ extra_classes|default('') }}">
+  {% if title is defined %}
+    <div class="filter-title">{{ title }}</div>
+  {% endif %}
+
+  <div class="filters">
+    {% block content %}{% endblock %}
+  </div>
+</div>

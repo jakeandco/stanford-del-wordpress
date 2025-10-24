@@ -1,0 +1,27 @@
+{% set display_featured = posts.pagination.current == 1 and not hide_featured ? 'block' : 'none' %}
+
+{% if fields.featured_work is not empty %}
+  <div class="featured-post-wrap" style="display: {{ display_featured }};">
+    {% if fields.featured_label %}
+      <div>{{ fields.featured_label }}</div>
+    {% endif %}
+    {% include '@partial/tease_switcher.twig' with { post: get_post(fields.featured_work) } only %}
+  </div>
+{% endif %}
+
+<div class="all-works-wrap">
+  {% if fields.archive_label %}
+    <div>{{ fields.archive_label }}</div>
+  {% endif %}
+  <div class="all-works-grid">
+    {% if posts|length %}
+      {% include '@partial/post-repeater.twig' with { posts: posts } only %}
+    {% else %}
+      <div class="no-results">No works found matching your criteria.</div>
+    {% endif %}
+  </div>
+
+  {% if posts|length %}
+    {% include '@partial/pagination-alt.twig' with { posts: posts } only %}
+  {% endif %}
+</div>
