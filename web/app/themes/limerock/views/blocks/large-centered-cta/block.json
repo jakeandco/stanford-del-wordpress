@@ -1,11 +1,12 @@
 {
   "name": "limerock/large-centered-cta",
   "title": "Large Centered CTA",
-  "description": "Block Description",
+  "description": "Prominent full-width callout with centered heading, optional supporting text, and CTA button.",
   "category": "cta",
-  "icon": "admin-comments",
+  "icon": "migrate",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

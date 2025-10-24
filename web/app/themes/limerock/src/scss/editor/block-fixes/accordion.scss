@@ -1,0 +1,22 @@
+// Don't perform fade-in animation on editor preview.
+.block_accordion {
+  .collapse:not(.show) {
+    display: block;
+  }
+
+  .accordion .accordion-button[aria-expanded=false] {
+
+    &:before,
+    &:after {
+      bottom: 25px;
+    }
+
+    &:before {
+      transform: none;
+    }
+
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+}

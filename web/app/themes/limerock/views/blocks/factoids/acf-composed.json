@@ -6,6 +6,10 @@
       "label": "Factoids",
       "name": "factoids",
       "type": "repeater",
+      "layout": "row",
+      "acfe_repeater_stylised_button": 1,
+      "button_label": "Add Factoid",
+      "collapsed": "field_group_block_factoids_factoids_title",
       "sub_fields": [
         {
           "label": "Title",
@@ -25,7 +29,7 @@
       {
         "param": "block",
         "operator": "==",
-        "value": "limerock\/factoids"
+        "value": "limerock/factoids"
       }
     ]
   ]

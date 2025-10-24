@@ -3,9 +3,10 @@
   "title": "Research Area Circle",
   "description": "Circular layout featuring four research areas positioned at N/E/S/W around a faint ring; each shows icon + title and links to its archive/landing.",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "grid-view",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

@@ -3,9 +3,10 @@
   "title": "2-Up CTA",
   "description": "This block contains two CTAs with text of customizable size, CTA buttons, and optional background images.",
   "category": "cta",
-  "icon": "admin-comments",
+  "icon": "migrate",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

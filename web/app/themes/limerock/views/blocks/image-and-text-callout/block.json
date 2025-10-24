@@ -2,10 +2,11 @@
   "name": "limerock/image-and-text-callout",
   "title": "Image and Text Callout",
   "description": "This block contains an image and text. The image size can be customized.",
-  "category": "text",
-  "icon": "admin-comments",
+  "category": "widgets",
+  "icon": "analytics",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

@@ -3,9 +3,10 @@
   "title": "Research Area List",
   "description": "Displays Research Area posts in a list format. The current page will always be omitted.",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "list-view",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

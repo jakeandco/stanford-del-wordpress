@@ -3,9 +3,10 @@
   "title": "People Archive",
   "description": "Displays people posts for the purposes of the People archive page.",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "archive",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

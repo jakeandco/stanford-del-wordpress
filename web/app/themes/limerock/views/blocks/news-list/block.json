@@ -3,9 +3,10 @@
   "title": "News List",
   "description": "Displays a listing of News items, in a list format. If there are more posts than can be shown, pagination should be added.",
   "category": "post-type",
-  "icon": "admin-comments",
+  "icon": "list-view",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

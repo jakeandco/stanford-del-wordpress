@@ -1,6 +1,6 @@
 {
-  "name": "group_block_two-column-text-block",
-  "title": "Block Details: 2-Column Text Block",
+  "name": "group_block_event-details",
+  "title": "Block Details: Event Details",
   "fields": [
     {
       "label": "Heading",
@@ -16,11 +16,6 @@
       "label": "Column 2",
       "name": "column_2",
       "type": "wysiwyg"
-    },
-    {
-      "label": "Sidebar Content",
-      "name": "sidebar_content",
-      "type": "wysiwyg"
     }
   ],
   "location": [
@@ -28,7 +23,7 @@
       {
         "param": "block",
         "operator": "==",
-        "value": "limerock/two-column-text-block"
+        "value": "limerock/event-details"
       }
     ]
   ]
