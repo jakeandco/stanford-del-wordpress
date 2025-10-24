@@ -15,17 +15,23 @@
     {
       "label": "Content",
       "name": "content",
-      "type": "wysiwyg"
+      "type": "wysiwyg",
+      "wrapper": {
+        "width": 70
+      }
+    },
+    {
+      "label": "Image",
+      "name": "image",
+      "type": "image",
+      "wrapper": {
+        "width": 30
+      }
     },
     {
       "label": "Button",
       "name": "button",
       "type": "link"
-    },
-    {
-      "label": "Image",
-      "name": "image",
-      "type": "image"
     }
   ],
   "location": [

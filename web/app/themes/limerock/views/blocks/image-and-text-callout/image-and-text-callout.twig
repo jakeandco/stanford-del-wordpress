@@ -1,19 +1,27 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_image-and-text-callout' } %}
   {% block content %}
 
-
-    {% include '@partial/media-item.twig' with { image: fields.image } only %}
-
-    {{fields.text}}
-
-
-    {% if fields.image_size == 'large' %}
-      <h4>Select type: Large</h4>
-      ,
-    {% elseif fields.image_size == 'small' %}
-      <h4>Select type: Small</h4>
-
-    {% endif %}
+    <div class="container">
+      <div class="image-and-text-callout image-and-text-callout--{{fields.image_size}}">
+        <div class="row align-items-center">
+          {% if fields.image_size == 'large' %}
+            <div class="col-12 col-md-6">
+              {% include '@partial/media-item.twig' with { image: fields.image } only %}
+            </div>
+            <div class="col-12 col-md-6 text-holder">
+              {{fields.text}}
+            </div>
+          {% elseif fields.image_size == 'small' %}
+            <div class="col-12 col-md-5">
+              {% include '@partial/media-item.twig' with { image: fields.image } only %}
+            </div>
+            <div class="col-12 col-md-7 text-holder">
+              {{fields.text}}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
 
   {% endblock %}
 {% endembed %}

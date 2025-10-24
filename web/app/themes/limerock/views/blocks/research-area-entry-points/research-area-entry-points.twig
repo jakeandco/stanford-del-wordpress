@@ -3,7 +3,9 @@
     <div class="container">
       {% set post_type = 'research-area' %}
 
-      <span class="block-title d-block">{{fields.title}}</span>
+      {% if fields.title %}
+        <span class="block-title d-block">{{fields.title}}</span>
+      {% endif %}
     </div>
 
     {% set selections = get_posts({ post_type }) %}
