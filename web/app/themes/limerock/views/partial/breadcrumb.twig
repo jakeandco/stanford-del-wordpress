@@ -1,14 +1,21 @@
-{% set parent = post.parent %}
-{% if parent is empty and post.post_type != 'page' %}
-  {% set parent = get_post_type_archive(post.post_type) %}
+{% set ancestors = fn('get_post_ancestors', post)|default([]) %}
+
+{% if post_type != 'page' %}
+  {% set archive_page = get_post_type_archive(post_type) %}
+  {% if archive_page %}
+    {% set ancestors = ancestors|merge([archive_page]) %}
+  {% endif %}
 {% endif %}
 
-{% if parent is not empty %}
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">
-        <a href="{{ parent.path }}">{{parent.title}}</a>
-      </li>
+{% if ancestors is not empty %}
+  <nav class="back-link" aria-label="breadcrumb">
+    <ol class="list-group-horizontal list-group list-unstyled">
+      {% for item in ancestors|reverse %}
+        {% set breadcrumb = get_post(item) %}
+        <li class="list-group-item border-0">
+          <a href="{{ breadcrumb.path }}">{{breadcrumb.title}}</a>
+        </li>
+      {% endfor %}
     </ol>
   </nav>
 {% endif %}

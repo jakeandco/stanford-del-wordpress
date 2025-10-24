@@ -4,18 +4,20 @@
 
 body:has(.hero) {
   .content-wrapper {
-    margin-top: 0;
+    --content-wrapper--margin-top: 0;
   }
 }
 
 .content-wrapper {
-  margin-top: 54px;
+  --content-wrapper--margin-top: 54px;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    margin-top: 184px;
+    --content-wrapper--margin-top: 184px;
   }
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-    margin-top: 188px;
+    --content-wrapper--margin-top: 188px;
   }
+
+  margin-top: var(--content-wrapper--margin-top);
 }
 
 .block-title {

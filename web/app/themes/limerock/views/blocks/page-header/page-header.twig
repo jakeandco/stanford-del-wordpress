@@ -1,104 +1,50 @@
-{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_page-header' } %}
+{% set post = get_post(post_id) %}
+{% set backgroundColor =  post.meta('header_background').slug %}
+
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_page-header', block: block|merge({ backgroundColor }) } %}
   {% block content %}
-    {# {% include '@partial/page-header-title.twig' with { fields: fields } %} #}
-    {# <div class="container">
-      {% if fields.title_size == 'small' %}
-        <h4>Select type: Small</h4>
-        ,
-      {% elseif fields.title_size == 'medium' %}
-        <h4>Select type: Medium</h4>
-        ,
-      {% elseif fields.title_size == 'large' %}
-        <h4>Select type: Large</h4>
-        ,
-      {% elseif fields.title_size == 'extra_large' %}
-        <h4>Select type: Extra Large</h4>
-      {% endif %}
+    {% set header_sizes = {
+        small: "h4",
+        medium: "h3",
+        large: "h2",
+        extra_large: "h1",
+      } %}
 
-      {{fields.intro_copy}}
-    </div> #}
-
-    {# Archive Header #}
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="h2">Events</h1>
-          <strong class="subtitle h5 d-block">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</strong>
+          {% include "@partial/breadcrumb.twig" with { post } only %}
+
+          <h1 class="{{ header_sizes[fields.title_size] }}">{{ post.title }}</h1>
+          {% if fields.intro_copy %}
+            <strong class="subtitle h5 d-block">{{ fields.intro_copy }}</strong>
+          {% endif %}
         </div>
-      </div>
-    </div>
 
-    {# Large Page Title #}
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Archive</h1>
-        </div>
-        <div class="col-12">
-          <nav aria-label="breadcrumb" class="breadcrumb-nav">
-            <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navigation1" aria-expanded="false" aria-controls="navigation1">
-              <span><span class="text text-show">Show</span><span class="text text-close">Close</span> navigation</span>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 8L13.0622 0.500001L0.937822 0.500001L7 8Z" fill="black"/>
-              </svg>
-            </button>
-
-            <div class="collapse d-md-block" id="navigation1">
-              <ol class="breadcrumb list-unstyled">
-                <li class="breadcrumb-item"><a href="#">Leadership</a></li>
-                <li class="breadcrumb-item"><a href="#">Education</a></li>
-                <li class="breadcrumb-item"><a href="#">Give</a></li>
-                <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><span>Corporate Affiliates</span></li>
-              </ol>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-
-    {# Basic Page Title  #}
-    <div data-bs-theme="warm-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="back-link"><a href="#">About</a></div>
-
-            <h1 class="h4">Basic page title</h1>
-          </div>
+        {% if post.children is not empty %}
           <div class="col-12">
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
               <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navigation2" aria-expanded="false" aria-controls="navigation2">
-                <span><span class="text text-show">Show</span> <span class="text text-close">Close</span> navigation</span>
-                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span>
+                  <span class="text text-show">Show</span>
+                  <span class="text text-close">Close</span>
+                  navigation</span>
+                <svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 8L13.0622 0.500001L0.937822 0.500001L7 8Z" fill="black"/>
                 </svg>
               </button>
               <div class="collapse d-md-block" id="navigation2">
                 <ol class="breadcrumb list-unstyled">
-                  <li class="breadcrumb-item"><a href="#">Optional Sub-pages</a></li>
-                  <li class="breadcrumb-item"><a href="#">Opportunities</a></li>
-                  <li class="breadcrumb-item"><a href="#">Give</a></li>
-                  <li class="breadcrumb-item"><a href="#">Supporters</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"><span>Corporate Affiliates</span></li>
+                  {% for child in post.children %}
+                    <li class="breadcrumb-item">
+                      <a href="{{ child.path }}">{{ child.title }}</a>
+                    </li>
+                  {% endfor %}
                 </ol>
               </div>
             </nav>
           </div>
-        </div>
-      </div>
-    </div>
-
-    {# Basic Page Title - No Subpages #}
-    <div data-bs-theme="warm-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="back-link"><a href="#">About</a></div>
-
-            <h1 class="h4">Basic page title</h1>
-          </div>
-        </div>
+        {% endif %}
       </div>
     </div>
   {% endblock %}

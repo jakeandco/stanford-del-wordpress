@@ -15,8 +15,8 @@
     "align": false,
     "anchor": true,
     "color": {
-      "gradient": true,
-      "background": true,
+      "gradient": false,
+      "background": false,
       "text": false
     },
     "spacing": {

@@ -1,5 +1,7 @@
 .block_page-header {
   // Add your custom styles here
+  margin-top: calc(var(--content-wrapper--margin-top) * -1);
+  padding-top: var(--content-wrapper--margin-top);
 
   h1 {
     @media screen and (max-width: map-get($grid-breakpoints, 'md')) {
@@ -313,4 +315,24 @@
       transition: all 0.3s ease-in-out;
     }
   }
+
+  .list-group {
+    column-gap: 0.5ch;
+
+    &-item {
+      padding: 0;
+
+      a::before {
+        padding-right: 0.5ch;
+        content: '/';
+      }
+
+      &:first-of-type {
+        a::before {
+          content: '←';
+        }
+      }
+    }
+  }
+
 }
