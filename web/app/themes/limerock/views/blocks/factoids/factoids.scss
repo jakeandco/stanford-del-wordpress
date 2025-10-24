@@ -1,7 +1,4 @@
 .block_factoids {
-    &--count-1 {}
-    &--count-2 {}
-    &--count-3 {}
 
   padding: 44px 0;
   @media screen and (min-width: map-get($grid-breakpoints, 'md')) {

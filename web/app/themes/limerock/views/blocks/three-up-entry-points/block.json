@@ -2,10 +2,11 @@
   "name": "limerock/three-up-entry-points",
   "title": "3-Up Entry Points",
   "description": "This block contains a 3-column list of card style entry points, each with a link and description",
-  "category": "theme",
-  "icon": "admin-comments",
+  "category": "entry-points",
+  "icon": "migrate",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

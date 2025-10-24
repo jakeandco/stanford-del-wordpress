@@ -9,7 +9,7 @@
 */
 
 let mix = require('laravel-mix');
-// const glob = require('glob');
+const glob = require('glob');
 require('@chiiya/laravel-mix-image-minimizer');
 
 mix.alias({
@@ -28,6 +28,12 @@ mix.js('src/js/index.js', 'dist/js/main.js')
 
 mix.js('src/js/admin/index.js', 'dist/js/admin.js')
    .sourceMaps();
+
+// Get all custom plugins JS and compile.
+glob.sync('src/js/custom_plugins/*.js').forEach(file => {
+   mix.js(file, file.replace('src/', 'dist/'))
+   .sourceMaps();
+});
 
 // Get all block JS and compile.
 // glob.sync('blocks/*/src/js/*.js').forEach(file => {

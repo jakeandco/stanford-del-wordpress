@@ -9,7 +9,7 @@
         accordion_id,
       } %}
         {% block accordion_header %}
-          <span class="subheading">Optional subheading</span>
+          <span class="subheading">{{ row.subtitle }}</span>
           <h3 class="accordion-heading accordion-heading-{{ row.title_size }}">{{row.title}}</h3>
           {% endblock %}
         {% block accordion_body %}

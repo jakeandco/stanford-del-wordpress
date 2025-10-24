@@ -1,3 +1,51 @@
 .block_two-up-media-item {
   // Add your custom styles here
+  overflow: hidden;
+
+  .images {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .img-holder {
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      width: 50%;
+    }
+
+    &:nth-child(even) {
+
+      .media-item_caption {
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    figure {
+      margin-bottom: 50px;
+    }
+
+    .media-item_holder {
+      position: relative;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 109.168%;
+      }
+    }
+
+    img {
+      width: 100%;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .media-item_caption {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
 }

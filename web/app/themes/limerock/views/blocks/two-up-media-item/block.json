@@ -3,9 +3,10 @@
   "title": "2-Up Media Item",
   "description": "This block is used to display a multiple images or videos with captions, in a 2 column, full width format.",
   "category": "media",
-  "icon": "admin-comments",
+  "icon": "format-gallery",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

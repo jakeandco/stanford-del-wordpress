@@ -1,9 +1,9 @@
 {
-  "name": "limerock/news-cards",
-  "title": "News Cards",
-  "description": "Displays a listing of News items, in a card format.",
+  "name": "limerock/event-details",
+  "title": "Event Details",
+  "description": "Two equal-width text columns with optional CTA buttons; stacks on mobile.",
   "category": "post-type",
-  "icon": "grid-view",
+  "icon": "tickets-alt",
   "keywords": [],
   "acf": {
     "blockVersion": 3,
@@ -15,7 +15,7 @@
     "align": false,
     "anchor": true,
     "color": {
-      "gradient": true,
+      "gradient": false,
       "background": true,
       "text": false
     },

@@ -3,9 +3,10 @@
   "title": "Single Media Item",
   "description": "This block is used to display a single image or video with an optional headline and caption. It supports WordPress alignment options",
   "category": "media",
-  "icon": "admin-comments",
+  "icon": "format-image",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

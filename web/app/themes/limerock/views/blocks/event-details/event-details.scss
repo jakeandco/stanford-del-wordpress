@@ -1,0 +1,79 @@
+.block_event-details {
+  // Add your custom styles here
+  padding: 26px 0;
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 57px 0;
+  }
+
+  .light-text {
+    opacity: 0.5;
+    color: inherit !important;
+  }
+
+  h5 {
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+
+  .block-title {
+    padding-bottom: 13px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-bottom: 9px;
+      margin-bottom: 52px;
+    }
+  }
+
+  .two-column-sidebar {
+    margin-bottom: 18px;
+    word-wrap: break-word;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 6px;
+      padding-right: 0;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding-right: 25px;
+    }
+
+    .sidebar-title {
+      margin-bottom: 0px;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 7px;
+      }
+    }
+
+    ul {
+      padding-top: 18px;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-top: 20px;
+      }
+
+      li {
+        margin-bottom: 3px;
+
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 23px;
+    margin-bottom: 14px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      margin-bottom: 17px;
+    }
+  }
+}

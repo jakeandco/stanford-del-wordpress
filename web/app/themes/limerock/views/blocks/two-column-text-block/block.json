@@ -3,9 +3,10 @@
   "title": "2-Column Text Block",
   "description": "Two equal-width text columns with optional CTA buttons; stacks on mobile.",
   "category": "text",
-  "icon": "admin-comments",
+  "icon": "editor-table",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

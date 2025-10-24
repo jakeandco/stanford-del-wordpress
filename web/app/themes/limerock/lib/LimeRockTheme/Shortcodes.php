@@ -16,7 +16,7 @@ class Shortcodes
 
     add_shortcode('button', "LimeRockTheme\Shortcodes::shortcode_button");
     add_shortcode('year', "LimeRockTheme\Shortcodes::shortcode_current_year");
-    add_shortcode('footnote', "LimeRockTheme\Shortcodes::shortcode_footnote");
+    // add_shortcode('footnote', "LimeRockTheme\Shortcodes::shortcode_footnote");
   }
 
   /*

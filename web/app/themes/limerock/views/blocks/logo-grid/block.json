@@ -3,9 +3,10 @@
   "title": "Logo Grid",
   "description": "This block displays a 4-column grid of images, typically used to showcase logos. ",
   "category": "media",
-  "icon": "admin-comments",
+  "icon": "format-gallery",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

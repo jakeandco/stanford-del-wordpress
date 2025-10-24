@@ -24,20 +24,20 @@
             <div class="col-12 col-md-7 date-holder">
 
               {% if start == end %}
-                <p>{{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ha T') }}</p>
+                <p>{{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ga T') }}</p>
 
               {% elseif start_date == end_date %}
                 <p>
-                  {{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ha') }}
+                  {{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ga') }}
                   to
-                  {{ end_time_obj|merge({ value: end })|datetime('ha T') }}
+                  {{ end_time_obj|merge({ value: end })|datetime('ga T') }}
                 </p>
 
               {% else %}
                 <p>
-                  {{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ha T') }}
+                  {{ start_time_obj|merge({ value: start })|datetime('l, F j, Y, ga T') }}
                   to
-                  {{ end_time_obj|merge({ value: end })|datetime('l, F j, Y, ha T') }}
+                  {{ end_time_obj|merge({ value: end })|datetime('l, F j, Y, ga T') }}
                 </p>
               {% endif %}
             </div>

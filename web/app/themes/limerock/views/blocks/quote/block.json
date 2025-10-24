@@ -3,9 +3,10 @@
   "title": "Quote",
   "description": "A block that displays a quote either selected from the quote post type or directly entered into the block.",
   "category": "text",
-  "icon": "quote",
+  "icon": "format-quote",
   "keywords": [],
   "acf": {
+    "blockVersion": 3,
     "mode": "preview",
     "renderCallback": "LimeRockTheme_block_render_callback"
   },

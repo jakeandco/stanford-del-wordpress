@@ -18,15 +18,6 @@
           "type": "wysiwyg"
         },
         {
-          "label": "Text Size",
-          "name": "text_size",
-          "type": "select",
-          "choices": {
-            "large": "Large",
-            "small": "Small"
-          }
-        },
-        {
           "label": "Buttons",
           "name": "buttons",
           "type": "repeater",
