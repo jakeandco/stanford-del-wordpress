@@ -1,15 +1,18 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_three-up-entry-points' } %}
   {% block content %}
-
-
-    {% for row in fields.entry_points %}
-
-
-      <a href="{{row['link'].url}}" alt="{{row['link'].alt}}">{{row['link'].title}}</a>
-
-      {{row['description']}}
-
-    {% endfor %}
-
+    <div class="container">
+      <div class="row">
+        {% for row in fields.entry_points %}
+          <div class="col-12 col-md-4">
+            <div class="entry-point-card">
+              <h3 class="entry-point-card--title">
+                <a href="{{row['link'].url}}" alt="{{row['link'].alt}}">{{row['link'].title}}</a>
+              </h3>
+              {{row['description']}}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   {% endblock %}
 {% endembed %}
