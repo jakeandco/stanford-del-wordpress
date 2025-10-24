@@ -1,3 +1,39 @@
 .block_three-up-entry-points {
   // Add your custom styles here
+  padding: 30px 0 1px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    padding: 84px 0 54px;
+  }
+
+  .row {
+    margin: 0 -6px;
+
+    .col-12 {
+      padding: 0 6px;
+    }
+  }
+}
+
+.entry-point-card {
+  border: 1px solid;
+  padding: 30px 25px 15px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    height: calc(100% - 30px);
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    padding: 45px 39px 23px;
+  }
+
+  .entry-point-card--title {
+    margin-bottom: 22px;
+    font-size: 20px;
+    line-height: 1.273;
+    font-weight: 600;
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
 }
