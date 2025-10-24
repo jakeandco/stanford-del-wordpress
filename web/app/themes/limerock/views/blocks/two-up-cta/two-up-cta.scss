@@ -12,7 +12,18 @@
         left: auto;
         right: 0;
       }
+
+      &:only-child {
+
+        figure {
+          @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
     }
+
   }
 
   &:nth-child(even) {
@@ -51,6 +62,33 @@
       left: 0;
       width: 50vw;
       transform: none;
+    }
+
+    &:only-child {
+      position: relative;
+      padding-bottom: 100%;
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-bottom: 0;
+        min-height: 660px;
+        width: 100%;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        min-height: 788px;
+      }
+
+      figure {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+        @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+          left: 0;
+          width: 50vw;
+          transform: none;
+        }
+      }
     }
   }
 
