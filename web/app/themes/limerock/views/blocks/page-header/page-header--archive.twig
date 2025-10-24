@@ -1,0 +1,47 @@
+{% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_page-header' } %}
+  {% block content %}
+
+    {# Archive Header with Search #}
+    <div class="container form-heading">
+      <div class="row align-items-center align-items-md-end">
+        <div class="col-12 col-lg-7">
+          <h1>Archive</h1>
+        </div>
+        <div class="col-12 col-lg-5 form-holder">
+          <form>
+            <input type="text" placeholder="Looking for someone specific?">
+            <button type="submit">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="currentColor" stroke-width="2"/>
+              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {# Archive Header with Search and Back #}
+    <div class="container form-heading">
+      <div class="row align-items-center align-items-md-end">
+        <div class="col-12 col-lg-7">
+          <div class="back-link"><a href="#">About</a></div>
+
+          <h1 class="h3">All Work</h1>
+        </div>
+
+        <div class="col-12 col-lg-5 form-holder">
+          <form>
+            <input type="text" placeholder="Search by keyword lorem">
+            <button type="submit">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="currentColor" stroke-width="2"/>
+              <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}
