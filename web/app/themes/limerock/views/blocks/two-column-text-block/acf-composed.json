@@ -10,12 +10,18 @@
     {
       "label": "Column 1",
       "name": "column_1",
-      "type": "wysiwyg"
+      "type": "wysiwyg",
+      "wrapper": {
+        "width": 50
+      }
     },
     {
       "label": "Column 2",
       "name": "column_2",
-      "type": "wysiwyg"
+      "type": "wysiwyg",
+      "wrapper": {
+        "width": 50
+      }
     },
     {
       "label": "Sidebar Content",
