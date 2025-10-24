@@ -25,6 +25,7 @@ class AdminCustomizer
   {
     add_filter('tiny_mce_before_init', 'LimeRockTheme\AdminCustomizer::mce_before_init_insert_formats');
     add_filter('mce_buttons', 'LimeRockTheme\AdminCustomizer::mce_buttons');
+    add_filter('mce_external_plugins', 'LimeRockTheme\AdminCustomizer::mce_external_plugins');
   }
 
   public static function mime_types($mimes)
@@ -93,7 +94,14 @@ class AdminCustomizer
   public static function mce_buttons($buttons)
   {
     array_splice($buttons, 1, 0, 'styleselect');
+    array_splice($buttons, 2, 0, 'limerock_shortcodes');
     return $buttons;
+  }
+
+  public static function mce_external_plugins($plugin_array)
+  {
+    $plugin_array['limerock_shortcodes'] = get_template_directory_uri() . '/dist/js/custom_plugins/limerock_shortcodes.js';
+    return $plugin_array;
   }
 
   public static function mce_before_init_insert_formats($init_array)
