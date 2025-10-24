@@ -5,12 +5,18 @@
     {
       "label": "Left",
       "name": "left",
-      "type": "image"
+      "type": "image",
+      "wrapper": {
+        "width": 50
+      }
     },
     {
       "label": "Right",
       "name": "right",
-      "type": "image"
+      "type": "image",
+      "wrapper": {
+        "width": 50
+      }
     }
   ],
   "location": [

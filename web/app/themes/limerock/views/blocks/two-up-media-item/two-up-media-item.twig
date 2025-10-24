@@ -1,11 +1,13 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_two-up-media-item' } %}
   {% block content %}
+    <div class="images d-md-flex flex-wrap">
+      <div class="img-holder">
+        {% include '@partial/media-item.twig' with { image: fields.left } only %}
+      </div>
 
-
-    {% include '@partial/media-item.twig' with { image: fields.left } only %}
-
-
-    {% include '@partial/media-item.twig' with { image: fields.right } only %}
-
+      <div class="img-holder">
+        {% include '@partial/media-item.twig' with { image: fields.right } only %}
+      </div>
+    </div>
   {% endblock %}
 {% endembed %}
