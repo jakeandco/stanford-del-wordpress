@@ -45,7 +45,7 @@
     {% endembed %}
 
     {# Filter by Research Area #}
-    {% embed '@partial/block_wrapper.twig' with { title: 'Filter by research area' } %}
+    {% embed '@partial/filter_wrapper.twig' with { title: 'Filter by research area' } %}
       {% block content %}
         {% set selected_research_areas = request.get.research_area|default([]) %}
         {% for term in research_terms %}
@@ -80,7 +80,7 @@
     {% endembed %}
 
     {# Sort Options #}
-    {% embed '@partial/block_wrapper.twig' with { title: 'Sort' } %}
+    {% embed '@partial/filter_wrapper.twig' with { title: 'Sort' } %}
       {% block content %}
         {% set sort_options = {
           'newest': 'Newest',
