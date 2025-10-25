@@ -9,11 +9,11 @@
   </div>
 {% endif %}
 
-<div class="all-works-wrap">
+<div class="all-posts-wrap">
   {% if fields.archive_label %}
     <div>{{ fields.archive_label }}</div>
   {% endif %}
-  <div class="all-works-grid">
+  <div class="all-posts-grid">
     {% if posts|length %}
       {% include '@partial/post-repeater.twig' with { posts: posts } only %}
     {% else %}

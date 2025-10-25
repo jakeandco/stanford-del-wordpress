@@ -94,46 +94,10 @@
         </div>
 
       {% elseif fields.variation == 'cards' %}
-
-        {% if fields.items_per_row == '3' %}
-          {% set column_classes = 'col-md-4' %}
-        {% elseif fields.items_per_row == '4' %}
-          {% set column_classes = 'col-md-4 col-lg-3' %}
-        {% elseif fields.items_per_row == '6' %}
-          {% set column_classes = 'col-md-4 col-lg-3 col-xl-2' %}
-        {% endif %}
-
-        <div class="callout callout-cards">
-          <div class="row">
-            {% for row in people %}
-              <div class="col-12 {{column_classes}}">
-                <a href="{{ row.link }}" class="callout-item">
-                  <div class="image-holder">
-                    {% include "@views/partial/media-item.twig" with { image: row.thumbnail } %}
-
-                    <span class="btn btn-info more-link">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M-0.000305154 5.23623L-0.000305449 4.39362H8.26532L4.47357 0.601859L5.07543 -6.97675e-06L9.89036 4.81492L5.07543 9.62985L4.47357 9.02798L8.26532 5.23623L-0.000305154 5.23623Z" fill="white"/>
-                      </svg>
-                    </span>
-                  </div>
-
-                  <div class="text-holder">
-                    <h3>{{ [row.meta('first_name'), row.meta('last_name')]|filter(v => v)|join(' ')|default(row.title) }}</h3>
-
-                    {% if row.meta('titles') %}
-                      <p class="titles">
-                        {% for item in row.meta('titles') %}
-                          <span>{{ item.title }}</span>
-                        {% endfor %}
-                      </p>
-                    {% endif %}
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
+        {% include '@partial/people-cards.twig' with {
+          people: people,
+          items_per_row: fields.items_per_row|default(6)
+        } only %}
       {% endif %}
     </div>
 

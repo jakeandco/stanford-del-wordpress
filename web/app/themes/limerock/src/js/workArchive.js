@@ -42,19 +42,21 @@ export function setup() {
   });
 
   // remove filter
-  selectedFiltersWrap.addEventListener('click', function (e) {
-    const removeOption = e.target.closest('.remove-filter-js');
+  if (selectedFiltersWrap) {
+    selectedFiltersWrap.addEventListener('click', function (e) {
+      const removeOption = e.target.closest('.remove-filter-js');
 
-    if (!removeOption) return;
+      if (!removeOption) return;
 
-    const optionId = removeOption.getAttribute('data-option');
-    const relatedOption = form.querySelector(`.filter-option-js[data-option="${optionId}"]`);
+      const optionId = removeOption.getAttribute('data-option');
+      const relatedOption = form.querySelector(`.filter-option-js[data-option="${optionId}"]`);
 
-    if (relatedOption) {
-      relatedOption.checked = false;
-      relatedOption.dispatchEvent(new Event('change', { bubbles: true }));
-    }
-  });
+      if (relatedOption) {
+        relatedOption.checked = false;
+        relatedOption.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  }
 
   // handle reset
   resetBtns.forEach(btn => {

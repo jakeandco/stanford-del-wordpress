@@ -5,35 +5,7 @@
       method="get"
       class="ajax-form-js hide-selected-labels"
     >
-      <div class="form-heading-wrap block_page-header">
-        <div class="container form-heading">
-          <div class="row align-items-center align-items-md-end">
-            <div class="col-12 col-lg-7">
-              {% if fields.back_to_link %}
-                <div class="back-link">
-                  <a href="{{ fields.back_to_link.url }}">{{ fields.back_to_link.title ?: 'Back' }}</a>
-                </div>
-              {% endif %}
-              {% include '@partial/page-header-title.twig' with { fields: fields } %}
-            </div>
-
-            <div class="col-12 col-lg-5 form-holder">
-              <input
-                name="search"
-                type="text"
-                placeholder="{{ fields.search_placeholder ?: 'Search...' }}"
-                value="{{ request.get.search }}"
-              >
-              <button type="submit">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.76953 1C8.40342 1.00008 10.539 3.13538 10.5391 5.76953C10.5391 8.40376 8.40347 10.539 5.76953 10.5391C3.13552 10.5391 1 8.40381 1 5.76953C1.00009 3.13533 3.13558 1 5.76953 1Z" stroke="currentColor" stroke-width="2"/>
-                <line y1="-1" x2="8.2422" y2="-1" transform="matrix(0.707088 0.707126 -0.707088 0.707126 8.24219 9.88965)" stroke="currentColor" stroke-width="2"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% include '@partial/archive-heading.twig' with { fields: fields, request: request } only %}
       <div class="works-wrap">
         <div class="container">
           {% include '@blocks/work-archive/work-archive-filters.twig' with { fields: fields } %}
