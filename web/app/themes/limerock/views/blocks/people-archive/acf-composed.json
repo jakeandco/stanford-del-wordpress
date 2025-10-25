@@ -3,25 +3,49 @@
   "title": "Block Details: People Archive",
   "fields": [
     {
-      "label": "Title",
-      "name": "title",
-      "type": "text"
+      "label": "",
+      "name": "section_title",
+      "type": "message",
+      "message": "<h2>People Archive</h2>",
+      "new_lines": "",
+      "esc_html": 0
     },
     {
-      "label": "Featured Label",
-      "name": "featured_label",
+      "label": "Header Title",
+      "name": "header_title",
+      "type": "text",
+      "wrapper": {
+        "width": 50
+      }
+    },
+    {
+      "label": "Title Size",
+      "name": "title_size",
+      "type": "select",
+      "choices": {
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "extra_large": "Extra Large"
+      },
+      "wrapper": {
+        "width": 50
+      }
+    },
+    {
+      "label": "Text",
+      "name": "text",
+      "type": "textarea"
+    },
+    {
+      "label": "Search placeholder",
+      "name": "search_placeholder",
       "type": "text"
     },
     {
       "label": "Archive Label",
       "name": "archive_label",
       "type": "text"
-    },
-    {
-      "label": "Featured People",
-      "name": "featured_people",
-      "type": "relationship",
-      "post_type": ["person"]
     }
   ],
   "location": [

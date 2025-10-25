@@ -1,16 +1,41 @@
 {% embed '@partial/block_wrapper.twig' with { extra_classes: 'block_people-archive' } %}
   {% block content %}
-    {% set post_type = 'people' %}
+    <form
+      action="{{ ajax_url }}"
+      method="get"
+      class="ajax-form-js hide-selected-labels"
+    >
+      {% include '@partial/archive-heading.twig' with { fields: fields, request: request } only %}
+      <div class="people-wrap">
+        <div class="container">
+          {% if fields.text %}
+            <div class="archive-text">{{ fields.text }}</div>
+          {% endif %}
+          <div class="ajax-results-js">
+            <div class="all-posts-wrap">
+              {% if fields.archive_label %}
+                <div>{{ fields.archive_label }}</div>
+              {% endif %}
+              <div class="all-posts-grid">
+                {% if posts|length %}
+                  {% include '@partial/people-cards.twig' with { people: posts, items_per_row: 6 } only %}
+                {% else %}
+                  <div class="no-results">No works found matching your criteria.</div>
+                {% endif %}
+              </div>
 
+              {% if posts|length %}
+                {% include '@partial/pagination-alt.twig' with { posts: posts } only %}
+              {% endif %}
+            </div>
 
-    <p>{{fields.title}}</p>
+            <div class="loader-wrap">
+              <div class="loader"></div>
+            </div>
+          </div>
 
-    <p>{{fields.featured_label}}</p>
-
-
-    {% include '@partial/post-repeater.twig' with { posts: fields.featured_people } only %}
-
-    <p>{{fields.archive_label}}</p>
-    {% include '@partial/post-repeater.twig' with { posts: get_posts({ post_type })} only %}
+        </div>
+      </div>
+    </form>
   {% endblock %}
 {% endembed %}

@@ -1,0 +1,112 @@
+<div class="filters-wrap">
+  <div class="selected-filters-wrap">
+    <div class="selected-fitlers selected-filters-js"></div>
+    <button type="button" class="reset-js" disabled>Clear All</button>
+  </div>
+  <button type="button">Sort and filter</button>
+  <button type="button">View results</button>
+  <button type="button" class="reset-js" disabled>Reset</button>
+  <div class="filters-blocks">
+
+    {# Filter by Post Type #}
+    {% embed '@partial/filter_wrapper.twig' with { title: 'Filter by type' } %}
+      {% block content %}
+        {% set post_types = ['post', 'project', 'publication'] %}
+        {% set selected_types = request.get.type|default([]) %}
+        {% for type in post_types %}
+          <label>
+            <input
+              class="filter-option-js"
+              type="checkbox"
+              name="type[]"
+              value="{{ type }}"
+              data-option="type-{{ type }}"
+              data-text="{{ type | e('html_attr') }}"
+              {% if type in selected_types or 'all' in selected_types %}
+                checked
+              {% endif %}
+            >
+            <span>{{ type|capitalize }}</span>
+          </label>
+        {% endfor %}
+        <label>
+          <input
+            class="filter-option-js all-labels-js"
+            type="checkbox"
+            name="type[]"
+            value="all"
+            {% if 'all' in selected_types %}
+              checked
+            {% endif %}
+          >
+          <span>All</span>
+        </label>
+      {% endblock %}
+    {% endembed %}
+
+    {# Filter by Research Area #}
+    {% embed '@partial/filter_wrapper.twig' with { title: 'Filter by research area' } %}
+      {% block content %}
+        {% set selected_research_areas = request.get.research_area|default([]) %}
+        {% for term in research_terms %}
+          <label>
+            <input
+              class="filter-option-js"
+              type="checkbox"
+              name="research_area[]"
+              value="{{ term.slug }}"
+              data-option="research_area-{{ term.slug }}"
+              data-text="{{ term.name | e('html_attr') }}"
+              {% if term.slug in selected_research_areas or 'all' in selected_research_areas %}
+                checked
+              {% endif %}
+            >
+            <span>{{ term.name }}</span>
+          </label>
+        {% endfor %}
+        <label>
+          <input
+            class="filter-option-js all-labels-js"
+            type="checkbox"
+            name="research_area[]"
+            value="all"
+            {% if 'all' in selected_research_areas %}
+              checked
+            {% endif %}
+          >
+          <span>All</span>
+        </label>
+      {% endblock %}
+    {% endembed %}
+
+    {# Sort Options #}
+    {% embed '@partial/filter_wrapper.twig' with { title: 'Sort' } %}
+      {% block content %}
+        {% set sort_options = {
+          'newest': 'Newest',
+          'oldest': 'Oldest',
+          'a_z': 'A to Z',
+          'z_a': 'Z to A'
+        } %}
+        {% set selected_sort = request.get.sort|default('newest') %}
+        {% for key, label in sort_options %}
+          <label>
+            <input
+              class="filter-option-js{{ key == 'newest' ? ' default-sort-js' : '' }}"
+              type="radio"
+              name="sort"
+              value="{{ key }}"
+              data-option="sort-{{ key }}"
+              data-text="{{ label | e('html_attr') }}"
+              {% if key == selected_sort %}
+                checked
+              {% endif %}
+            >
+            <span>{{ label }}</span>
+          </label>
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+  </div>
+</div>
